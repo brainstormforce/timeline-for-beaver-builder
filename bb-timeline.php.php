@@ -19,7 +19,7 @@ if ( !class_exists( 'BSFBBTimeline' ) ) {
 
     class BSFBBTimeline
     {
-        
+        //to initializ new object
         function __construct() {
             add_action( 'init', array( $this, 'load_timeline' ) );
             add_action('init', array( $this, 'load_textdomain'));
@@ -69,6 +69,7 @@ if ( !class_exists( 'BSFBBTimeline' ) ) {
             
             }
             
+            //To display notice 
             echo '<div class="notice notice-error">';
 
                 echo "<p>The <strong>Timeline Module For Beaver Builder</strong> " . __( 'plugin requires', 'bb-timeline' )." <strong><a href='".$url."'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-timeline' ) . "</p>";

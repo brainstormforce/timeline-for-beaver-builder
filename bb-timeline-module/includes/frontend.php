@@ -4,21 +4,71 @@
 </<?php echo $settings->main_tag; ?>>
 <!--/.heading_title-->
 
-<!--sub_heading_title-->
-<<?php echo $settings->sub_tag; ?> class="bb_timline_sub_heading">
-	<?php echo $settings->sub_heading_title; ?>
-</<?php echo $settings->sub_tag; ?>>
-<!--/.sub_heading_title-->
-
+<!--Left-->
 <?php
-if ( $settings->timeline_layout == "style1" ) {
+if ( $settings->timeline_layout == "left" ) {
 ?>
-<h1>style1</h1>
+	<div class="bb_tmtimeline_container">
+		<ul class="bb_tmtimeline">
+			<?php 
+			for($i=0; $i < count($settings->timeline1); $i++) :
+				if(!is_object($settings->timeline1[$i])) {
+					continue;
+				}
+				$timeline1 = $settings->timeline1[$i];
+			?>
+			<li>
+				<!--date-->
+				<div class="bb_tmtime">
+					<span><?php echo $timeline1->day; ?>/<?php echo $timeline1->month; ?>/<?php echo $timeline1->year; ?></span> 
+				</div>
+				<!--/.date-->
+
+				<!--icon-->
+				<div class="bb_tmicon">
+					<i class="<?php echo $timeline1->icon; ?>"></i>
+				</div>
+				<!--/.icon-->
+
+				<!--Timline-Content-->
+				<div class="bb_tmlabel">
+
+					<!--Timline-Title-->
+					<h2><?php echo $timeline1->timeline_title; ?></h2>
+					<!--/.Timline-Title-->
+
+					<!--Timline-description-->
+					<p><?php echo $timeline1->timeline_editor; ?></p>
+					<!--/.Timline-description-->
+
+				</div>
+				<!--/.Timline-Content-->
+			</li>
+			<?php endfor; ?>
+		</ul>
+	</div>
 <?php
 }
-if ( $settings->timeline_layout == "style2" ) {	 
 ?>
-<h1>style2</h1>
+<!--/.Left-->
+
+<!--Right-->
+<?php
+if ( $settings->timeline2 == "right" ) {	 
+?>
+timeline 2
 <?php
 }
 ?>	
+<!--/.Right-->
+
+
+<!--Right-->
+<?php
+if ( $settings->timeline3 == "both" ) {	 
+?>
+timeline 3
+<?php
+}
+?>	
+<!--/.Right-->

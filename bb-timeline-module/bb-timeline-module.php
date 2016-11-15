@@ -33,65 +33,76 @@ FLBuilder::register_module('BSFBBTimelines',
         'general'       => array( // Tab
             'title'         => __('General', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
-                
-                'heading'       => array( // Section
-                    'title'         => __('Heading', 'bb-timeline'), // Section Title
-                    'fields'        => array( // Section Fields
-                        'heading_title'     => array(
-                            'type'          => 'text',
-                            'label'         => __('Heading Title', 'bb-timeline'),
-                            'default'       => '',
-                            'placeholder'   => 'Enter Heading Title',
-                            'default'       => __('Heading Title', 'bb-timeline'),
-                            'class'         => 'heading-title',
-                            'preview'         => array(
-                                'type'             => 'text',
-                                'selector'         => '.bb_timline_heading'
-                            )
-                        ),
-                        'sub_heading_title'     => array(
-                            'type'          => 'text',
-                            'label'         => __('Sub Heading Title', 'bb-timeline'),
-                            'default'       => '',
-                            'placeholder'   => 'Enter Sub Heading Title',
-                            'default'       => __('Sub Heading Title', 'bb-timeline'),
-                            'class'         => 'sub-heading-title',
-                            'preview'         => array(
-                                'type'             => 'text',
-                                'selector'         => '.bb_timline_sub_heading'
-                            )
-                        ),
-
-                    ) 
-                ),
-
                 'layout'       => array( // Section
                     'title'         => 'Select Layout', // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_layout'       => array(
                             'type'          => 'select',
                             'label'         => __('Timeline Layouts', 'bb-timeline'),
-                            'default'       => 'style1',
+                            'default'       => 'left',
                             'class'         => '',
                             'options'       => array(
-                                'style1'             => __('Style 1', 'bb-timeline'),
-                                'style2'             => __('Style 2', 'bb-timeline')
+                                'left'             => __('Left', 'bb-timeline'),
+                                'right'             => __('Right', 'bb-timeline'),
+                                'both'             => __('Both Side', 'bb-timeline')
                             ),
                             'toggle'        => array(
-                                'style1'      => array(
-                                    'sections'      => array( 'style1' ),
+                                'left'      => array(
+                                    'sections'      => array( 'left' ),
                                     'tabs'      => array( 'timeline1' ),
                                     'fields'     => array( 'layout1' )
                                 ),
-                                'style2'      => array(
-                                    'sections'      => array( 'timeline_title_section' ),
+                                'right'      => array(
+                                    'sections'      => array( 'right' ),
                                     'tabs'      => array( 'timeline2' ),
                                     'fields'     => array( 'layout2' )
+                                ),
+                                'both'      => array(
+                                    'sections'      => array( 'both' ),
+                                    'tabs'      => array( 'timeline3' ),
+                                    'fields'     => array( 'layout3' )
                                 )
                             ),
                         ),
                     )
-                )
+                ),
+
+                'heading'       => array( // Section
+                    'title'         => __('Heading', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'heading_title'     => array(
+                            'type'          => 'text',
+                            'label'         => __('Heading Text', 'bb-timeline'),
+                            'default'       => '',
+                            'placeholder'   => 'Enter Heading Text',
+                            'default'       => __('Timeline', 'bb-timeline'),
+                            'class'         => 'heading-title',
+                            'preview'         => array(
+                                'type'             => 'text',
+                                'selector'         => '.bb_timline_heading'
+                            )
+                        ),
+                    ) 
+                ),
+                'heading_typo'     => array(
+                    'title'         => __('Heading Typography', 'bb-timeline'),
+                    'fields'        => array(
+                        'main_tag'           => array(
+                            'type'          => 'select',
+                            'label'         => __( 'HTML Tag', 'bb-timeline' ),
+                            'default'       => 'h2',
+                            'options'       => array(
+                                'h1'            =>  'h1',
+                                'h2'            =>  'h2',
+                                'h3'            =>  'h3',
+                                'h4'            =>  'h4',
+                                'h5'            =>  'h5',
+                                'h6'            =>  'h6'
+                            )
+                        ),
+                    )
+                ),
+
             )
         ),
 
@@ -113,44 +124,13 @@ FLBuilder::register_module('BSFBBTimelines',
             )
         ),
 
-        'typography'         => array(
+        'timeline_typography'         => array(
             'title'         => __('Typography', 'bb-timeline'),
             'sections'      => array(
-                'heading_title'     => array(
-                    'title'         => __('Heading', 'bb-timeline'),
+                'timeline_typography'     => array(
+                    'title'         => __('Timeline Title', 'bb-timeline'),
                     'fields'        => array(
-                        'main_tag'           => array(
-                            'type'          => 'select',
-                            'label'         => __( 'HTML Tag', 'bb-timeline' ),
-                            'default'       => 'h2',
-                            'options'       => array(
-                                'h1'            =>  'h1',
-                                'h2'            =>  'h2',
-                                'h3'            =>  'h3',
-                                'h4'            =>  'h4',
-                                'h5'            =>  'h5',
-                                'h6'            =>  'h6'
-                            )
-                        ),
-                    )
-                ),
-                'sub_heading_title'    =>  array(
-                    'title'     => __('Sub Heading', 'bb-timeline'),
-                    'fields'    => array(
 
-                        'sub_tag'           => array(
-                            'type'          => 'select',
-                            'label'         => __( 'HTML Tag', 'bb-timeline' ),
-                            'default'       => 'h4',
-                            'options'       => array(
-                                'h1'            =>  'h1',
-                                'h2'            =>  'h2',
-                                'h3'            =>  'h3',
-                                'h4'            =>  'h4',
-                                'h5'            =>  'h5',
-                                'h6'            =>  'h6'
-                            )
-                        ),
 
                     )
                 ),
@@ -174,23 +154,79 @@ FLBuilder::register_settings_form('timeline_form', array(
                         'timeline_title' => array(
                             'type'          => 'text',
                             'label'         => __('Timeline Title', 'bb-timeline'),
-                            'default'       => 'John Doe',
+                            'default'       => 'Title of section',
                             'description'   => '',
                         )
 
                     ),
                 ),
-                'timeline1'       => array( // Section
+                'timeline_editor_section'       => array( // Section
                     'title'         => __('Timeline', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
-                        'testimonial'          => array(
+                        'timeline_editor'          => array(
                             'type'          => 'editor',
                             'label'         => '',
-                            'default'       => 'If you are looking for some awesome, knowledgeable people to work with, these are the guys I highly recommend. Their friendliness and result-driven approach is what I love about them.',
+                            'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.',
                         ),
                     ),
                 ),
             )
         ),
+
+        'date_time'       => array(
+            'title'         => __('Date & Time', 'bb-timeline'),
+            'sections'      => array(
+                'date'       => array(
+                    'title'         => __( 'Date', 'bb-timeline' ),
+                    'fields'        => array(
+                        'day'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Day', 'bb-timeline'),
+                            'default'       => date( 'j' ),
+                            'maxlength'     => '2',
+                            'size'          => '5',
+                            'preview'      => array(
+                                'type'         => 'none'
+                            )
+                        ),
+                        'month'         => array(
+                            'type'          => 'text',
+                            'label'         => __('Month', 'bb-timeline'),
+                            'default'       => date( 'n' ),
+                            'maxlength'     => '2',
+                            'size'          => '5',
+                            'preview'      => array(
+                                'type'         => 'none'
+                            )
+                        ),
+                        'year'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Year', 'bb-timeline'),
+                            'default'       => date( 'Y' ),
+                            'maxlength'     => '4',
+                            'size'          => '5',
+                            'preview'      => array(
+                                'type'         => 'none'
+                            )
+                        ),
+                    )
+                ),
+            ),
+        ),
+
+        'timeline_icon'       => array(
+            'title'         => __('Timeline Icon', 'bb-timeline'),
+            'sections'      => array(
+                'icon'       => array(
+                    'title'         => __( 'Select Icon', 'bb-timeline' ),
+                    'fields'        => array(
+                        'icon'          => array(
+                            'type'          => 'icon',
+                            'label'         => __('Icon', 'bb-timeline')
+                        )
+                    )
+                ),
+            ),
+        ),    
     )
 ));
