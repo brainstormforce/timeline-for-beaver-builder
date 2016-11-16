@@ -63,6 +63,12 @@ FLBuilder::register_module('BSFBBTimelines',
                         ),
                     )
                 ),
+            )
+        ),
+
+        'main_heading'       => array( // Tab
+            'title'         => __('Heading', 'bb-timeline'), // Tab title
+            'sections'      => array( // Tab Sections
 
                 'heading'       => array( // Section
                     'title'         => __('Heading', 'bb-timeline'), // Section Title
@@ -81,31 +87,6 @@ FLBuilder::register_module('BSFBBTimelines',
                         ),
                     ) 
                 ),
-
-            )
-        ),
-
-        'timeline'      => array( // Tab
-            'title'         => __('Timeline', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                'general'       => array( // Section
-                    'title'         => '', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline1'     => array(
-                            'type'          => 'form',
-                            'label'         => __('Timeline', 'bb-timeline'),
-                            'form'          => 'timeline_form', // ID from registered form below
-                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
-                            'multiple'      => true
-                        ),
-                    )
-                )
-            )
-        ),   
-
-        'timeline_typography'         => array(
-            'title'         => __('Typography', 'bb-timeline'),
-            'sections'      => array(
 
                 'heading_typo'     => array(
                     'title'         => __('Heading Typography', 'bb-timeline'),
@@ -130,7 +111,7 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'family'        => 'Default',
                                 'weight'        => 300
                             ),
-                            'label'         => __('Font', 'bb-timeline'),
+                            'label'         => __('Font Family', 'bb-timeline'),
                             'preview'         => array(
                                 'type'            => 'font',
                                 'selector'        => '.bb-timline-heading'
@@ -139,7 +120,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                         'title_size'    => array(
                             'type'          => 'select',
-                            'label'         => __('Heading Size', 'bb-timeline'),
+                            'label'         => __('Font Size', 'bb-timeline'),
                             'default'       => 'default',
                             'options'       => array(
                                 'default'       =>  __('Default', 'bb-timeline'),
@@ -154,7 +135,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                         'title_custom_size' => array(
                             'type'              => 'text',
-                            'label'             => __('Heading Custom Size', 'bb-timeline'),
+                            'label'             => __('Font Custom Size', 'bb-timeline'),
                             'default'           => '36',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -208,6 +189,12 @@ FLBuilder::register_module('BSFBBTimelines',
                             'size'          => '4',
                             'description'   => 'px'
                         ),
+                    )
+                ),
+
+                'heading_colornback'     => array(
+                    'title'         => __('Heading Color & Background', 'bb-timeline'),
+                    'fields'        => array(
 
                         'color'    => array( 
                             'type'       => 'color',
@@ -218,51 +205,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'type' => 'css',
                                 'property' => 'color',
                                 'selector' => '.bb-timline-heading'
-                            )
-                        ),
-
-                        'heading_align'     => array(
-                            'type'          => 'select',
-                            'label'         => __('Heading Alignment', 'bb-timeline'),
-                            'default'       => 'Left',
-                            'options'       => array(
-                                'left'      =>  __('Left', 'bb-timeline'),
-                                'center'    =>  __('Center', 'bb-timeline'),
-                                'right'     =>  __('Right', 'bb-timeline')
-                            ),
-                            'help'         => __('This is the alignment option and would only apply to Heading elements', 'bb-timeline'),
-                        ),
-
-                        'title_margin' => array(
-                            'type'              => 'text',
-                            'label'             => __('Margin', 'bb-timeline'),
-                            'placeholder'       => '0',
-                            'maxlength'         => '3',
-                            'size'              => '4',
-                            'description'       => 'px',
-                            'default'    => '',
-                            'preview'       => array(
-                                'type' => 'css',
-                                'property' => 'margin',
-                                'selector' => '.bb-timline-heading',
-                                'unit'       => 'px'
-                            )
-
-                        ),
-
-                        'title_padding' => array(
-                            'type'              => 'text',
-                            'label'             => __('Padding', 'bb-timeline'),
-                            'placeholder'       => '0',
-                            'maxlength'         => '3',
-                            'size'              => '4',
-                            'description'       => 'px',
-                            'default'    => '10',
-                            'preview'       => array(
-                                'type' => 'css',
-                                'property' => 'padding',
-                                'selector' => '.bb-timline-heading',
-                                'unit'       => 'px'
                             )
                         ),
 
@@ -280,11 +222,222 @@ FLBuilder::register_module('BSFBBTimelines',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
+                        ),
+                    )
+                ),
+
+                'heading_alignments'     => array(
+                    'title'         => __('Heading Alignments', 'bb-timeline'),
+                    'fields'        => array(
+                        'heading_align'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Heading Alignment', 'bb-timeline'),
+                            'default'       => 'Left',
+                            'options'       => array(
+                                'left'      =>  __('Left', 'bb-timeline'),
+                                'center'    =>  __('Center', 'bb-timeline'),
+                                'right'     =>  __('Right', 'bb-timeline')
+                            ),
+                            'help'         => __('This is the alignment option and would only apply to Heading elements', 'bb-timeline'),
+                        ),
+
+                        'title_margin_top' => array(
+                            'type'              => 'text',
+                            'label'             => __('Margin Top', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'margin-top',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+
+                        'title_margin_bottom' => array(
+                            'type'              => 'text',
+                            'label'             => __('Margin Bottom', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'margin-bottom',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+
+                        'title_padding_top' => array(
+                            'type'              => 'text',
+                            'label'             => __('Padding Top', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '10',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'padding-top',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+
+                        'title_padding_right' => array(
+                            'type'              => 'text',
+                            'label'             => __('Padding Right', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '10',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'padding-right',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+
+                        'title_padding_bottom' => array(
+                            'type'              => 'text',
+                            'label'             => __('Padding Bottom', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '10',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'padding-bottom',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+
+                        'title_padding_left' => array(
+                            'type'              => 'text',
+                            'label'             => __('Padding Left', 'bb-timeline'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '10',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'padding-left',
+                                'selector' => '.bb-timline-heading',
+                                'unit'       => 'px'
+                            )
+                        ),
+                    )
+                ),
+                
+                'heading_border'     => array(
+                    'title'         => __('Heading Border', 'bb-timeline'),
+                    'fields'        => array(
+                        'heading_border_show'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Show Hide border', 'bb-timeline'),
+                            'default'       => 'hide',
+                            'options'       => array(
+                                'hide'       =>  __('Hide', 'bb-timeline'),
+                                'show'        =>  __('Show', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'show'        => array(
+                                    'fields'        => array('heading_border_style', 'heading_border_width', 'heading_border_color' )
+                                )
+                            )
+                        ),
+                        'heading_border_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Border Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'options'       => array(
+                                'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' )
+                            ),
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-timline-heading',
+                                'property'      => 'border-style'
+                            ),
+                        ),
+                        'heading_border_width'        => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Width', 'bb-timeline'),
+                            'default'       => '0',
+                            'maxlength'     => '2',
+                            'size'          => '3',
+                            'description'   => 'px',
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-timline-heading',
+                                'property'      => 'border-width',
+                                'unit'          => 'px'
+                            )
+                        ),
+                        'heading_border_color'         => array(
+                            'type'          => 'color',
+                            'label'         => __('Border Color', 'bb-timeline'),
+                            'default'       => 'cccccc',
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-timline-heading',
+                                'property'      => 'border-color'
+                            )
+                        ),
+                        'heading_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Round Corners', 'bb-timeline'),
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => 'px'
                         )
                     )
                 ),
 
-                'timeline_typography'     => array(
+            )
+        ),
+
+        'timeline'      => array( // Tab
+            'title'         => __('Timeline', 'bb-timeline'), // Tab title
+            'sections'      => array( // Tab Sections
+                'general'       => array( // Section
+                    'title'         => '', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline1'     => array(
+                            'type'          => 'form',
+                            'label'         => __('Timeline', 'bb-timeline'),
+                            'form'          => 'timeline_form', // ID from registered form below
+                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
+                            'multiple'      => true
+                        ),
+                    )
+                )
+            )
+        ),
+
+        'timeline_style'     => array(
+            'title'         => __('Style', 'bb-timeline'),
+            'sections'      => array(
+
+            )
+        ),   
+
+        'timeline_typography'         => array(
+            'title'         => __('Typography', 'bb-timeline'),
+            'sections'      => array(
+
+                'timeline_title_typography'     => array(
                     'title'         => __('Timeline Title', 'bb-timeline'),
                     'fields'        => array(
                         'tmtitle_tag'           => array(
@@ -307,7 +460,7 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'family'        => 'Default',
                                 'weight'        => 300
                             ),
-                            'label'         => __('Font', 'bb-timeline'),
+                            'label'         => __('Font Family', 'bb-timeline'),
                             'preview'         => array(
                                 'type'            => 'font',
                                 'selector'        => '.bb-timline-title'
@@ -411,7 +564,213 @@ FLBuilder::register_module('BSFBBTimelines',
 
                     )
                 ),
-            ),
+
+                'timeline_description_typography'     => array(
+                    'title'         => __('Timeline Description', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'timeline_dec_font'          => array(
+                            'type'          => 'font',
+                            'default'       => array(
+                                'family'        => 'Default',
+                                'weight'        => 300
+                            ),
+                            'label'         => __('Font Family', 'bb-timeline'),
+                            'preview'         => array(
+                                'type'            => 'font',
+                                'selector'        => '.bb-timline-dec'
+                            )
+                        ),
+
+                        'timeline_dec_size'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Font Size', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_dec_custom_size')
+                                )
+                            )
+                        ),
+
+                        'timeline_dec_custom_size' => array(
+                            'type'              => 'text',
+                            'label'             => __('Custom Font Size', 'bb-timeline'),
+                            'default'           => '18',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px'
+                        ),
+
+                        'timeline_dec_line_height'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Line Height', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_dec_custom_line_height')
+                                )
+                            )
+                        ),
+
+                        'timeline_dec_custom_line_height' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Line Height', 'bb-timeline'),
+                            'default'       => '30',
+                            'maxlength'     => '4',
+                            'size'          => '4',
+                            'description'   => 'px'
+                        ),
+
+                        'timeline_dec_letter_spacing'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Letter Spacing', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_dec_custom_letter_spacing')
+                                )
+                            )
+                        ),
+
+                        'timeline_dec_custom_letter_spacing' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Letter Spacing', 'bb-timeline'),
+                            'default'       => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => 'px'
+                        ),
+
+                        'timeline_dec_color'    => array( 
+                            'type'       => 'color',
+                            'label'         => __('Text Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'color',
+                                'selector' => '.bb-timline-dec'
+                            )
+                        ),
+                    )
+                ),
+                
+                'timeline_date_typography'     => array(
+                    'title'         => __('Timeline Date Typography', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'timeline_date_font'          => array(
+                            'type'          => 'font',
+                            'default'       => array(
+                                'family'        => 'Default',
+                                'weight'        => 300
+                            ),
+                            'label'         => __('Font Family', 'bb-timeline'),
+                            'preview'         => array(
+                                'type'            => 'font',
+                                'selector'        => '.bb-tmtime'
+                            )
+                        ),
+
+                        'timeline_date_size'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Font Size', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_date_custom_size')
+                                )
+                            )
+                        ),
+
+                        'timeline_date_custom_size' => array(
+                            'type'              => 'text',
+                            'label'             => __('Custom Font Size', 'bb-timeline'),
+                            'default'           => '18',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px'
+                        ),
+
+                        'timeline_date_line_height'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Line Height', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_date_custom_line_height')
+                                )
+                            )
+                        ),
+
+                        'timeline_date_custom_line_height' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Line Height', 'bb-timeline'),
+                            'default'       => '30',
+                            'maxlength'     => '4',
+                            'size'          => '4',
+                            'description'   => 'px'
+                        ),
+
+                        'timeline_date_letter_spacing'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Letter Spacing', 'bb-timeline'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bb-timeline'),
+                                'custom'        =>  __('Custom', 'bb-timeline')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('timeline_date_custom_letter_spacing')
+                                )
+                            )
+                        ),
+
+                        'timeline_date_custom_letter_spacing' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Letter Spacing', 'bb-timeline'),
+                            'default'       => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => 'px'
+                        ),
+
+                        'timeline_date_color'    => array( 
+                            'type'       => 'color',
+                            'label'         => __('Text Color', 'bb-timeline'),
+                            'default'    => 'bdd0db',
+                            'show_reset' => true,
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'color',
+                                'selector' => '.bb-tmtime'
+                            )
+                        ),
+                    )
+                ),
+            )
         ),      
     )
 );

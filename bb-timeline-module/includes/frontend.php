@@ -1,7 +1,9 @@
 <!--Heading_Title-->
-<<?php echo $settings->main_tag; ?> class="bb-timline-heading bb-heading-<?php echo $settings->heading_align; ?>">
+<div class="header-title bb-heading-<?php echo $settings->heading_align; ?>">
+<<?php echo $settings->main_tag; ?> class="bb-timline-heading">
 	<?php echo $settings->heading_title; ?>
-</<?php echo $settings->main_tag; ?>>
+</<?php echo $settings->main_tag; ?>>	
+</div>
 <!--/.Heading_Title-->
 
 <div class="bb-tmtimeline-container bb-timeline-<?php echo $settings->timeline_layout; ?>">
@@ -36,7 +38,7 @@
 			<!--/.Timline-Title-->
 
 			<!--Timline-description-->
-			<p><?php echo $timeline1->timeline_editor; ?></p>
+			<div class="bb-timline-dec"><?php echo $timeline1->timeline_editor; ?></div>
 			<!--/.Timline-description-->
 
 			</div>

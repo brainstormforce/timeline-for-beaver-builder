@@ -1,13 +1,13 @@
 /*main heading align*/
-.bb-timline-heading.bb-heading-left {
+.header-title.bb-heading-left {
     text-align: left;
 }
 
-.bb-timline-heading.bb-heading-center {
+.header-title.bb-heading-center {
     text-align: center;
 }
 
-.bb-timline-heading.bb-heading-right{
+.header-title.bb-heading-right{
     text-align: right;
 }
 /*main heading align /.*/
@@ -31,6 +31,10 @@
 
 .bb-tmicon i {
     line-height: 2.1;
+}
+
+.bb-timline-heading {
+    display: inline-block;
 }
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
 /*-----------------------------Timeline-Layout-LEFT-Start----------------------------*/
@@ -59,11 +63,6 @@
 	text-align: right;
 }
 
-.bb-timeline-left .bb-tmtimeline > li .bb-tmtime span:first-child {
-	font-size: 18px;
-	line-height: 2;
-	color: #bdd0db;
-}
 
 /* Right content */
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
@@ -210,11 +209,6 @@
 	background: #6cbfee;
 }
 
-.bb-timeline-right .bb-tmtimeline > li .bb-tmtime span:first-child {
-	font-size: 18px;
-	line-height: 2;
-	color: #bdd0db;
-}
 /*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
 /*-----------------------------Timeline-Layout-BOTH-Start----------------------------*/
 .bb-timeline-both .bb-tmtimeline:before {
@@ -299,17 +293,8 @@
     left: 0;
 }
 
-.bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmtime span:first-child {
-    font-size: 18px;
-    line-height: 2;
-    color: #bdd0db;
-    text-align: left;
-}
 
 .bb-timeline-both .bb-tmtimeline > li .bb-tmtime span:first-child {
-    font-size: 18px;
-    line-height: 2;
-    color: #bdd0db;
     text-align: right;
 }
 
