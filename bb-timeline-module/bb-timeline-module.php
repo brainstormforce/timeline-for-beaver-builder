@@ -18,7 +18,7 @@ class BSFBBTimelines extends FLBuilderModule {
             'category'		=> __('Advanced Modules', 'bb-timeline'),
             'dir'           => BB_TIMELINE_DIR . 'bb-timeline-module/',
             'url'           => BB_TIMELINE_URL . 'bb-timeline-module/',
-            'partial_refresh'   => true
+            'partial_refresh'   => false
         ));
         
     }
@@ -352,7 +352,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             ),
                             'toggle'        => array(
                                 'show'        => array(
-                                    'fields'        => array('heading_border_style', 'heading_border_width', 'heading_border_color' )
+                                    'fields'        => array('heading_border_style', 'heading_border_width', 'heading_border_color', 'heading_border_radius' )
                                 )
                             )
                         ),
@@ -389,6 +389,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'type'          => 'color',
                             'label'         => __('Border Color', 'bb-timeline'),
                             'default'       => 'cccccc',
+                            'show_reset' => true,
                             'preview'       => array(
                                 'type'          => 'css',
                                 'selector'      => '.bb-timline-heading',
@@ -429,7 +430,73 @@ FLBuilder::register_module('BSFBBTimelines',
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
             'sections'      => array(
+                'timeline_first_sections'     => array(
+                    'title'         => __('Timeline Even Sections', 'bb-timeline'),
+                    'fields'        => array(
 
+                        'odd_sections_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+
+                        'odd_sections_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bb-timeline'),
+                            'default'     => '',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '5',
+                        ),
+                    )
+                ),
+
+                'timeline_second_sections'     => array(
+                    'title'         => __('Timeline Odd Sections', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'even_sections_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+
+                        'even_sections_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bb-timeline'),
+                            'default'     => '',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '5',
+                        ),
+
+                    )
+                ),
+
+                'timeline_connector'     => array(
+                    'title'         => __('Timeline Connector', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'connector_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+
+                        'connector_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bb-timeline'),
+                            'default'     => '50',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '5',
+                        ),
+
+                    )
+                ),
             )
         ),   
 

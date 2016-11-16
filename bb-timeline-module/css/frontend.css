@@ -45,7 +45,7 @@
     top: 0;
     bottom: 0;
     width: 10px;
-    background: #afdcf8;
+    /*background: #afdcf8;*/
     left: 20%;
     margin-left: -10px;
 }
@@ -67,7 +67,7 @@
 /* Right content */
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
 	margin: 0 0 30px 25%;
-	background: #3594cb;
+	/*background: #3594cb;*/
 	color: #fff;
 	padding: 2em;
 	font-size: 1.2em;
@@ -78,7 +78,7 @@
 }
 
 .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-	background: #6cbfee;
+	/*background: #6cbfee;*/
 }
 
 /* The triangle */
@@ -90,13 +90,13 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-right-color: #3594cb;
+	/*border-right-color: #3594cb;*/
 	border-width: 10px;
 	top: 10px;
 }
 
 .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-	border-right-color: #6cbfee;
+	/*border-right-color: #6cbfee;*/
 }
 
 /* The icons */
@@ -113,9 +113,9 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    background: #46a4da;
+    /*background: #46a4da;*/
     border-radius: 50%;
-    box-shadow: 0 0 0 8px #afdcf8;
+    /*box-shadow: 0 0 0 8px #afdcf8;*/
     text-align: center;
     left: 20%;
     top: 0;
@@ -141,7 +141,7 @@
     top: 0;
     bottom: 0;
     width: 10px;
-    background: #afdcf8;
+    /*background: #afdcf8;*/
     right: 20%;
     margin-right: -10px;
 }
@@ -167,9 +167,9 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    background: #46a4da;
+    /*background: #46a4da;*/
     border-radius: 50%;
-    box-shadow: 0 0 0 8px #afdcf8;
+    /*box-shadow: 0 0 0 8px #afdcf8;*/
     text-align: center;
     right: 20%;
     top: 0;
@@ -178,7 +178,7 @@
 
 .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
     margin: 0 25% 30px 0;
-    background: #3594cb;
+    /*background: #3594cb;*/
     color: #fff;
     padding: 2em;
     font-size: 1.2em;
@@ -189,7 +189,7 @@
 }
 
 .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-left-color: #6cbfee;
+    /*border-left-color: #6cbfee;*/
 }
 
 .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
@@ -200,13 +200,13 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #3594cb;
+    /*border-left-color: #3594cb;*/
     border-width: 10px;
     top: 10px;
 }
 
 .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-	background: #6cbfee;
+	/*background: #6cbfee;*/
 }
 
 /*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
@@ -217,7 +217,7 @@
     top: 0;
     bottom: 0;
     width: 10px;
-    background: #afdcf8;
+/*    background: #afdcf8;*/
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -235,9 +235,9 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    background: #46a4da;
+    /*background: #46a4da;*/
     border-radius: 50%;
-    box-shadow: 0 0 0 8px #afdcf8;
+    /*box-shadow: 0 0 0 8px #afdcf8;*/
     text-align: center;
     right: 0;
     left: 0;
@@ -257,7 +257,7 @@
 
 .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
     margin: 0 0 30px 55%;
-    background: #3594cb;
+    /*background: #3594cb;*/
     color: #fff;
     padding: 2em;
     font-size: 1.2em;
@@ -268,12 +268,12 @@
 }
 
 .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-    background: #6cbfee;
+    /*background: #6cbfee;*/
     margin: 0 55% 30px 0;
 }
 
 .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-left-color: #6cbfee;
+    /*border-left-color: #6cbfee;*/
     border-right-color: transparent;
     right: 0;
     left: 100%;
@@ -291,11 +291,11 @@
     position: absolute;
     right: auto;
     left: 0;
+    text-align: right;
 }
 
-
-.bb-timeline-both .bb-tmtimeline > li .bb-tmtime span:first-child {
-    text-align: right;
+.bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmtime {
+    text-align: left;
 }
 
 .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after {
@@ -306,13 +306,13 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #3594cb;
+    /*border-right-color: #3594cb;*/
     border-width: 10px;
     top: 10px;
 }
 
 .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-left-color: #6cbfee;
+    /*border-left-color: #6cbfee;*/
     border-right-color: transparent;
     right: 0;
     left: 100%;
@@ -354,13 +354,13 @@
 		right: auto;
 		left: 20px;
 		border-right-color: transparent;
-		border-bottom-color: #3594cb;
+		/*border-bottom-color: #3594cb;*/
 		top: -20px;
 	}
 
 	.bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 		border-right-color: transparent;
-		border-bottom-color: #6cbfee;
+		/*border-bottom-color: #6cbfee;*/
 	}
 
 	.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
@@ -390,13 +390,13 @@
 
 	.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 		border-left-color: transparent;
-    	border-bottom-color: #6cbfee;
+    	/*border-bottom-color: #6cbfee;*/
 	}
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after{
 		right: auto;
     	left: 20px;
     	border-left-color: transparent;
-    	border-bottom-color: #3594cb;
+    	/*border-bottom-color: #3594cb;*/
     	top: -20px;
 	}
 
@@ -418,6 +418,9 @@
 	.bb-timeline-both .bb-tmtimeline > li .bb-tmtime span {
 	    text-align: left;
 	}
+	.bb-timeline-both .bb-tmtimeline > li .bb-tmtime{
+		text-align: left;
+	}
 
 	.bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
 	    margin: 0 0 40px 0;
@@ -427,13 +430,13 @@
 	}
 
 	.bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-	    background: #6cbfee;
+	    /*background: #6cbfee;*/
 	    margin: 1px 0 40px 0;
 	}
 
 	.bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 	    border-left-color: transparent;
-	    border-bottom-color: #6cbfee;
+	    /*border-bottom-color: #6cbfee;*/
 	    right: auto;
 	    left: 20px;
 	    top: -20px;
@@ -442,7 +445,7 @@
 		right: auto;
 	    left: 20px;
 	    border-right-color: transparent;
-	    border-bottom-color: #3594cb;
+	    /*border-bottom-color: #3594cb;*/
 	    top: -20px;
 	}
 

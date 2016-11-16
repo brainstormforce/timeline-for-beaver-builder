@@ -150,3 +150,90 @@
     text-align: <?php echo $settings->timeline_date_align; ?>;
 <?php endif; ?>
 }
+
+/* Timeline Connector */
+<?php $connector_bg_color = ( !empty($settings->connector_bg_color) ) ? $settings->connector_bg_color : '46a4da' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline:before {
+	background-color: #<?php echo $connector_bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+}
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
+	box-shadow: 0 0 0 8px rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+	background: #<?php echo $connector_bg_color; ?>;
+}
+
+
+/* Timeline Sections Odd Even */
+<?php $odd_sections_bg_color = ( !empty($settings->odd_sections_bg_color) ) ? $settings->odd_sections_bg_color : '6cbfee' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel{
+	background-color: #<?php echo $odd_sections_bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($odd_sections_bg_color)) ?>, <?php echo ( $settings->odd_sections_bg_color_opc != '' ) ? $settings->odd_sections_bg_color_opc/100 : 100; ?>);
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-right-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-left-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-left-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-right-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-left-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-right-color: transparent;
+}
+
+<?php $even_sections_bg_color = ( !empty($settings->even_sections_bg_color) ) ? $settings->even_sections_bg_color : '3594cb' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmlabel{
+	background-color: #<?php echo $even_sections_bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($even_sections_bg_color)) ?>, <?php echo ( $settings->even_sections_bg_color_opc != '' ) ? $settings->even_sections_bg_color_opc/100 : 100; ?>);
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
+	border-right-color: #<?php echo $even_sections_bg_color; ?>;
+}
+
+.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
+    border-right-color: #<?php echo $even_sections_bg_color; ?>;
+    border-left-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
+    border-left-color: #<?php echo $even_sections_bg_color; ?>;
+    border-right-color: transparent;
+}
+
+/*Dynamic Responsive */
+@media screen and (max-width: 768px) {
+/* Connector */
+.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-bottom-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-bottom-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+    border-bottom-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
+	border-bottom-color: #<?php echo $even_sections_bg_color; ?>;
+}
+
+.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
+    border-bottom-color: #<?php echo $even_sections_bg_color; ?>;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
+    border-bottom-color: #<?php echo $even_sections_bg_color; ?>;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+}
+
+
