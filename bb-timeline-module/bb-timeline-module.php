@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @class BSFBBTimelines
  */
@@ -19,10 +18,8 @@ class BSFBBTimelines extends FLBuilderModule {
             'dir'           => BB_TIMELINE_DIR . 'bb-timeline-module/',
             'url'           => BB_TIMELINE_URL . 'bb-timeline-module/',
             'partial_refresh'   => false
-        ));
-        
+        )); 
     }
-
 }
 
 /**
