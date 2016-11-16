@@ -27,9 +27,13 @@ class BSFBBTimelines extends FLBuilderModule {
  */
 FLBuilder::register_module('BSFBBTimelines', 
     array(
+
+        //General
         'general'       => array( // Tab
             'title'         => __('General', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
+
+                //Timeline layout Option
                 'layout'       => array( // Section
                     'title'         => 'Select Layout', // Section Title
                     'fields'        => array( // Section Fields
@@ -63,10 +67,12 @@ FLBuilder::register_module('BSFBBTimelines',
             )
         ),
 
+        //Heading
         'main_heading'       => array( // Tab
             'title'         => __('Heading', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
-
+                
+                //Add Heading Text
                 'heading'       => array( // Section
                     'title'         => __('Heading', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
@@ -85,6 +91,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     ) 
                 ),
 
+                //Heading Typography
                 'heading_typo'     => array(
                     'title'         => __('Heading Typography', 'bb-timeline'),
                     'fields'        => array(
@@ -144,6 +151,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Heading Color and Background
                 'heading_colornback'     => array(
                     'title'         => __('Heading Color & Background', 'bb-timeline'),
                     'fields'        => array(
@@ -178,6 +186,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Heading Alignment
                 'heading_alignments'     => array(
                     'title'         => __('Heading Alignments', 'bb-timeline'),
                     'fields'        => array(
@@ -291,6 +300,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
                 
+                //Heading Border
                 'heading_border'     => array(
                     'title'         => __('Heading Border', 'bb-timeline'),
                     'fields'        => array(
@@ -360,6 +370,7 @@ FLBuilder::register_module('BSFBBTimelines',
             )
         ),
         
+        //Add Timeline
         'timeline'      => array( // Tab
             'title'         => __('Timeline', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
@@ -378,9 +389,12 @@ FLBuilder::register_module('BSFBBTimelines',
             )
         ),
 
+        //Timeline Style
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
             'sections'      => array(
+
+                //Timeline First Section Styling
                 'timeline_first_sections'     => array(
                     'title'         => __('Timeline Even Sections', 'bb-timeline'),
                     'fields'        => array(
@@ -403,6 +417,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Timeline Second Section Styling
                 'timeline_second_sections'     => array(
                     'title'         => __('Timeline Odd Sections', 'bb-timeline'),
                     'fields'        => array(
@@ -426,6 +441,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Timeline Connector Styling
                 'timeline_connector'     => array(
                     'title'         => __('Timeline Connector', 'bb-timeline'),
                     'fields'        => array(
@@ -451,10 +467,12 @@ FLBuilder::register_module('BSFBBTimelines',
             )
         ),   
 
+        //Timeline Typography
         'timeline_typography'         => array(
             'title'         => __('Typography', 'bb-timeline'),
             'sections'      => array(
 
+                //Timeline Title
                 'timeline_title_typography'     => array(
                     'title'         => __('Timeline Title', 'bb-timeline'),
                     'fields'        => array(
@@ -537,7 +555,8 @@ FLBuilder::register_module('BSFBBTimelines',
 
                     )
                 ),
-
+                
+                //Timeline Description
                 'timeline_description_typography'     => array(
                     'title'         => __('Timeline Description', 'bb-timeline'),
                     'fields'        => array(
@@ -607,6 +626,7 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
                 
+                //Timeline Date
                 'timeline_date_typography'     => array(
                     'title'         => __('Timeline Date Typography', 'bb-timeline'),
                     'fields'        => array(
@@ -678,6 +698,8 @@ FLBuilder::register_settings_form('timeline_form', array(
         'general'      => array( // Tab
             'title'         => __('General', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
+                
+                //Title
                 'timeline_title_section'       => array( // Section
                     'title'         => __('Title', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
@@ -690,6 +712,8 @@ FLBuilder::register_settings_form('timeline_form', array(
 
                     ),
                 ),
+
+                //Description
                 'timeline_editor_section'       => array( // Section
                     'title'         => __('Timeline', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
@@ -703,6 +727,7 @@ FLBuilder::register_settings_form('timeline_form', array(
             )
         ),
 
+        //Add Date
         'timeline_date'       => array(
             'title'         => __('Timeline Date', 'bb-timeline'),
             'sections'      => array(
@@ -744,6 +769,7 @@ FLBuilder::register_settings_form('timeline_form', array(
             ),
         ),
 
+        //Add Icon
         'timeline_icon'       => array(
             'title'         => __('Timeline Icon', 'bb-timeline'),
             'sections'      => array(
