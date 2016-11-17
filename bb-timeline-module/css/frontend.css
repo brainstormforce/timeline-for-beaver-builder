@@ -30,7 +30,7 @@
 }
 
 .bb-tmicon i {
-    line-height: 2.1;
+    vertical-align: middle;
 }
 
 .bb-timline-heading {
@@ -106,7 +106,7 @@
     font-variant: normal;
     text-transform: none;
     font-size: 1.4em;
-    line-height: 40px;
+    line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
@@ -159,7 +159,7 @@
     font-variant: normal;
     text-transform: none;
     font-size: 1.4em;
-    line-height: 40px;
+    line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
@@ -215,7 +215,7 @@
     font-variant: normal;
     text-transform: none;
     font-size: 1.4em;
-    line-height: 40px;
+    line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
