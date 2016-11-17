@@ -103,15 +103,15 @@
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($odd_sections_bg_color)) ?>, <?php echo ( $settings->odd_sections_bg_color_opc != '' ) ? $settings->odd_sections_bg_color_opc/100 : 100; ?>);
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-right-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-right-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($odd_sections_bg_color)) ?>, <?php echo ( $settings->odd_sections_bg_color_opc != '' ) ? $settings->odd_sections_bg_color_opc/100 : 100; ?>);
     border-left-color: transparent;
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-left-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($odd_sections_bg_color)) ?>, <?php echo ( $settings->odd_sections_bg_color_opc != '' ) ? $settings->odd_sections_bg_color_opc/100 : 100; ?>);
     border-right-color: transparent;
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-    border-left-color: #<?php echo $odd_sections_bg_color; ?>;
+    border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($odd_sections_bg_color)) ?>, <?php echo ( $settings->odd_sections_bg_color_opc != '' ) ? $settings->odd_sections_bg_color_opc/100 : 100; ?>);
     border-right-color: transparent;
 }
 
@@ -121,15 +121,14 @@
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($even_sections_bg_color)) ?>, <?php echo ( $settings->even_sections_bg_color_opc != '' ) ? $settings->even_sections_bg_color_opc/100 : 100; ?>);
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
-	border-right-color: #<?php echo $even_sections_bg_color; ?>;
+	border-right-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($even_sections_bg_color)) ?>, <?php echo ( $settings->even_sections_bg_color_opc != '' ) ? $settings->even_sections_bg_color_opc/100 : 100; ?>);
 }
-
 .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
-    border-right-color: #<?php echo $even_sections_bg_color; ?>;
+    border-right-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($even_sections_bg_color)) ?>, <?php echo ( $settings->even_sections_bg_color_opc != '' ) ? $settings->even_sections_bg_color_opc/100 : 100; ?>);
     border-left-color: transparent;
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
-    border-left-color: #<?php echo $even_sections_bg_color; ?>;
+    border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($even_sections_bg_color)) ?>, <?php echo ( $settings->even_sections_bg_color_opc != '' ) ? $settings->even_sections_bg_color_opc/100 : 100; ?>);
     border-right-color: transparent;
 }
 
