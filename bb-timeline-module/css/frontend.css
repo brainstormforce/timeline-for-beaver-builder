@@ -60,6 +60,7 @@
 	width: 25%;
 	padding-right: 100px;
 	position: absolute;
+    text-align: right;
 }
 
 .bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
@@ -309,6 +310,7 @@
 		width: 100%;
 		position: relative;
 		padding: 0 0 20px 0;
+        text-align: left;
 	}
 
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
