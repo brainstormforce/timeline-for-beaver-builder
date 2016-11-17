@@ -36,6 +36,10 @@
 .bb-timline-heading {
     display: inline-block;
 }
+
+.bb-tmtime span {
+    display: inline-block;
+}
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
 
 /*-----------------------------Timeline-Layout-LEFT-Start----------------------------*/
@@ -59,7 +63,7 @@
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
-	display: block;
+	display: inline-block;
 	text-align: right;
 }
 

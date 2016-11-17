@@ -133,6 +133,7 @@
 
 /*Dynamic Responsive */
 @media screen and (max-width: 768px) {
+
 /* Connector */
 .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
     border-bottom-color: #<?php echo $odd_sections_bg_color; ?>;
@@ -166,5 +167,5 @@
 }
 
 }
-
+/*Dynamic Responsive End*/
 
