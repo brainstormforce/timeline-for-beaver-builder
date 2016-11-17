@@ -16,6 +16,10 @@
 			$timeline1 = $settings->timeline1[$i];
 		?>
 		<li>
+			<!--connector-->
+			<div class="bb-tmconector"></div>
+			<!--/ .connector-->
+
 			<!--date-->
 			<div class="bb-tmtime">
 				<span><?php echo $timeline1->day; ?>/<?php echo $timeline1->month; ?>/<?php echo $timeline1->year; ?></span> 

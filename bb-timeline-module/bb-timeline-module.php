@@ -40,7 +40,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_layout'       => array(
                             'type'          => 'select',
                             'label'         => __('Timeline Layouts', 'bb-timeline'),
-                            'default'       => 'left',
+                            'default'       => 'Right',
                             'class'         => '',
                             'options'       => array(
                                 'left'             => __('Left', 'bb-timeline'),
@@ -48,12 +48,12 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'both'             => __('Both Side', 'bb-timeline')
                             ),
                             'toggle'        => array(
-                                'left'      => array(
-                                    'sections'      => array( 'left' ),
-                                    'tabs'      => array( 'timeline1' )
-                                ),
                                 'right'      => array(
                                     'sections'      => array( 'right' ),
+                                    'tabs'      => array( 'timeline1' )
+                                ),
+                                'left'      => array(
+                                    'sections'      => array( 'left' ),
                                     'tabs'      => array( 'timeline1' )
                                 ),
                                 'both'      => array(
@@ -445,6 +445,65 @@ FLBuilder::register_module('BSFBBTimelines',
                 'timeline_connector'     => array(
                     'title'         => __('Timeline Connector', 'bb-timeline'),
                     'fields'        => array(
+
+                        'connector_border_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Border Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'options'       => array(
+                                'none'       =>  __('None', 'bb-timeline'),
+                                'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double'        => _x( 'double', 'Border type.', 'bb-timeline' ),
+                                'groove'        => _x( 'groove', 'Border type.', 'bb-timeline' ),
+                                'outset'        => _x( 'outset', 'Border type.', 'bb-timeline' ),
+                                'ridge'        => _x( 'ridge', 'Border type.', 'bb-timeline' )
+                            ),
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmtimeline:before',
+                                'property'      => 'border-left-style'
+                            ),
+                            'toggle'        => array(
+                                'solid'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'groove'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'outset'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                ),
+                                'ridge'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                )
+                            )   
+                        ),
+
+                        'connector_border_width'        => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Width', 'bb-timeline'),
+                            'default'       => '10',
+                            'maxlength'     => '2',
+                            'size'          => '3',
+                            'description'   => 'px',
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmtimeline:before',
+                                'property'      => 'border-left-width',
+                                'unit'          => 'px'
+                            )
+                        ),
 
                         'connector_bg_color' => array( 
                             'type'       => 'color',
