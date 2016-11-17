@@ -64,7 +64,6 @@
 
 .bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
 	display: inline-block;
-	text-align: right;
 }
 
 /* Right content */
@@ -300,14 +299,6 @@
 }
 /*-----------------------------Timeline-Layout-BOTH-End----------------------------*/
 
-/* Example Media Queries */
-@media screen and (max-width: 1024px) {
-
-	.bb-tmtimeline > li .bb-tmtime span:last-child {
-		font-size: 1.5em;
-	}
-}
-
 @media screen and (max-width: 768px) {
 	/*right responsive*/
 	.bb-tmtimeline:before {
@@ -318,10 +309,6 @@
 		width: 100%;
 		position: relative;
 		padding: 0 0 20px 0;
-	}
-
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
-		text-align: left;
 	}
 
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
