@@ -1,6 +1,6 @@
 /* Heading Typography */
-<?php if( !empty($settings->heading_font) && $settings->font['family'] != 'Default' ) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-heading{
+<?php if( !empty($settings->heading_font) && $settings->heading_font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb-timline-heading {
 	<?php FLBuilderFonts::font_css( $settings->heading_font ); ?>
 }
 <?php endif; ?>
@@ -40,8 +40,8 @@
 }
 
 /* Timeline Title Typography */
-<?php if( !empty($settings->timeline_title_font) && $settings->font['family'] != 'Default' ) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-title{
+<?php if( !empty($settings->timeline_title_font) && $settings->timeline_title_font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb-timline-title {
 	<?php FLBuilderFonts::font_css( $settings->timeline_title_font ); ?>
 }
 <?php endif; ?>
@@ -55,8 +55,8 @@
 }
 
 /* Timeline Description Typography */
-<?php if( !empty($settings->timeline_dec_font) && $settings->font['family'] != 'Default' ) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-dec{
+<?php if( !empty($settings->timeline_dec_font) && $settings->timeline_dec_font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb-timline-dec {
 	<?php FLBuilderFonts::font_css( $settings->timeline_dec_font ); ?>
 }
 <?php endif; ?>
@@ -70,8 +70,8 @@
 }
 
 /* Timeline Date Typography */
-<?php if( !empty($settings->timeline_date_font) && $settings->font['family'] != 'Default' ) : ?>
-.fl-node-<?php echo $id; ?> .bb-tmtime{
+<?php if( !empty($settings->timeline_date_font) && $settings->timeline_date_font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb-tmtime {
     <?php FLBuilderFonts::font_css( $settings->timeline_date_font ); ?>
 }
 <?php endif; ?>
@@ -81,7 +81,6 @@
     font-size: <?php echo $settings->timeline_date_custom_size; ?>px;
     line-height: <?php echo $settings->timeline_date_custom_line_height; ?>px;
     letter-spacing: <?php echo $settings->timeline_date_custom_letter_spacing; ?>px;
-    text-align: <?php echo $settings->timeline_date_align; ?>;
 }
 
 /* Timeline Connector */
