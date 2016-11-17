@@ -42,9 +42,9 @@
 }
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
 
-/*-----------------------------Timeline-Layout-LEFT-Start----------------------------*/
+/*-----------------------------Timeline-Layout-Right-Start----------------------------*/
 /* The line */
-.bb-timeline-left .bb-tmtimeline:before {
+.bb-timeline-right .bb-tmtimeline:before {
     content: '';
     position: absolute;
     top: 0;
@@ -55,20 +55,20 @@
 }
 
 /* The date/time */
-.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
 	display: block;
 	width: 25%;
 	padding-right: 100px;
 	position: absolute;
 }
 
-.bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
 	display: inline-block;
 	text-align: right;
 }
 
 /* Right content */
-.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
 	margin: 0 0 30px 25%;
 	color: #fff;
 	padding: 2em;
@@ -79,12 +79,12 @@
 	border-radius: 5px;
 }
 
-.bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
+.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
 	/*background: #6cbfee;*/
 }
 
 /* The triangle */
-.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
 	right: 100%;
 	border: solid transparent;
 	content: " ";
@@ -96,12 +96,12 @@
 	top: 10px;
 }
 
-.bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 	/*border-right-color: #6cbfee;*/
 }
 
 /* The icons */
-.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
     width: 40px;
     height: 40px;
     speak: none;
@@ -121,22 +121,22 @@
     margin: 0 0 0 -25px;
 }
 
-.bb-timeline-left .bb-tm-title-left {
+.bb-timeline-right .bb-tm-title-left {
     text-align: left;
 }
 
-.bb-timeline-left .bb-tm-title-center {
+.bb-timeline-right .bb-tm-title-center {
     text-align: center;
 }
 
-.bb-timeline-left .bb-tm-title-right{
+.bb-timeline-right .bb-tm-title-right{
     text-align: right;
 }
-/*-----------------------------Timeline-Layout-LEFT-End----------------------------*/
+/*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
 
-/*-----------------------------Timeline-Layout-RIGHT-Start-------------------------*/
+/*-----------------------------Timeline-Layout-LEFT-Start-------------------------*/
 
-.bb-timeline-right .bb-tmtimeline:before {
+.bb-timeline-left .bb-tmtimeline:before {
     content: '';
     position: absolute;
     top: 0;
@@ -146,7 +146,7 @@
     margin-right: -10px;
 }
 
-.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
+.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
     display: block;
     width: 25%;
     padding-left: 100px;
@@ -154,7 +154,7 @@
     right: 0;
 }
 
-.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
+.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
     width: 40px;
     height: 40px;
     speak: none;
@@ -174,7 +174,7 @@
     margin: 0 -25px 0 0;
 }
 
-.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
+.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
     margin: 0 25% 30px 0;
     color: #fff;
     padding: 2em;
@@ -185,7 +185,7 @@
     border-radius: 5px;
 }
 
-.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
+.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
     left: 100%;
     border: solid transparent;
     content: " ";
@@ -309,75 +309,75 @@
 }
 
 @media screen and (max-width: 768px) {
-	/*left responsive*/
+	/*right responsive*/
 	.bb-tmtimeline:before {
 		display: none;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
+	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
 		width: 100%;
 		position: relative;
 		padding: 0 0 20px 0;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
+	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
 		text-align: left;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
+	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
 		margin: 0 0 30px 0;
 		padding: 1em;
 		font-weight: 400;
 		font-size: 95%;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
+	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
 		right: auto;
 		left: 20px;
 		border-right-color: transparent;
 		top: -20px;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+	.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 		border-right-color: transparent;
 	}
 
-	.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
+	.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
 		position: relative;
 		float: right;
 		left: auto;
 		margin: -55px 5px 0 0px;
 	}
 
-	/*right responsive*/
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
+	/*left responsive*/
+	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
 	    width: 100%;
 	    position: relative;
 	    padding: 0 0 20px 0;
 	}
 
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
+	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
 	    text-align: left;
 	}
 
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
+	.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
 	    margin: 0 0 40px 0;
 	    padding: 1em;
 	    font-weight: 400;
 	    font-size: 95%;
 	}
 
-	.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+	.bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 		border-left-color: transparent;
 	}
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after{
+	.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after{
 		right: auto;
     	left: 20px;
     	border-left-color: transparent;
     	top: -20px;
 	}
 
-	.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
+	.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
 	    position: relative;
 	    float: right;
 	    left: auto;
