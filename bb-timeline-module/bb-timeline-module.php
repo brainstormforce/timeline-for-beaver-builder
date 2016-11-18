@@ -48,12 +48,12 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'both'             => __('Both Side', 'bb-timeline')
                             ),
                             'toggle'        => array(
-                                'right'      => array(
-                                    'sections'      => array( 'right' ),
-                                    'tabs'      => array( 'timeline1' )
-                                ),
                                 'left'      => array(
                                     'sections'      => array( 'left' ),
+                                    'tabs'      => array( 'timeline1' )
+                                ),
+                                'right'      => array(
+                                    'sections'      => array( 'right' ),
                                     'tabs'      => array( 'timeline1' )
                                 ),
                                 'both'      => array(
@@ -64,6 +64,25 @@ FLBuilder::register_module('BSFBBTimelines',
                         ),
                     )
                 ),
+            )
+        ),
+
+        //Add Timeline
+        'timeline'      => array( // Tab
+            'title'         => __('Timeline', 'bb-timeline'), // Tab title
+            'sections'      => array( // Tab Sections
+                'general'       => array( // Section
+                    'title'         => '', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline1'     => array(
+                            'type'          => 'form',
+                            'label'         => __('Timeline', 'bb-timeline'),
+                            'form'          => 'timeline_form', // ID from registered form below
+                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
+                            'multiple'      => true
+                        ),
+                    )
+                )
             )
         ),
 
@@ -369,25 +388,6 @@ FLBuilder::register_module('BSFBBTimelines',
 
             )
         ),
-        
-        //Add Timeline
-        'timeline'      => array( // Tab
-            'title'         => __('Timeline', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                'general'       => array( // Section
-                    'title'         => '', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline1'     => array(
-                            'type'          => 'form',
-                            'label'         => __('Timeline', 'bb-timeline'),
-                            'form'          => 'timeline_form', // ID from registered form below
-                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
-                            'multiple'      => true
-                        ),
-                    )
-                )
-            )
-        ),
 
         //Timeline Style
         'timeline_style'     => array(
@@ -671,17 +671,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'property' => 'color',
                                 'selector' => '.bb-timline-dec'
                             )
-                        ),
-
-                        'timeline_dec_align'     => array(
-                            'type'          => 'select',
-                            'label'         => __('Title Alignment', 'bb-timeline'),
-                            'default'       => 'Left',
-                            'options'       => array(
-                                'left'      =>  __('Left', 'bb-timeline'),
-                                'center'    =>  __('Center', 'bb-timeline'),
-                                'right'     =>  __('Right', 'bb-timeline')
-                            ),
                         ),
                     )
                 ),

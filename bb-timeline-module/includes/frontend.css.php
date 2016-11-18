@@ -90,7 +90,7 @@
 	background: #<?php echo $connector_bg_color; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline .bb-tmconector {
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline:before {
 	width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
     border-left-style: <?php echo $settings->connector_border_style; ?>;

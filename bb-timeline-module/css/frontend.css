@@ -10,6 +10,10 @@
 .header-title.bb-heading-right{
     text-align: right;
 }
+
+.header-title .bb-timline-heading {
+    display: inline-block;
+}
 /*main heading align /.*/
 
 /*-----------------------------Common-CSS-Start---------------------------------------*/
@@ -33,10 +37,6 @@
     vertical-align: middle;
 }
 
-.bb-tmtimeline-container .bb-timline-heading {
-    display: inline-block;
-}
-
 .bb-tmtimeline-container .bb-tmtime span {
     display: inline-block;
 }
@@ -44,7 +44,7 @@
 
 /*-----------------------------Timeline-Layout-Right-Start----------------------------*/
 /* The line */
-.bb-timeline-right .bb-tmtimeline .bb-tmconector {
+.bb-timeline-right .bb-tmtimeline:before {
     content: '';
     position: absolute;
     top: 2px;
@@ -131,7 +131,7 @@
 
 /*-----------------------------Timeline-Layout-LEFT-Start-------------------------*/
 
-.bb-timeline-left .bb-tmtimeline .bb-tmconector {
+.bb-timeline-left .bb-tmtimeline:before {
     content: '';
     position: absolute;
     top: 2px;
@@ -194,7 +194,7 @@
 
 /*-----------------------------Timeline-Layout-BOTH-Start----------------------------*/
 
-.bb-timeline-both .bb-tmtimeline .bb-tmconector {
+.bb-timeline-both .bb-tmtimeline:before {
     content: '';
     position: absolute;
     top: 2px;
@@ -295,7 +295,7 @@
 
 @media screen and (max-width: 768px) {
 	/*right responsive*/
-	.bb-tmtimeline-container .bb-tmconector {
+	.bb-tmtimeline-container .bb-tmtimeline:before {
 		display: none;
 	}
 
