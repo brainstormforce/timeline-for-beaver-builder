@@ -40,11 +40,11 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_layout'       => array(
                             'type'          => 'select',
                             'label'         => __('Timeline Layouts', 'bb-timeline'),
-                            'default'       => 'Right',
+                            'default'       => 'left',
                             'class'         => '',
                             'options'       => array(
                                 'left'             => __('Left', 'bb-timeline'),
-                                'right'             => __('Right', 'bb-timeline'),
+                                'right'             => __('right', 'bb-timeline'),
                                 'both'             => __('Both Side', 'bb-timeline')
                             ),
                             'toggle'        => array(
@@ -403,7 +403,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'type'       => 'color',
                             'label'         => __('Background Color', 'bb-timeline'),
                             'default'    => '',
-                            'show_reset' => true,
+                            'show_reset' => true
                         ),
 
                         'odd_sections_bg_color_opc' => array( 
@@ -412,7 +412,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '5',
+                            'size'        => '5'
                         ),
                     )
                 ),
@@ -426,7 +426,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'type'       => 'color',
                             'label'         => __('Background Color', 'bb-timeline'),
                             'default'    => '',
-                            'show_reset' => true,
+                            'show_reset' => true
                         ),
 
                         'even_sections_bg_color_opc' => array( 
@@ -435,7 +435,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '5',
+                            'size'        => '5'
                         ),
 
                     )
@@ -460,11 +460,7 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'outset'        => _x( 'outset', 'Border type.', 'bb-timeline' ),
                                 'ridge'        => _x( 'ridge', 'Border type.', 'bb-timeline' )
                             ),
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmtimeline:before',
-                                'property'      => 'border-left-style'
-                            ),
+                            
                             'toggle'        => array(
                                 'solid'        => array(
                                     'fields'        => array( 'connector_border_width', 'connector_border_color' )
@@ -487,6 +483,11 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'ridge'        => array(
                                     'fields'        => array( 'connector_border_width', 'connector_border_color' )
                                 )
+                            ),
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmtimeline:before',
+                                'property'      => 'border-left-style'
                             )   
                         ),
 
@@ -509,7 +510,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'type'       => 'color',
                             'label'         => __('Background Color', 'bb-timeline'),
                             'default'    => '',
-                            'show_reset' => true,
+                            'show_reset' => true
                         ),
 
                         'connector_bg_color_opc' => array( 
@@ -518,7 +519,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '5',
+                            'size'        => '5'
                         ),
 
                     )
@@ -766,7 +767,7 @@ FLBuilder::register_settings_form('timeline_form', array(
                             'type'          => 'text',
                             'label'         => __('Timeline Title', 'bb-timeline'),
                             'default'       => 'Title of section',
-                            'description'   => '',
+                            'description'   => ''
                         )
 
                     ),
@@ -779,7 +780,7 @@ FLBuilder::register_settings_form('timeline_form', array(
                         'timeline_editor'          => array(
                             'type'          => 'editor',
                             'label'         => '',
-                            'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.',
+                            'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
                         ),
                     ),
                 ),
