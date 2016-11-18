@@ -54,6 +54,11 @@
 	text-align: <?php echo $settings->timeline_title_align; ?>;
 }
 
+.fl-node-<?php echo $id; ?> .bb-timline-title {
+	margin-top: <?php echo $settings->timeline_title_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->timeline_title_margin_bottom; ?>px;
+}
+
 /* Timeline Description Typography */
 <?php if( !empty($settings->timeline_dec_font) && $settings->timeline_dec_font['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb-timline-dec {
@@ -69,6 +74,11 @@
 	text-align: <?php echo $settings->timeline_dec_align; ?>;
 }
 
+.fl-node-<?php echo $id; ?> .bb-timline-dec {
+	margin-top: <?php echo $settings->timeline_dec_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->timeline_dec_margin_bottom; ?>px;
+}
+
 /* Timeline Date Typography */
 <?php if( !empty($settings->timeline_date_font) && $settings->timeline_date_font['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb-tmtime {
@@ -81,6 +91,18 @@
     font-size: <?php echo $settings->timeline_date_custom_size; ?>px;
     line-height: <?php echo $settings->timeline_date_custom_line_height; ?>px;
     letter-spacing: <?php echo $settings->timeline_date_custom_letter_spacing; ?>px;
+}
+
+/* Timeline Title border */
+.fl-node-<?php echo $id; ?> .bb-tmlabel-border-bottom {
+	border-bottom-width: <?php echo $settings->timeline_title_border_width; ?>px;
+    border-bottom-style: <?php echo $settings->timeline_title_border_style; ?>;
+    border-bottom-color: #<?php echo $settings->timeline_title_border_color; ?>;
+    width : <?php echo $settings->timeline_title_seperator_width; ?>%;
+}
+
+.fl-node-<?php echo $id; ?> .tm-title-border-bottom {
+    text-align: <?php echo $settings->timeline_title_border_align; ?>;
 }
 
 /* Timeline Connector */

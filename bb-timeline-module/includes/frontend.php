@@ -36,7 +36,9 @@
 				<?php echo $timeline1->timeline_title; ?>
 			</<?php echo $settings->tmtitle_tag; ?>>
 			<!--/.Timline-Title-->
-
+			<div class="tm-title-border-bottom">
+				<span class="bb-tmlabel-border-bottom"></span>
+			</div>
 			<!--Timline-description-->
 			<div class="bb-timline-dec"><?php echo $timeline1->timeline_editor; ?></div>
 			<!--/.Timline-description-->

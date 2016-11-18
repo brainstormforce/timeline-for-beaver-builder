@@ -23,11 +23,7 @@
     list-style: none !important;
     position: relative;
 } 
-.bb-tmtimeline-container .bb-tmtimeline > li .bb-tmlabel .bb-timline-title { 
-	margin-top: 0px;
-	padding: 0 0 10px 0;
-	border-bottom: 1px solid rgba(255,255,255,0.4);
-}
+
 .bb-tmtimeline-container .bb-tmtimeline > li {
 	position: relative;
 	margin: 0 !important;
@@ -39,6 +35,17 @@
 
 .bb-tmtimeline-container .bb-tmtime span {
     display: inline-block;
+}
+
+.tm-title-border-bottom {
+    width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+.bb-tmlabel-border-bottom {
+    display: inline-block;
+    vertical-align: bottom;
 }
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
 
