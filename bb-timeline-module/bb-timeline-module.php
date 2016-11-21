@@ -482,12 +482,7 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'ridge'        => array(
                                     'fields'        => array( 'connector_border_width', 'connector_border_color' )
                                 )
-                            ),
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmtimeline:before',
-                                'property'      => 'border-left-style'
-                            )   
+                            )
                         ),
 
                         'connector_border_width'        => array(
@@ -496,13 +491,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'       => '10',
                             'maxlength'     => '2',
                             'size'          => '1',
-                            'description'   => 'px',
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmtimeline:before',
-                                'property'      => 'border-left-width',
-                                'unit'          => 'px'
-                            )
+                            'description'   => 'px'
                         ),
 
                         'connector_bg_color' => array( 
@@ -942,6 +931,29 @@ FLBuilder::register_settings_form('timeline_form', array(
         'timeline_date'       => array(
             'title'         => __('Timeline Date', 'bb-timeline'),
             'sections'      => array(
+
+                //Title
+                'date_show_hide_section'       => array( // Section
+                    'title'         => __('Date Show / Hide', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'date_show_hide'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Show / Hide', 'bb-timeline'),
+                            'default'       => 'show',
+                            'options'       => array(
+                                'hide'      =>  __('Hide', 'bb-timeline'),
+                                'show'      => __( 'Show', 'bb-timeline' )
+                            ),
+                            'toggle'        => array(
+                                'show'        => array(
+                                    'sections'            => array( 'date' )
+                                ),
+                            )
+                        )
+                    ),
+                ),
+
+                //Set Date
                 'date'       => array(
                     'title'         => __( 'Date', 'bb-timeline' ),
                     'fields'        => array(

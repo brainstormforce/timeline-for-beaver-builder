@@ -112,7 +112,14 @@
 	background: #<?php echo $connector_bg_color; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline:before {
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel:before {
+	width: <?php echo $settings->connector_border_width; ?>px;
+	border-left-width: <?php echo $settings->connector_border_width; ?>px;
+    border-left-style: <?php echo $settings->connector_border_style; ?>;
+    border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+}
+
+.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before {
 	width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
     border-left-style: <?php echo $settings->connector_border_style; ?>;
