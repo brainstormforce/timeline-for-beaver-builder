@@ -1,44 +1,3 @@
-/* Heading Typography */
-<?php if( !empty($settings->heading_font) && $settings->heading_font['family'] != 'Default' ) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-heading {
-	<?php FLBuilderFonts::font_css( $settings->heading_font ); ?>
-}
-<?php endif; ?>
-
-.fl-node-<?php echo $id; ?> .bb-timline-heading {
-	font-size: <?php echo $settings->heading_size; ?>px;
-	line-height: <?php echo $settings->heading_line_height; ?>px;
-	letter-spacing: <?php echo $settings->heading_letter_spacing; ?>px;
-	text-align: <?php echo $settings->heading_align; ?>;
-	color: #<?php echo $settings->heading_color; ?>;
-}
-
-.fl-node-<?php echo $id; ?> .bb-timline-heading {
-	margin-top: <?php echo $settings->title_margin_top; ?>px;
-	margin-bottom: <?php echo $settings->title_margin_bottom; ?>px;
-	padding-top: <?php echo $settings->title_padding_top; ?>px;
-	padding-right: <?php echo $settings->title_padding_right; ?>px;
-	padding-bottom: <?php echo $settings->title_padding_bottom; ?>px;
-	padding-left: <?php echo $settings->title_padding_left; ?>px;
-}
-
-<?php if(!empty($settings->heading_bg_color)) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-heading { 
-	background-color: #<?php echo $settings->heading_bg_color; ?>;
-	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->heading_bg_color)) ?>, <?php echo ( $settings->heading_bg_color_opc != '' ) ? $settings->heading_bg_color_opc/100 : 100; ?>);
-}
-<?php endif; ?>
-
-/* heading border */
-.fl-node-<?php echo $id; ?> .bb-timline-heading {
-	border:<?php echo $settings->heading_border_width; ?>px <?php echo $settings->heading_border_style; ?> #<?php echo $settings->heading_border_color; ?>;
-	<?php if(!empty($settings->heading_border_radius)) : ?>	
-	border-radius: <?php echo $settings->heading_border_radius; ?>px;
-	-moz-border-radius: <?php echo $settings->heading_border_radius; ?>px;
-	-webkit-border-radius: <?php echo $settings->heading_border_radius; ?>px;
-	<?php endif; ?>	
-}
-
 /* Timeline Title Typography */
 <?php if( !empty($settings->timeline_title_font) && $settings->timeline_title_font['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb-timline-title {
@@ -71,7 +30,6 @@
 	font-size: <?php echo $settings->timeline_dec_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_dec_custom_line_height; ?>px;
 	letter-spacing: <?php echo $settings->timeline_dec_custom_letter_spacing; ?>px;
-	text-align: <?php echo $settings->timeline_dec_align; ?>;
 }
 
 .fl-node-<?php echo $id; ?> .bb-timline-dec {
@@ -108,8 +66,13 @@
 /* Timeline Connector */
 <?php $connector_bg_color = ( !empty($settings->connector_bg_color) ) ? $settings->connector_bg_color : '46a4da' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
-	box-shadow: 0 0 0 8px rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
-	background: #<?php echo $connector_bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+	background-color: #<?php echo $connector_bg_color; ?>;
+}
+
+<?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '3594CB' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
+	box-shadow: 0 0 0 8px rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_icon_border_bg_color)) ?>, <?php echo ( $settings->timeline_icon_border_bg_color_opc != '' ) ? $settings->timeline_icon_border_bg_color_opc/100 : 100; ?>);
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel:before {
@@ -117,6 +80,24 @@
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
     border-left-style: <?php echo $settings->connector_border_style; ?>;
     border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+}
+
+<?php
+	foreach( $settings->timeline1 as $item ) {
+?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmicon i {
+	color: #<?php echo $item->timeline_icon_colors; ?>;
+}
+<?php
+	}
+?>
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmicon, .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon img{
+	<?php if(!empty($settings->connector_border_radius)) : ?>	
+	border-radius: <?php echo $settings->connector_border_radius; ?>%;
+	-moz-border-radius: <?php echo $settings->connector_border_radius; ?>%;
+	-webkit-border-radius: <?php echo $settings->connector_border_radius; ?>%;
+	<?php endif; ?>	
 }
 
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before {

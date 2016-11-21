@@ -31,6 +31,9 @@
 
 .bb-tmtimeline-container .bb-tmicon i {
     vertical-align: middle;
+    display: block;
+    font-size: 26px;
+    line-height: 1.6;
 }
 
 .bb-tmtimeline-container .bb-tmtime span {
@@ -47,9 +50,24 @@
     display: inline-block;
     vertical-align: bottom;
 }
+
+.bb-tmtimeline-container .bb-tmtimeline > li:last-child .bb-tmlabel:before {
+    height: 100%;
+}
+
+.bb-timeline-both .bb-tmtimeline > li .bb-tmtime.bb-tmtime-hide {
+    display: none;
+}
+
+.bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon img {
+    max-width: 100%;
+    width: 40px;
+    height: 40px;
+}
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
 
 /*-----------------------------Timeline-Layout-Right-Start----------------------------*/
+
 /* The line */
 .bb-timeline-right .bb-tmlabel:before {
     content: '';
@@ -61,35 +79,6 @@
     transform: translateX(-50%);
     height: 111%;
 }
-
-.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
-    width: 40px;
-    height: 40px;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    font-size: 1.4em;
-    line-height: 37px;
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    left: -50px;
-    top: 0;
-    margin: 0;
-    transform: translateX(-50%);
-}
-/*.bb-timeline-right .bb-tmtimeline:before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    bottom: 0;
-    left: 20%;
-    margin-left: -10px;
-}*/
 
 /* The date/time */
 .bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
@@ -108,7 +97,7 @@
 .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
 	margin: 0 0 30px 25%;
 	color: #fff;
-	padding: 2em;
+	padding: 30px;
 	font-size: 1.2em;
 	font-weight: 300;
 	line-height: 1.4;
@@ -116,9 +105,6 @@
 	border-radius: 5px;
 }
 
-.bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-	/*background: #6cbfee;*/
-}
 
 /* The triangle */
 .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
@@ -134,7 +120,7 @@
 }
 
 /* The icons */
-/*.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
+.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
     width: 40px;
     height: 40px;
     speak: none;
@@ -142,17 +128,17 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    font-size: 1.4em;
     line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     text-align: center;
-    left: 20%;
+    left: -50px;
     top: 0;
-    margin: 0 0 0 -25px;
-}*/
+    margin: 0;
+    transform: translateX(-50%);
+}
 
 .bb-timeline-right .bb-tm-title-left {
     text-align: left;
@@ -168,15 +154,6 @@
 /*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
 
 /*-----------------------------Timeline-Layout-LEFT-Start-------------------------*/
-
-/*.bb-timeline-left .bb-tmtimeline:before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    bottom: 0;
-    right: 20%;
-    margin-right: -10px;
-}*/
 
 .bb-timeline-left .bb-tmlabel:before {
     content: '';
@@ -197,12 +174,11 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    font-size: 1.4em;
     line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     text-align: center;
     right: -50px;
     top: 0;
@@ -218,30 +194,10 @@
     right: 0;
 }
 
-/*.bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
-    width: 40px;
-    height: 40px;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    font-size: 1.4em;
-    line-height: 37px;
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    right: 20%;
-    top: 0;
-    margin: 0 -25px 0 0;
-}*/
-
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
     margin: 0 25% 30px 0;
     color: #fff;
-    padding: 2em;
+    padding: 30px;
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.4;
@@ -273,6 +229,7 @@
     left: 0;
     margin: 0 auto;
 }
+
 .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
     width: 40px;
     height: 40px;
@@ -281,12 +238,11 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    font-size: 1.4em;
     line-height: 37px;
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     text-align: center;
     right: 0;
     left: 0;
@@ -307,7 +263,7 @@
 .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
     margin: 0 0 30px 55%;
     color: #fff;
-    padding: 2em;
+    padding: 30px;
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.4;
@@ -380,7 +336,7 @@
 
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
 		margin: 0 0 30px 0;
-		padding: 1em;
+		padding: 20px;
 		font-weight: 400;
 		font-size: 95%;
 	}
@@ -396,13 +352,6 @@
 		border-right-color: transparent;
 	}
 
-/*	.bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
-		position: relative;
-		float: right;
-		left: auto;
-		margin: -55px 5px 0 0px;
-	}
-*/
     .bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
         position: absolute;
         float: right;
@@ -427,7 +376,7 @@
 
 	.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
 	    margin: 0 0 40px 0;
-	    padding: 1em;
+	    padding: 20px;
 	    font-weight: 400;
 	    font-size: 95%;
 	}
@@ -470,7 +419,7 @@
 
 	.bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
 	    margin: 0 0 40px 0;
-	    padding: 1em;
+	    padding: 20px;
 	    font-weight: 400;
 	    font-size: 95%;
 	}

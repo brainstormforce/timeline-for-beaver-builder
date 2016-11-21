@@ -1,12 +1,5 @@
-<!--Heading_Title-->
-<div class="header-title bb-heading-<?php echo $settings->heading_align; ?>">
-<<?php echo $settings->main_tag; ?> class="bb-timline-heading">
-	<?php echo $settings->heading_title; ?>
-</<?php echo $settings->main_tag; ?>>	
-</div>
-<!--/.Heading_Title-->
-
-<?php if( $settings->timeline_layout != 'both' ) { ?> <!-- If Left Or Right -->
+<?php if( $settings->timeline_layout != 'both' ) { ?> 
+<!-- If Left Or Right -->
 <div class="bb-tmtimeline-container bb-timeline-<?php echo $settings->timeline_layout; ?>">
 	<ul class="bb-tmtimeline">
 		<?php 
@@ -18,8 +11,11 @@
 		?>
 		<li>
 			<!--date-->
-			<div class="bb-tmtime">
-				<span><?php echo $timeline1->day; ?>/<?php echo $timeline1->month; ?>/<?php echo $timeline1->year; ?></span> 
+			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
+				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
+				<span class="feed-date">
+					<?php echo date($timeline1->date_format, strtotime($current_date)); ?>
+				</span> 
 			</div>
 			<!--/.date-->
 
@@ -27,10 +23,21 @@
 			<div class="bb-tmlabel">
 
 			<!--icon-->
+			<?php if( $timeline1->timeline_img_icon_type == 'icon' ){ ?>  
 			<div class="bb-tmicon">
-				<i class="<?php echo $timeline1->icon; ?>"></i>
+				<i class="<?php echo $timeline1->timeline_icon_style; ?>"></i>
 			</div>
 			<!--/.icon-->
+		    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
+		    <!--image-->
+			<div class="bb-tmicon">
+			    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
+				   <img src="<?php echo $timeline1->photo_src; ?>"/>
+				<?php } ?>
+			</div>
+			<!--/.image-->
+			<?php } ?>
+			
 
 			<!--Timline-Title-->
 			<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
@@ -51,7 +58,8 @@
 	</ul>
 </div>
 
-<?php } else { ?> <!-- If both -->
+<?php } else { ?> 
+<!-- If both -->
 <div class="bb-tmtimeline-container bb-timeline-<?php echo $settings->timeline_layout; ?>">
 	<ul class="bb-tmtimeline">
 		<?php 
@@ -63,16 +71,29 @@
 		?>
 		<li>
 			<!--date-->
-			<div class="bb-tmtime">
-				<span><?php echo $timeline1->day; ?>/<?php echo $timeline1->month; ?>/<?php echo $timeline1->year; ?></span> 
+			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
+				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
+				<span class="feed-date">
+					<?php echo date($timeline1->date_format, strtotime($current_date)); ?>
+				</span> 
 			</div>
 			<!--/.date-->
 
 			<!--icon-->
+			<?php if( $timeline1->timeline_img_icon_type == 'icon' ){ ?>  
 			<div class="bb-tmicon">
-				<i class="<?php echo $timeline1->icon; ?>"></i>
+				<i class="<?php echo $timeline1->timeline_icon_style; ?>"></i>
 			</div>
 			<!--/.icon-->
+		    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
+		    <!--image-->
+			<div class="bb-tmicon">
+			    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
+				   <img src="<?php echo $timeline1->photo_src; ?>"/>
+				<?php } ?>
+			</div>
+			<!--/.image-->
+			<?php } ?>
 
 			<!--Timline-Content-->
 			<div class="bb-tmlabel">
@@ -95,4 +116,5 @@
 		<?php endfor; ?>
 	</ul>
 </div>
+
 <?php } ?>
