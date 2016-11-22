@@ -133,16 +133,16 @@ FLBuilder::register_module('BSFBBTimelines',
 
                             'toggle'        => array(
                                 'solid'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
                                 ),
                                 'dashed'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
                                 )
                             )
                         ),
@@ -153,8 +153,10 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'       => '5',
                             'maxlength'     => '2',
                             'size'          => '2',
-                            'description'   => 'px'
+                            'description'   => 'px',
+                            'help'         => __('To manage connector line width this width will also applied to icon border.', 'bb-timeline')
                         ),
+
 
                         'connector_bg_color' => array( 
                             'type'       => 'color',
@@ -169,7 +171,8 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '2'
+                            'size'        => '2',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
                         ),
 
                         'timeline_icon_border_bg_color' => array( 
@@ -185,7 +188,8 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '2'
+                            'size'        => '2',
+                            'help'         => __('To manage icon border opacity.', 'bb-timeline')
                         ),
 
                         'connector_border_radius' => array(
@@ -194,7 +198,8 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'maxlength'     => '3',
                             'size'          => '2',
-                            'description'   => '%'
+                            'description'   => '%',
+                            'help'         => __('To manage icon border corners.', 'bb-timeline')
                         ),
 
                     )
