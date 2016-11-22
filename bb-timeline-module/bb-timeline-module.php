@@ -150,7 +150,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Connector line Width', 'bb-timeline'),
                             'default'       => '5',
                             'maxlength'     => '2',
-                            'size'          => '2',
+                            'size'          => '4',
                             'description'   => 'px',
                             'help'         => __('To manage connector line width this width will also applied to icon border.', 'bb-timeline')
                         ),
@@ -169,7 +169,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '2',
+                            'size'        => '4',
                             'help'         => __('To manage connector line opacity.', 'bb-timeline')
                         ),
 
@@ -186,7 +186,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '2',
+                            'size'        => '4',
                             'help'         => __('To manage icon border opacity.', 'bb-timeline')
                         ),
 
@@ -195,7 +195,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Icon Border Corners', 'bb-timeline'),
                             'default'     => '50',
                             'maxlength'     => '3',
-                            'size'          => '2',
+                            'size'          => '4',
                             'description'   => '%',
                             'help'         => __('To manage icon border corners.', 'bb-timeline')
                         ),
@@ -751,7 +751,7 @@ FLBuilder::register_settings_form('timeline_form', array(
                         'timeline_icon_style'          => array(
                             'type'          => 'icon',
                             'label'         => __('Icon', 'bb-timeline'),
-                            'default' => 'ua-icon ua-icon-Circle-Full',
+                            'default' => 'fa fa-circle-o',
                             'show_remove' => true,
                         ),
 
