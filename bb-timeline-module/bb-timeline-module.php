@@ -17,9 +17,7 @@ class BSFBBTimelines extends FLBuilderModule {
             'category'		=> __('Advanced Modules', 'bb-timeline'),
             'dir'           => BB_TIMELINE_DIR . 'bb-timeline-module/',
             'url'           => BB_TIMELINE_URL . 'bb-timeline-module/',
-            'editor_export'   => true, // Defaults to true and can be omitted.
-            'enabled'         => true, // Defaults to true and can be omitted.
-            'partial_refresh' => false, // Defaults to false and can be omitted.
+            'partial_refresh' => false // Defaults to false and can be omitted.
         )); 
     }
 
