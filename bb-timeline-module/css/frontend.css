@@ -135,7 +135,6 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    /*border-radius: 50%;*/
     text-align: center;
     left: -50px;
     top: 0;
@@ -182,7 +181,6 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    /*border-radius: 50%;*/
     text-align: center;
     right: -50px;
     top: 0;
@@ -248,7 +246,6 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     color: #fff;
-    /*border-radius: 50%;*/
     text-align: center;
     right: 0;
     left: 0;
