@@ -55,7 +55,7 @@
     height: 100%;
 }
 
-.bb-timeline-both .bb-tmtimeline > li .bb-tmtime.bb-tmtime-hide {
+.bb-tmtimeline-container .bb-tmtimeline > li .bb-tmtime.bb-tmtime-hide {
     display: none;
 }
 
