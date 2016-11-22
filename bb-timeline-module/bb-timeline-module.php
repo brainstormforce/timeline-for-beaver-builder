@@ -127,33 +127,22 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
                                 'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
                                 'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
-                                'double'        => _x( 'double', 'Border type.', 'bb-timeline' ),
-                                'groove'        => _x( 'groove', 'Border type.', 'bb-timeline' ),
-                                'outset'        => _x( 'outset', 'Border type.', 'bb-timeline' ),
-                                'ridge'        => _x( 'ridge', 'Border type.', 'bb-timeline' )
+                                'double'        => _x( 'Double', 'Border type.', 'bb-timeline' )
                             ),
-                            
+                            'help'         => __('For Double style effect, Connector line Width must be above 4px.', 'bb-timeline'),
+
                             'toggle'        => array(
                                 'solid'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
                                 ),
                                 'dashed'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
-                                ),
-                                'groove'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
-                                ),
-                                'outset'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
-                                ),
-                                'ridge'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc' )
                                 )
                             )
                         ),
@@ -161,9 +150,9 @@ FLBuilder::register_module('BSFBBTimelines',
                         'connector_border_width'        => array(
                             'type'          => 'text',
                             'label'         => __('Connector line Width', 'bb-timeline'),
-                            'default'       => '10',
+                            'default'       => '5',
                             'maxlength'     => '2',
-                            'size'          => '4',
+                            'size'          => '2',
                             'description'   => 'px'
                         ),
 
@@ -180,7 +169,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '4'
+                            'size'        => '2'
                         ),
 
                         'timeline_icon_border_bg_color' => array( 
@@ -196,7 +185,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '4'
+                            'size'        => '2'
                         ),
 
                         'connector_border_radius' => array(
@@ -204,7 +193,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Icon Border Corners', 'bb-timeline'),
                             'default'     => '50',
                             'maxlength'     => '3',
-                            'size'          => '4',
+                            'size'          => '2',
                             'description'   => '%'
                         ),
 
@@ -290,7 +279,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                         'timeline_title_align'     => array(
                             'type'          => 'select',
-                            'label'         => __('Heading Alignment', 'bb-timeline'),
+                            'label'         => __('Title Alignment', 'bb-timeline'),
                             'default'       => 'Left',
                             'options'       => array(
                                 'left'      =>  __('Left', 'bb-timeline'),
@@ -347,11 +336,9 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'solid'     => _x( 'Solid', 'Border type.', 'bb-timeline' ),
                                 'dashed'    => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
                                 'dotted'    => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
-                                'double'    => _x( 'double', 'Border type.', 'bb-timeline' ),
-                                'groove'    => _x( 'groove', 'Border type.', 'bb-timeline' ),
-                                'outset'    => _x( 'outset', 'Border type.', 'bb-timeline' ),
-                                'ridge'     => _x( 'ridge', 'Border type.', 'bb-timeline' )
+                                'double'    => _x( 'Double', 'Border type.', 'bb-timeline' )
                             ),
+                            'help'         => __('For Double style effect Separator Height must be above 3px', 'bb-timeline'),
                             'toggle'        => array(
                                 'solid'        => array(
                                     'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
@@ -363,15 +350,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                     'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
-                                ),
-                                'groove'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
-                                ),
-                                'outset'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
-                                ),
-                                'ridge'        => array(
                                     'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
                                 )
                             ),

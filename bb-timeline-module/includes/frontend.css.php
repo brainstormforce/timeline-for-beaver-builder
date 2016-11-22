@@ -56,7 +56,7 @@
 	border-bottom-width: <?php echo $settings->timeline_title_border_width; ?>px;
     border-bottom-style: <?php echo $settings->timeline_title_border_style; ?>;
     border-bottom-color: #<?php echo $settings->timeline_title_border_color; ?>;
-    width : <?php echo $settings->timeline_title_seperator_width; ?>%;
+    width : <?php echo ( $settings->timeline_title_seperator_width < '100' ) ? $settings->timeline_title_seperator_width : '100'; ?>%;
 }
 
 .fl-node-<?php echo $id; ?> .tm-title-border-bottom {
@@ -72,12 +72,17 @@
 
 <?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '3594CB' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
-	box-shadow: 0 0 0 8px rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_icon_border_bg_color)) ?>, <?php echo ( $settings->timeline_icon_border_bg_color_opc != '' ) ? $settings->timeline_icon_border_bg_color_opc/100 : 100; ?>);
+	border-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
+    border-style: <?php echo $settings->connector_border_style; ?>;
+    border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_icon_border_bg_color)) ?>, <?php echo ( $settings->timeline_icon_border_bg_color_opc != '' ) ? $settings->timeline_icon_border_bg_color_opc/100 : 100; ?>);
+    box-sizing: content-box;
+    box-shadow: none;
+    top: -<?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel:before {
-	width: <?php echo $settings->connector_border_width; ?>px;
-	border-left-width: <?php echo $settings->connector_border_width; ?>px;
+	width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
+	border-left-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
     border-left-style: <?php echo $settings->connector_border_style; ?>;
     border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
 }
