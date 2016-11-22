@@ -112,7 +112,7 @@ FLBuilder::register_module('BSFBBTimelines',
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
             'sections'      => array(
-                
+
                 //Timeline Connector Styling
                 'timeline_connector'     => array(
                     'title'         => __('Timeline Connector', 'bb-timeline'),
@@ -163,7 +163,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Connector line Width', 'bb-timeline'),
                             'default'       => '10',
                             'maxlength'     => '2',
-                            'size'          => '1',
+                            'size'          => '4',
                             'description'   => 'px'
                         ),
 
@@ -180,7 +180,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '50',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '5'
+                            'size'        => '4'
                         ),
 
                         'timeline_icon_border_bg_color' => array( 
@@ -196,7 +196,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
-                            'size'        => '5'
+                            'size'        => '4'
                         ),
 
                         'connector_border_radius' => array(
