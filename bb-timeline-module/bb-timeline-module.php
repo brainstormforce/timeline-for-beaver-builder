@@ -131,16 +131,16 @@ FLBuilder::register_module('BSFBBTimelines',
 
                             'toggle'        => array(
                                 'solid'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 ),
                                 'dashed'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color', 'timeline_icon_border_bg_color_opc' )
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 )
                             )
                         ),
@@ -178,16 +178,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Icon Border Color', 'bb-timeline'),
                             'default'    => '',
                             'show_reset' => true
-                        ),
-
-                        'timeline_icon_border_bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Icon Border Opacity', 'bb-timeline'),
-                            'default'     => '',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '4',
-                            'help'         => __('To manage icon border opacity.', 'bb-timeline')
                         ),
 
                         'connector_border_radius' => array(

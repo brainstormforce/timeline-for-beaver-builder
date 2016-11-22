@@ -74,7 +74,7 @@
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
 	border-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
     border-style: <?php echo $settings->connector_border_style; ?>;
-    border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_icon_border_bg_color)) ?>, <?php echo ( $settings->timeline_icon_border_bg_color_opc != '' ) ? $settings->timeline_icon_border_bg_color_opc/100 : 100; ?>);
+    border-color: #<?php echo $settings->timeline_icon_border_bg_color; ?>;
     box-sizing: content-box;
     box-shadow: none;
     top: -<?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
