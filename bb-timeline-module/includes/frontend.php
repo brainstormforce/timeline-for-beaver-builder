@@ -9,7 +9,7 @@
 			}
 			$timeline1 = $settings->timeline1[$i];
 		?>
-		<li>
+		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
@@ -69,7 +69,7 @@
 			}
 			$timeline1 = $settings->timeline1[$i];
 		?>
-		<li>
+		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>

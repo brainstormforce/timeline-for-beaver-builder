@@ -114,51 +114,51 @@ FLBuilder::register_module('BSFBBTimelines',
             'sections'      => array(
 
                 //Timeline First Section Styling
-                'timeline_first_sections'     => array(
-                    'title'         => __('Timeline Even Sections', 'bb-timeline'),
-                    'fields'        => array(
+                // 'timeline_first_sections'     => array(
+                //     'title'         => __('Timeline Even Sections', 'bb-timeline'),
+                //     'fields'        => array(
 
-                        'odd_sections_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
+                //         'odd_sections_bg_color' => array( 
+                //             'type'       => 'color',
+                //             'label'         => __('Background Color', 'bb-timeline'),
+                //             'default'    => '',
+                //             'show_reset' => true
+                //         ),
 
-                        'odd_sections_bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bb-timeline'),
-                            'default'     => '',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '5'
-                        ),
-                    )
-                ),
+                //         'odd_sections_bg_color_opc' => array( 
+                //             'type'        => 'text',
+                //             'label'       => __('Opacity', 'bb-timeline'),
+                //             'default'     => '',
+                //             'description' => '%',
+                //             'maxlength'   => '3',
+                //             'size'        => '5'
+                //         ),
+                //     )
+                // ),
 
                 //Timeline Second Section Styling
-                'timeline_second_sections'     => array(
-                    'title'         => __('Timeline Odd Sections', 'bb-timeline'),
-                    'fields'        => array(
+                // 'timeline_second_sections'     => array(
+                //     'title'         => __('Timeline Odd Sections', 'bb-timeline'),
+                //     'fields'        => array(
 
-                        'even_sections_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
+                //         'even_sections_bg_color' => array( 
+                //             'type'       => 'color',
+                //             'label'         => __('Background Color', 'bb-timeline'),
+                //             'default'    => '',
+                //             'show_reset' => true
+                //         ),
 
-                        'even_sections_bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bb-timeline'),
-                            'default'     => '',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '5'
-                        ),
+                //         'even_sections_bg_color_opc' => array( 
+                //             'type'        => 'text',
+                //             'label'       => __('Opacity', 'bb-timeline'),
+                //             'default'     => '',
+                //             'description' => '%',
+                //             'maxlength'   => '3',
+                //             'size'        => '5'
+                //         ),
 
-                    )
-                ),
+                //     )
+                // ),
 
                 //Timeline Connector Styling
                 'timeline_connector'     => array(
@@ -672,6 +672,36 @@ FLBuilder::register_settings_form('timeline_form', array(
             )
         ),
 
+        //Timeline Style
+        'timeline_style'     => array(
+            'title'         => __('Style', 'bb-timeline'),
+            'sections'      => array(
+
+                //Timeline Section Styling
+                'timeline_bg_sections'     => array(
+                    'title'         => __('Timeline Sections', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'sections_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'sections_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bb-timeline'),
+                            'default'     => '',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '5'
+                        ),
+                    )
+                ),
+            )
+        ),  
+
         //Add Date
         'timeline_date'       => array(
             'title'         => __('Timeline Date', 'bb-timeline'),
@@ -752,6 +782,7 @@ FLBuilder::register_settings_form('timeline_form', array(
             ),
         ),
 
+        //Timeline Icon / Image
         'timeline_item_image'      => array(
             'title'         => __('Icon / Image', 'bb-timeline'),
             'sections'      => array(
