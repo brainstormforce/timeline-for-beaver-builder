@@ -20,6 +20,8 @@ class BSFBBTimelines extends FLBuilderModule {
             'partial_refresh' => false // Defaults to false and can be omitted.
         )); 
 
+        $this->add_js('jquery-waypoints');
+
         // Register and enqueue your own.
         $this->add_css( 'animate', BB_TIMELINE_URL . 'assets/css/animate.css' );
     }
@@ -84,106 +86,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                     'tabs'      => array( 'timeline1' )
                                 )
                             ),
-                        ),
-                    )
-                ),
-
-                //Timeline Animation Option
-                'anim_general'          => array(
-                    'title'         => 'Timeline Animation',
-                    'fields'        => array(
-                        'tm_animation'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Animation', 'bb-timeline'),
-                            'default'       => 'no',
-                            'help'          => __('Choose one of the animation types for timeline.','bb-timeline'),
-                            'options'       => array(
-                                'no'                => __('No', 'bb-timeline'),
-                                'bounce'            => __( 'bounce' , 'bb-timeline' ),
-                                'flash'             => __( 'flash' , 'bb-timeline' ),
-                                'pulse'             => __( 'pulse' , 'bb-timeline' ),
-                                'rubberBand'        => __( 'rubberBand' , 'bb-timeline' ),
-                                'shake'             => __( 'shake' , 'bb-timeline' ),
-                                'headShake'         => __( 'headShake' , 'bb-timeline' ),
-                                'swing'             => __( 'swing' , 'bb-timeline' ),
-                                'tada'              => __( 'tada' , 'bb-timeline' ),
-                                'wobble'            => __( 'wobble' , 'bb-timeline' ),
-                                'jello'             => __( 'jello' , 'bb-timeline' ),
-                                'bounceIn'          => __( 'bounceIn' , 'bb-timeline' ),
-                                'bounceInDown'      => __( 'bounceInDown' , 'bb-timeline' ),
-                                'bounceInLeft'      => __( 'bounceInLeft' , 'bb-timeline' ),
-                                'bounceInRight'     => __( 'bounceInRight' , 'bb-timeline' ),
-                                'bounceInUp'        => __( 'bounceInUp' , 'bb-timeline' ),
-                                'fadeIn'            => __( 'fadeIn' , 'bb-timeline' ),
-                                'fadeInDown'        => __( 'fadeInDown' , 'bb-timeline' ),
-                                'fadeInDownBig'     => __( 'fadeInDownBig' , 'bb-timeline' ),
-                                'fadeInLeft'        => __( 'fadeInLeft' , 'bb-timeline' ),
-                                'fadeInLeftBig'     => __( 'fadeInLeftBig' , 'bb-timeline' ),
-                                'fadeInRight'       => __( 'fadeInRight' , 'bb-timeline' ),
-                                'fadeInRightBig'    => __( 'fadeInRightBig' , 'bb-timeline' ),
-                                'fadeInUp'          => __( 'fadeInUp' , 'bb-timeline' ),
-                                'fadeInUpBig'       => __( 'fadeInUpBig' , 'bb-timeline' ),
-                                'flipInX'           => __( 'flipInX' , 'bb-timeline' ),
-                                'flipInY'           => __( 'flipInY' , 'bb-timeline' ),
-                                'flipOutX'          => __( 'flipOutX' , 'bb-timeline' ),
-                                'flipOutY'          => __( 'flipOutY' , 'bb-timeline' ),
-                                'lightSpeedIn'      => __( 'lightSpeedIn' , 'bb-timeline' ),
-                                'rotateIn'          => __( 'rotateIn' , 'bb-timeline' ),
-                                'rotateInDownLeft'  => __( 'rotateInDownLeft' , 'bb-timeline' ),
-                                'rotateInDownRight' => __( 'rotateInDownRight' , 'bb-timeline' ),
-                                'rotateInUpLeft'    => __( 'rotateInUpLeft' , 'bb-timeline' ),
-                                'rotateInUpRight'   => __( 'rotateInUpRight' , 'bb-timeline' ),
-                                'rollIn'            => __( 'rollIn' , 'bb-timeline' ),
-                                'zoomIn'            => __( 'zoomIn' , 'bb-timeline' ),
-                                'zoomInDown'        => __( 'zoomInDown' , 'bb-timeline' ),
-                                'zoomInLeft'        => __( 'zoomInLeft' , 'bb-timeline' ),
-                                'zoomInRight'       => __( 'zoomInRight' , 'bb-timeline' ),
-                                'zoomInUp'          => __( 'zoomInUp' , 'bb-timeline' ),
-                                'slideInDown'       => __( 'slideInDown' , 'bb-timeline' ),
-                                'slideInLeft'       => __( 'slideInLeft' , 'bb-timeline' ),
-                                'slideInRight'      => __( 'slideInRight' , 'bb-timeline' ),
-                                'slideInUp'         => __( 'slideInUp' , 'bb-timeline' ),
-                            ),
-                        ),
-
-                        /*'tm_animation_duration'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Animation Duration', 'bb-timeline'),
-                            'default'       => '',
-                            'help'          => 'How long the animation effect should last. Decides the speed of effect.',
-                            'maxlength'     => '3',
-                            'size'          => '6',
-                            'description'   => 's',
-                        ),*/
-
-                        'tm_animation_delay'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Animation Delay', 'bb-timeline'),
-                            'placeholder'   => '0',
-                            'help'          => 'Delay the animation effect for seconds you entered.',
-                            'maxlength'     => '3',
-                            'size'          => '6',
-                            'description'   => 'sec',
-                        ),
-
-                        'tm_animation_repeat'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Repeat Animation', 'bb-timeline'),
-                            'placeholder'   => '1',
-                            'help'          => 'The animation effect will repeat to the count you enter. Enter 0 if you want to repeat it infinitely.',
-                            'maxlength'     => '3',
-                            'size'          => '6',
-                            'description'   => 'times',
-                        ),
-
-                        'tm_viewport_position'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Viewport Position', 'bb-timeline'),
-                            'placeholder'   => '90',
-                            'help'          => 'The area of screen from top where animation effect will start working.',
-                            'maxlength'     => '3',
-                            'size'          => '6',
-                            'description'   => '%',
                         ),
                     )
                 ),
@@ -699,6 +601,118 @@ FLBuilder::register_settings_form('timeline_form', array(
             )
         ),
 
+        //Timeline Animation Option
+        'animation_tab'       => array( // Tab
+            'title'         => __('Animation', 'uabb'), // Tab title
+            'sections'      => array( // Tab Sections
+                'anim_general'          => array(
+                    'title'         => 'Timeline Animation',
+                    'fields'        => array(
+                        'tm_animation'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Animation', 'bb-timeline'),
+                            'default'       => 'no',
+                            'help'          => __('Choose one of the animation types for timeline.','bb-timeline'),
+                            'options'       => array(
+                                'no'                => __('No', 'bb-timeline'),
+                                'bounce'            => __( 'bounce' , 'bb-timeline' ),
+                                'flash'             => __( 'flash' , 'bb-timeline' ),
+                                'pulse'             => __( 'pulse' , 'bb-timeline' ),
+                                'rubberBand'        => __( 'rubberBand' , 'bb-timeline' ),
+                                'shake'             => __( 'shake' , 'bb-timeline' ),
+                                'headShake'         => __( 'headShake' , 'bb-timeline' ),
+                                'swing'             => __( 'swing' , 'bb-timeline' ),
+                                'tada'              => __( 'tada' , 'bb-timeline' ),
+                                'wobble'            => __( 'wobble' , 'bb-timeline' ),
+                                'jello'             => __( 'jello' , 'bb-timeline' ),
+                                'bounceIn'          => __( 'bounceIn' , 'bb-timeline' ),
+                                'bounceInDown'      => __( 'bounceInDown' , 'bb-timeline' ),
+                                'bounceInLeft'      => __( 'bounceInLeft' , 'bb-timeline' ),
+                                'bounceInRight'     => __( 'bounceInRight' , 'bb-timeline' ),
+                                'bounceInUp'        => __( 'bounceInUp' , 'bb-timeline' ),
+                                'fadeIn'            => __( 'fadeIn' , 'bb-timeline' ),
+                                'fadeInDown'        => __( 'fadeInDown' , 'bb-timeline' ),
+                                'fadeInDownBig'     => __( 'fadeInDownBig' , 'bb-timeline' ),
+                                'fadeInLeft'        => __( 'fadeInLeft' , 'bb-timeline' ),
+                                'fadeInLeftBig'     => __( 'fadeInLeftBig' , 'bb-timeline' ),
+                                'fadeInRight'       => __( 'fadeInRight' , 'bb-timeline' ),
+                                'fadeInRightBig'    => __( 'fadeInRightBig' , 'bb-timeline' ),
+                                'fadeInUp'          => __( 'fadeInUp' , 'bb-timeline' ),
+                                'fadeInUpBig'       => __( 'fadeInUpBig' , 'bb-timeline' ),
+                                'flipInX'           => __( 'flipInX' , 'bb-timeline' ),
+                                'flipInY'           => __( 'flipInY' , 'bb-timeline' ),
+                                'flipOutX'          => __( 'flipOutX' , 'bb-timeline' ),
+                                'flipOutY'          => __( 'flipOutY' , 'bb-timeline' ),
+                                'lightSpeedIn'      => __( 'lightSpeedIn' , 'bb-timeline' ),
+                                'rotateIn'          => __( 'rotateIn' , 'bb-timeline' ),
+                                'rotateInDownLeft'  => __( 'rotateInDownLeft' , 'bb-timeline' ),
+                                'rotateInDownRight' => __( 'rotateInDownRight' , 'bb-timeline' ),
+                                'rotateInUpLeft'    => __( 'rotateInUpLeft' , 'bb-timeline' ),
+                                'rotateInUpRight'   => __( 'rotateInUpRight' , 'bb-timeline' ),
+                                'rollIn'            => __( 'rollIn' , 'bb-timeline' ),
+                                'zoomIn'            => __( 'zoomIn' , 'bb-timeline' ),
+                                'zoomInDown'        => __( 'zoomInDown' , 'bb-timeline' ),
+                                'zoomInLeft'        => __( 'zoomInLeft' , 'bb-timeline' ),
+                                'zoomInRight'       => __( 'zoomInRight' , 'bb-timeline' ),
+                                'zoomInUp'          => __( 'zoomInUp' , 'bb-timeline' ),
+                                'slideInDown'       => __( 'slideInDown' , 'bb-timeline' ),
+                                'slideInLeft'       => __( 'slideInLeft' , 'bb-timeline' ),
+                                'slideInRight'      => __( 'slideInRight' , 'bb-timeline' ),
+                                'slideInUp'         => __( 'slideInUp' , 'bb-timeline' ),
+                            ),
+                            
+                            'toggle'        => array(
+                                'no'        => array(
+                                    'fields'        => array( )
+                                ),
+                            )
+                        
+                        ),
+
+                        /*'tm_animation_duration'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Animation Duration', 'bb-timeline'),
+                            'default'       => '',
+                            'help'          => 'How long the animation effect should last. Decides the speed of effect.',
+                            'maxlength'     => '3',
+                            'size'          => '6',
+                            'description'   => 's',
+                        ),*/
+
+                        'tm_animation_delay'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Animation Delay', 'bb-timeline'),
+                            'placeholder'   => '0',
+                            'help'          => 'Delay the animation effect for seconds you entered.',
+                            'maxlength'     => '3',
+                            'size'          => '6',
+                            'description'   => 'sec',
+                        ),
+
+                        'tm_animation_repeat'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Repeat Animation', 'bb-timeline'),
+                            'placeholder'   => '1',
+                            'help'          => 'The animation effect will repeat to the count you enter. Enter 0 if you want to repeat it infinitely.',
+                            'maxlength'     => '3',
+                            'size'          => '6',
+                            'description'   => 'times',
+                        ),
+
+                        'tm_viewport_position'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Viewport Position', 'bb-timeline'),
+                            'placeholder'   => '90',
+                            'help'          => 'The area of screen from top where animation effect will start working.',
+                            'maxlength'     => '3',
+                            'size'          => '6',
+                            'description'   => '%',
+                        ),
+                    )
+                ),
+            )
+        ),
+
         //Timeline Style
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
@@ -871,8 +885,8 @@ FLBuilder::register_settings_form('timeline_form', array(
                 ),
 
             ),
-        ) 
+        ),
 
-
+         
     )
 ));

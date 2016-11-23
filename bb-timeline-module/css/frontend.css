@@ -51,8 +51,9 @@
     vertical-align: bottom;
 }
 
-.bb-tmtimeline-container .bb-tmtimeline > li:last-child .bb-tmlabel:before {
+.bb-tmtimeline-container .bb-tmtimeline > li:last-child .tm-conatiner-main:before {
     height: 100%;
+    border-radius: 0 0 20px 20px;
 }
 
 .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmtime.bb-tmtime-hide {
@@ -69,17 +70,29 @@
 
 /*-----------------------------Timeline-Layout-Right-Start----------------------------*/
 
+/* Right content */
+.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
+    margin: 0 0 30px 25%;
+    color: #fff;
+    padding: 30px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+}
+
 /* The line */
-.bb-timeline-right .bb-tmlabel:before {
+.bb-timeline-right .tm-conatiner-main:before {
     content: '';
     position: absolute;
     top: 2px;
     bottom: 0;
-    left: -50px;
+    left: 20%;
     margin-left: 0;
-    transform: translateX(-50%);
-    height: 120%;
-    border-radius: 0 0 10px 10px;
+    transform: translateX(0%);
+    height: 100%;
 }
 
 /* The date/time */
@@ -94,20 +107,6 @@
 .bb-timeline-right .bb-tmtimeline > li .bb-tmtime span {
 	display: inline-block;
 }
-
-/* Right content */
-.bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
-	margin: 0 0 30px 25%;
-	color: #fff;
-	padding: 30px;
-	font-size: 1.2em;
-	font-weight: 300;
-	line-height: 1.4;
-	position: relative;
-	border-radius: 5px;
-    display: inline-block;
-}
-
 
 /* The triangle */
 .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
@@ -136,10 +135,10 @@
     position: absolute;
     color: #fff;
     text-align: center;
-    left: -50px;
+    left: 18%;
     top: 0;
     margin: 0;
-    transform: translateX(-50%);
+    transform: translateX(-1px);
 }
 
 .bb-timeline-right .bb-tm-title-left {
@@ -157,16 +156,28 @@
 
 /*-----------------------------Timeline-Layout-LEFT-Start-------------------------*/
 
-.bb-timeline-left .bb-tmlabel:before {
+.bb-timeline-left .tm-conatiner-main:before {
     content: '';
     position: absolute;
     top: 2px;
     bottom: 0;
-    right: -50px;
+    right: 20%;
     margin-left: 0;
-    transform: translateX(50%);
-    height: 120%;
-    border-radius: 0 0 10px 10px;
+    transform: translateX(0%);
+    height: 100%;
+}
+
+.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
+    margin: 0 0 30px 0;
+    color: #fff;
+    padding: 30px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+    width: 75%;
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
@@ -182,10 +193,10 @@
     position: absolute;
     color: #fff;
     text-align: center;
-    right: -50px;
+    right: 18%;
     top: 0;
     margin: 0;
-    transform: translateX(50%);
+    transform: translateX(2px);
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
@@ -194,18 +205,6 @@
     padding-left: 100px;
     position: absolute;
     right: 0;
-}
-
-.bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
-    margin: 0 25% 30px 0;
-    color: #fff;
-    padding: 30px;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.4;
-    position: relative;
-    border-radius: 5px;
-    display: inline-block;
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after {
@@ -322,9 +321,9 @@
 }
 /*-----------------------------Timeline-Layout-BOTH-End----------------------------*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
     /*common css*/
-    .bb-tmtimeline-container .bb-tmlabel:before, .bb-timeline-both .bb-tmtimeline:before {
+    .bb-tmtimeline-container .tm-conatiner-main:before, .bb-timeline-both .bb-tmtimeline:before {
         display: none;
     }
 
