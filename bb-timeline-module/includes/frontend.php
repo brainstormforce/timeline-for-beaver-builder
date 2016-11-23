@@ -41,7 +41,7 @@
 
 				<?php } ?>
 
-				<div class="bb-tmlabel<?php echo( $settings->tm_animation_repeat == '0' ) ? 'infinite' : ''; ?>">	
+				<div class="bb-tmlabel">	
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
@@ -104,7 +104,7 @@
 
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
-				<div class="bb-tmlabel<?php echo( $settings->tm_animation_repeat == '0' ) ? 'infinite' : ''; ?>">
+				<div class="bb-tmlabel">
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>

@@ -74,7 +74,7 @@
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
 	border-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
     border-style: <?php echo $settings->connector_border_style; ?>;
-    border-color: #<?php echo $connector_bg_color; ?>;
+    border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
     box-sizing: content-box;
     box-shadow: none;
 }
@@ -105,14 +105,11 @@
 	top: -<?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 }
 
-
 /* Animation CSS */
-<?php if ( $settings->tm_animation_repeat != '' && $settings->tm_animation_repeat != '0' && $settings->tm_animation_repeat != '1'  ) { ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .animated {
-    -webkit-animation-iteration-count: <?php echo $settings->tm_animation_repeat; ?>;
-            animation-iteration-count: <?php echo $settings->tm_animation_repeat; ?>;
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .animated {
+	-webkit-animation-duration:  <?php echo $settings->tm_animation_duration; ?>s;
+	animation-duration: <?php echo $settings->tm_animation_duration; ?>s;
 }
-<?php } ?>
 
 /* foreach child section*/
 <?php

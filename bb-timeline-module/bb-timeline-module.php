@@ -144,34 +144,28 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'slideInLeft'       => __( 'slideInLeft' , 'bb-timeline' ),
                                 'slideInRight'      => __( 'slideInRight' , 'bb-timeline' ),
                                 'slideInUp'         => __( 'slideInUp' , 'bb-timeline' ),
-                            ),
-                            
-                            'toggle'        => array(
-                                'no'        => array(
-                                    'fields'        => array( )
-                                ),
-                            )
-                        
+                            ),                      
                         ),
 
                         'tm_animation_delay'          => array(
                             'type'          => 'text',
                             'label'         => __('Animation Delay', 'bb-timeline'),
                             'placeholder'   => '0',
-                            'help'          => 'Delay the animation effect for seconds you entered.',
+                            'help'          => 'Delay the animation effect for milliseconds you entered.',
                             'maxlength'     => '3',
                             'size'          => '6',
-                            'description'   => 'sec',
+                            'description'   => 'ms',
                         ),
 
-                        'tm_animation_repeat'          => array(
+                        'tm_animation_duration'          => array(
                             'type'          => 'text',
-                            'label'         => __('Repeat Animation', 'bb-timeline'),
+                            'label'         => __('Animation Duration', 'bb-timeline'),
+                            'default'       => '1',
                             'placeholder'   => '1',
-                            'help'          => 'The animation effect will repeat to the count you enter. Enter 0 if you want to repeat it infinitely.',
+                            'help'          => 'How long the animation effect should last. Decides the speed of effect.',
                             'maxlength'     => '3',
                             'size'          => '6',
-                            'description'   => 'times',
+                            'description'   => 's',
                         ),
 
                         'tm_viewport_position'          => array(
@@ -435,16 +429,16 @@ FLBuilder::register_module('BSFBBTimelines',
                             'help'         => __('For Double style effect Separator Height must be above 3px', 'bb-timeline'),
                             'toggle'        => array(
                                 'solid'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
                                 ),
                                 'dashed'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color' )
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align'  )
                                 )
                             ),
                             'preview'       => array(
