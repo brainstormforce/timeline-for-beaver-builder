@@ -105,7 +105,7 @@
 <?php
 	foreach( $settings->timeline1 as $i => $item ) {
 ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmicon i {
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon i {
 	color: #<?php echo $item->timeline_icon_colors; ?>;
 }
 
