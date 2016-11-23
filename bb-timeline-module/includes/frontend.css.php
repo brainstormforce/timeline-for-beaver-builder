@@ -65,7 +65,7 @@
 
 /* Timeline Connector */
 
-<?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '46a4da' ; ?>
+<?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '6CBFEE' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
 	background-color: #<?php echo $timeline_icon_border_bg_color; ?>;
 }
