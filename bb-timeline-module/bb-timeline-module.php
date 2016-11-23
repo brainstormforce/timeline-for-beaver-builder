@@ -175,7 +175,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                         'timeline_icon_border_bg_color' => array( 
                             'type'       => 'color',
-                            'label'         => __('Icon Border Color', 'bb-timeline'),
+                            'label'         => __('Icon Background Color', 'bb-timeline'),
                             'default'    => '',
                             'show_reset' => true
                         ),

@@ -64,20 +64,19 @@
 }
 
 /* Timeline Connector */
-<?php $connector_bg_color = ( !empty($settings->connector_bg_color) ) ? $settings->connector_bg_color : '46a4da' ; ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
-	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
-	background-color: #<?php echo $connector_bg_color; ?>;
+
+<?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '46a4da' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
+	background-color: #<?php echo $timeline_icon_border_bg_color; ?>;
 }
 
-<?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '3594CB' ; ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon{
+<?php $connector_bg_color = ( !empty($settings->connector_bg_color) ) ? $settings->connector_bg_color : '46a4da' ; ?>
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
 	border-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
     border-style: <?php echo $settings->connector_border_style; ?>;
-    border-color: #<?php echo $settings->timeline_icon_border_bg_color; ?>;
+    border-color: #<?php echo $connector_bg_color; ?>;
     box-sizing: content-box;
     box-shadow: none;
-    top: -<?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel:before {
@@ -100,6 +99,10 @@
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
     border-left-style: <?php echo $settings->connector_border_style; ?>;
     border-left-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
+}
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
+	top: -<?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 }
 
 <?php
@@ -157,6 +160,7 @@
 	    border-left-color: transparent;
 	    border-right-color: transparent;
 	}
+
 }
 
 <?php
