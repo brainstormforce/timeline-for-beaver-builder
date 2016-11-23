@@ -328,8 +328,23 @@
         display: none;
     }
 
-	/*right responsive*/
+    .bb-tmtimeline-container .bb-tmlabel .bb-timline-title {
+        text-align: left !important;
+    }
 
+    .bb-tmtimeline-container .bb-tmlabel .tm-title-border-bottom {
+        text-align: left !important;
+    }
+
+    .bb-tmtimeline-container .bb-tmlabel .bb-timline-dec p {
+        text-align: left !important;
+    }
+
+    .bb-tmtimeline-container .bb-tmlabel.bb-timline-dec p img {
+        margin-left: 0 !important;
+    }
+
+	/*right responsive*/
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
 		width: 100%;
 		position: relative;
