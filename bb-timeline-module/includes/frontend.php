@@ -20,7 +20,7 @@
 			<!--/.date-->
 
 			<!--Timline-Content-->
-			<div class="bb-tmlabel">
+			<div class="bb-tmlabel <?php echo ( $settings->tm_animation_repeat == '0' ) ? 'infinite' : ''; ?>">
 
 			<!--icon-->
 			<?php if( $timeline1->timeline_img_icon_type == 'icon' ){ ?>  
@@ -96,7 +96,7 @@
 			<?php } ?>
 
 			<!--Timline-Content-->
-			<div class="bb-tmlabel">
+			<div class="bb-tmlabel <?php echo ( $settings->tm_animation_repeat == '0' ) ? 'infinite' : ''; ?>">
 
 			<!--Timline-Title-->
 			<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">

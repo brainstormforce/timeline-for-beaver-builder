@@ -1,0 +1,14 @@
+(function($) {
+
+	$(document).ready(function() {
+	
+		new Animation({
+			id: '<?php echo $id ?>',
+			animation_delay: '<?php echo ( $settings->tm_animation_delay != '' && $settings->tm_animation_delay != '0' ) ? $settings->tm_animation_delay : ''; ?>',
+			animation: '<?php echo ( $settings->tm_animation == 'no' ) ? 'no' : 'animated '.$settings->tm_animation; ?>',
+			viewport_position: '<?php echo ( $settings->tm_viewport_position != '' ) ? $settings->tm_viewport_position : '90'; ?>'
+
+		});
+	});
+	
+})(jQuery);
