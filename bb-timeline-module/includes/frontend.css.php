@@ -106,19 +106,18 @@
 }
 
 
-
-<?php
-	foreach( $settings->timeline1 as $i => $item ) {
-?>
-
 /* Animation CSS */
-<?php if ( $item->tm_animation_repeat != '' && $item->tm_animation_repeat != '0' && $item->tm_animation_repeat != '1'  ) { ?>
+<?php if ( $settings->tm_animation_repeat != '' && $settings->tm_animation_repeat != '0' && $settings->tm_animation_repeat != '1'  ) { ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .animated {
-    -webkit-animation-iteration-count: <?php echo $item->tm_animation_repeat; ?>;
-            animation-iteration-count: <?php echo $item->tm_animation_repeat; ?>;
+    -webkit-animation-iteration-count: <?php echo $settings->tm_animation_repeat; ?>;
+            animation-iteration-count: <?php echo $settings->tm_animation_repeat; ?>;
 }
 <?php } ?>
 
+/* foreach child section*/
+<?php
+	foreach( $settings->timeline1 as $i => $item ) {
+?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon i {
 	color: #<?php echo $item->timeline_icon_colors; ?>;
 }

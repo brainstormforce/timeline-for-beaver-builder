@@ -21,7 +21,7 @@
 
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
-			
+
 				<!--icon-->
 				<?php if( $timeline1->timeline_img_icon_type == 'icon' ){ ?>  
 				<div class="bb-tmicon">
@@ -56,6 +56,7 @@
 					<div class="bb-timline-dec"><?php echo $timeline1->timeline_editor; ?></div>
 					<!--/.Timline-description-->
 				</div>
+
 			</div>
 			
 			<!--/.Timline-Content-->

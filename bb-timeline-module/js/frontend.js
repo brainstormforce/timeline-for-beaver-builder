@@ -3,7 +3,6 @@
 	Animation = function( settings )
 	{
 		this.settings 	  = settings;
-		this.timeline    = settings.timeline;
 		this.animation    = settings.animation;
 		this.animation_delay	  = settings.animation_delay;
 		this.viewport_position =	settings.viewport_position;
@@ -18,7 +17,6 @@
 	
 		settings	: {},
 		nodeClass   : '',
-		timeline   : '',
 		animation   : '',
 		animation_delay : 0,
 		viewport_position : 90,
@@ -50,7 +48,7 @@
 		_executeAnimation: function( e )
 		{
 
-			var module = $( this.nodeClass ).find('.bb-tmtimeline .tm-timeline-li-'+ this.timeline +' .bb-tmlabel'),
+			var module = $( this.nodeClass ).find('.bb-tmtimeline .bb-tmlabel'),
 				animation_class = this.animation,
 				delay  = parseInt( this.animation_delay );
 			if( delay > 0) {
