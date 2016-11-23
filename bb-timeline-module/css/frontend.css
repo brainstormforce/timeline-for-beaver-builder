@@ -168,7 +168,7 @@
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
-    margin: 0 0 30px 0;
+    margin: 0 25% 30px 0;
     color: #fff;
     padding: 30px;
     font-size: 1.2em;
@@ -177,7 +177,6 @@
     position: relative;
     border-radius: 5px;
     display: inline-block;
-    width: 75%;
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmicon {
