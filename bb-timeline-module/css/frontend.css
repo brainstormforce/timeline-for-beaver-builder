@@ -68,11 +68,11 @@
 }
 
 .animation {
-    opacity: 0;
+    visibility: hidden;
 }
 
 .animated {
-    opacity: 1;
+    visibility: visible;
 }
 
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
