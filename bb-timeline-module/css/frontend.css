@@ -93,7 +93,7 @@
     bottom: 0;
     left: 20%;
     margin-left: 0;
-    transform: translateX(0%);
+    transform: translateX(-50%);
     height: 100%;
 }
 
@@ -137,10 +137,10 @@
     position: absolute;
     color: #fff;
     text-align: center;
-    left: 18%;
+    left: 20%;
     top: 0;
     margin: 0;
-    transform: translateX(-1px);
+    transform: translateX(-50%);
 }
 
 .bb-timeline-right .bb-tm-title-left {
@@ -165,7 +165,7 @@
     bottom: 0;
     right: 20%;
     margin-left: 0;
-    transform: translateX(0%);
+    transform: translateX(50%);
     height: 100%;
 }
 
@@ -194,10 +194,10 @@
     position: absolute;
     color: #fff;
     text-align: center;
-    right: 18%;
+    right: 20%;
     top: 0;
     margin: 0;
-    transform: translateX(2px);
+    transform: translateX(50%);
 }
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
