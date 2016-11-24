@@ -90,6 +90,54 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Date Format
+                'date_format_section'       => array( // Section
+                    'title'         => __('Select Date Format', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'date_format'   => array(
+                            'type'          => 'select',
+                            'label'         => __('Date Format', 'bb-timeline'),
+                            'default'       => 'M j, Y',
+                            'options'       => array(
+                                'M j, Y'        => date('M j, Y'),
+                                'F j, Y'        => date('F j, Y'),
+                                'm/d/Y'         => date('m/d/Y'),
+                                'm-d-Y'         => date('m-d-Y'),
+                                'd M Y'         => date('d M Y'),
+                                'd F Y'         => date('d F Y'),
+                                'Y-m-d'         => date('Y-m-d'),
+                                'Y/m/d'         => date('Y/m/d'),
+                            )
+                        ),
+                    ),
+                ),
+            )
+        ),
+
+        //Add Timeline
+        'timeline'      => array( // Tab
+            'title'         => __('Timeline', 'bb-timeline'), // Tab title
+            'sections'      => array( // Tab Sections
+                'general'       => array( // Section
+                    'title'         => '', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline1'     => array(
+                            'type'          => 'form',
+                            'label'         => __('Timeline', 'bb-timeline'),
+                            'form'          => 'timeline_form', // ID from registered form below
+                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
+                            'multiple'      => true
+                        ),
+                    )
+                )
+            )
+        ),
+
+        //Timeline Style
+        'timeline_style'     => array(
+            'title'         => __('Style', 'bb-timeline'),
+            'sections'      => array(
+                //Timeline Animation
                 'anim_general'          => array(
                     'title'         => 'Timeline Animation',
                     'fields'        => array(
@@ -179,32 +227,6 @@ FLBuilder::register_module('BSFBBTimelines',
                         ),
                     )
                 ),
-            )
-        ),
-
-        //Add Timeline
-        'timeline'      => array( // Tab
-            'title'         => __('Timeline', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                'general'       => array( // Section
-                    'title'         => '', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline1'     => array(
-                            'type'          => 'form',
-                            'label'         => __('Timeline', 'bb-timeline'),
-                            'form'          => 'timeline_form', // ID from registered form below
-                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
-                            'multiple'      => true
-                        ),
-                    )
-                )
-            )
-        ),
-
-        //Timeline Style
-        'timeline_style'     => array(
-            'title'         => __('Style', 'bb-timeline'),
-            'sections'      => array(
 
                 //Timeline Connector Styling
                 'timeline_connector'     => array(
@@ -747,28 +769,6 @@ FLBuilder::register_settings_form('timeline_form', array(
                     ),
                 ),
 
-                //Date
-                'date_format_section'       => array( // Section
-                    'title'         => __('Select Date Format', 'bb-timeline'), // Section Title
-                    'fields'        => array( // Section Fields
-                        'date_format'   => array(
-                            'type'          => 'select',
-                            'label'         => __('Date Format', 'bb-timeline'),
-                            'default'       => 'M j, Y',
-                            'options'       => array(
-                                'M j, Y'        => date('M j, Y'),
-                                'F j, Y'        => date('F j, Y'),
-                                'm/d/Y'         => date('m/d/Y'),
-                                'm-d-Y'         => date('m-d-Y'),
-                                'd M Y'         => date('d M Y'),
-                                'd F Y'         => date('d F Y'),
-                                'Y-m-d'         => date('Y-m-d'),
-                                'Y/m/d'         => date('Y/m/d'),
-                            )
-                        ),
-                    ),
-                ),
-
                 //Set Date
                 'date'       => array(
                     'title'         => __( 'Date', 'bb-timeline' ),
@@ -793,6 +793,7 @@ FLBuilder::register_settings_form('timeline_form', array(
                             'default'       => date( 'Y' ),
                             'maxlength'     => '4',
                             'size'          => '5',
+                            'description'   => __('<br/><br/>Please fill all three fields to display date.', 'bb-timeline'),
                         ),
                     )
                 ),

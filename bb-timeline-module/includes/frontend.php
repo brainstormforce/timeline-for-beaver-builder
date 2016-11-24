@@ -10,15 +10,16 @@
 			$timeline1 = $settings->timeline1[$i];
 		?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
+			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo date($timeline1->date_format, strtotime($current_date)); ?>
+					<?php echo date($settings->date_format, strtotime($current_date)); ?>
 				</span> 
 			</div>
 			<!--/.date-->
-
+			<?php } ?>
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
 
@@ -77,14 +78,16 @@
 			$timeline1 = $settings->timeline1[$i];
 		?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
+			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo date($timeline1->date_format, strtotime($current_date)); ?>
+					<?php echo date($settings->date_format, strtotime($current_date)); ?>
 				</span> 
 			</div>
 			<!--/.date-->
+			<?php } ?>
 
 			<!--icon-->
 			<?php if( $timeline1->timeline_img_icon_type == 'icon' ){ ?>  
