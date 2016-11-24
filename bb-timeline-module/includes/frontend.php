@@ -42,7 +42,12 @@
 
 				<?php } ?>
 
-				<div class="bb-tmlabel">	
+				<?php
+					$hideClass = '';
+					if( $settings->tm_animation != 'no' ){
+					$hideClass = 'bb-hide-it';
+				} ?>
+				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
@@ -97,7 +102,7 @@
 			<!--/.icon-->
 		    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
 		    <!--image-->
-			<div class="bb-tmicon">
+			<div class="bb-tmicon bb-hide-it">
 			    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
 				   <img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>
@@ -107,7 +112,12 @@
 
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
-				<div class="bb-tmlabel">
+				<?php
+					$hideClass = '';
+					if( $settings->tm_animation != 'no' ){
+					$hideClass = 'bb-hide-it';
+				} ?>
+				<div class="bb-tmlabel <?php echo $hideClass; ?>">
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>

@@ -55,10 +55,12 @@
 				delay  = parseInt( this.animation_delay );
 			if( delay > 0 ) {
 				setTimeout(function(){
+					module.removeClass('bb-hide-it');
 					module.addClass(animation_class);
 				}, delay * 1000);
 			}
 			else {
+				module.removeClass('bb-hide-it');
 				module.addClass(animation_class);
 			}
 		},

@@ -67,12 +67,8 @@
     display: block;
 }
 
-.animation {
+.bb-hide-it {
     visibility: hidden;
-}
-
-.animated {
-    visibility: visible;
 }
 
 /*-----------------------------Common-CSS-Ends---------------------------------------*/
