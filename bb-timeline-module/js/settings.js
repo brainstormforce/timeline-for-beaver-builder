@@ -1,7 +1,6 @@
 (function($){
 
-	FLBuilder.registerModuleHelper('bb-timeline-module', {
-
+	FLBuilder.registerModuleHelper('bb_timeline_form', {
 		rules: {
 			height: {
 				number: true

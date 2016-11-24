@@ -51,18 +51,6 @@
     letter-spacing: <?php echo $settings->timeline_date_custom_letter_spacing; ?>px;
 }
 
-/* Timeline Title border */
-.fl-node-<?php echo $id; ?> .bb-tmlabel-border-bottom {
-	border-bottom-width: <?php echo $settings->timeline_title_border_width; ?>px;
-    border-bottom-style: <?php echo $settings->timeline_title_border_style; ?>;
-    border-bottom-color: #<?php echo $settings->timeline_title_border_color; ?>;
-    width : <?php echo ( $settings->timeline_title_seperator_width < '100' ) ? $settings->timeline_title_seperator_width : '100'; ?>%;
-}
-
-.fl-node-<?php echo $id; ?> .tm-title-border-bottom {
-    text-align: <?php echo $settings->timeline_title_border_align; ?>;
-}
-
 /* Timeline Connector */
 
 <?php $timeline_icon_border_bg_color = ( !empty($settings->timeline_icon_border_bg_color) ) ? $settings->timeline_icon_border_bg_color : '6CBFEE' ; ?>
@@ -115,6 +103,18 @@
 <?php
 	foreach( $settings->timeline1 as $i => $item ) {
 ?>
+/* Timeline Title border */
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel-border-bottom {
+	border-bottom-width: <?php echo $item->timeline_title_border_width; ?>px;
+    border-bottom-style: <?php echo $item->timeline_title_border_style; ?>;
+    border-bottom-color: #<?php echo $item->timeline_title_border_color; ?>;
+    width : <?php echo ( $item->timeline_title_seperator_width < '100' ) ? $item->timeline_title_seperator_width : '100'; ?>%;
+}
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-title-border-bottom {
+    text-align: <?php echo $item->timeline_title_border_align; ?>;
+}
+
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon i {
 	color: #<?php echo $item->timeline_icon_colors; ?>;
 }

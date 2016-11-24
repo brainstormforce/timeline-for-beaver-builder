@@ -124,7 +124,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline1'     => array(
                             'type'          => 'form',
                             'label'         => __('Timeline', 'bb-timeline'),
-                            'form'          => 'timeline_form', // ID from registered form below
+                            'form'          => 'bb_timeline_form', // ID from registered form below
                             'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
                             'multiple'      => true
                         ),
@@ -319,7 +319,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Timeline Title
                 'timeline_title_typography'     => array(
-                    'title'         => __('Title Typography', 'bb-timeline'),
+                    'title'         => __('Title', 'bb-timeline'),
                     'fields'        => array(
                         'tmtitle_tag'           => array(
                             'type'          => 'select',
@@ -431,99 +431,10 @@ FLBuilder::register_module('BSFBBTimelines',
                         )
                     )
                 ),
-                
-                //Separator
-                'timeline_title_border'     => array(
-                    'title'         => __('Separator', 'bb-timeline'),
-                    'fields'        => array(
-
-                        'timeline_title_border_style'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Separator Style', 'bb-timeline'),
-                            'default'       => 'solid',
-                            'options'       => array(
-                                'none'      =>  __('None', 'bb-timeline'),
-                                'solid'     => _x( 'Solid', 'Border type.', 'bb-timeline' ),
-                                'dashed'    => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
-                                'dotted'    => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
-                                'double'    => _x( 'Double', 'Border type.', 'bb-timeline' )
-                            ),
-                            'help'         => __('For Double style effect Separator Height must be above 3px', 'bb-timeline'),
-                            'toggle'        => array(
-                                'solid'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
-                                ),
-                                'dashed'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
-                                ),
-                                'dotted'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
-                                ),
-                                'double'        => array(
-                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align'  )
-                                )
-                            ),
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmlabel-border-bottom',
-                                'property'      => 'border-bottom-style'
-                            ),
-                        ),
-
-                        'timeline_title_border_color'         => array(
-                            'type'          => 'color',
-                            'label'         => __('Separator Color', 'bb-timeline'),
-                            'default'       => 'ffffff',
-                            'show_reset' => true,
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmlabel-border-bottom',
-                                'property'      => 'border-bottom-color'
-                            )
-                        ),
-
-                        'timeline_title_border_width'        => array(
-                            'type'          => 'text',
-                            'label'         => __('Separator Height', 'bb-timeline'),
-                            'default'       => '1',
-                            'maxlength'     => '2',
-                            'size'          => '3',
-                            'description'   => 'px',
-                            'preview'       => array(
-                                'type'          => 'css',
-                                'selector'      => '.bb-tmlabel-border-bottom',
-                                'property'      => 'border-bottom-width',
-                                'unit'          => 'px'
-                            )
-                        ),
-
-                        'timeline_title_seperator_width'        => array(
-                            'type'          => 'text',
-                            'label'         => __('Seperator Width', 'bb-timeline'),
-                            'default'       => '10',
-                            'maxlength'     => '3',
-                            'size'          => '3',
-                            'description'   => '%',
-                            
-                        ),
-
-                        'timeline_title_border_align'     => array(
-                            'type'          => 'select',
-                            'label'         => __('Separator Alignment', 'bb-timeline'),
-                            'default'       => 'Left',
-                            'options'       => array(
-                                'left'      =>  __('Left', 'bb-timeline'),
-                                'center'    =>  __('Center', 'bb-timeline'),
-                                'right'     =>  __('Right', 'bb-timeline')
-                            ),
-                            'help'         => __('This is the alignment option for title border', 'bb-timeline'),
-                        )
-                    )
-                ),
-                
+                               
                 //Timeline Description
                 'timeline_description_typography'     => array(
-                    'title'         => __('Description Typography', 'bb-timeline'),
+                    'title'         => __('Description', 'bb-timeline'),
                     'fields'        => array(
 
                         'timeline_dec_font'          => array(
@@ -614,7 +525,7 @@ FLBuilder::register_module('BSFBBTimelines',
                 
                 //Timeline Date
                 'timeline_date_typography'     => array(
-                    'title'         => __('Date Typography', 'bb-timeline'),
+                    'title'         => __('Date', 'bb-timeline'),
                     'fields'        => array(
 
                         'timeline_date_font'          => array(
@@ -678,7 +589,7 @@ FLBuilder::register_module('BSFBBTimelines',
 /**
  * Register a settings form to use in the "form" field type above.
  */
-FLBuilder::register_settings_form('timeline_form', array(
+FLBuilder::register_settings_form('bb_timeline_form', array(
     'title' => __('Add Timeline', 'bb-timeline'),
     'tabs'  => array(
         'general'      => array( // Tab
@@ -687,13 +598,12 @@ FLBuilder::register_settings_form('timeline_form', array(
                 
                 //Title
                 'timeline_title_section'       => array( // Section
-                    'title'         => __('Title', 'bb-timeline'), // Section Title
+                    'title'         => __('', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_title' => array(
                             'type'          => 'text',
                             'label'         => __('Timeline Title', 'bb-timeline'),
                             'default'       => 'Title of section',
-                            'description'   => ''
                         )
 
                     ),
@@ -701,14 +611,72 @@ FLBuilder::register_settings_form('timeline_form', array(
 
                 //Description
                 'timeline_editor_section'       => array( // Section
-                    'title'         => __('Timeline', 'bb-timeline'), // Section Title
+                    'title'         => __('', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_editor'          => array(
                             'type'          => 'editor',
-                            'label'         => '',
+                            'rows'          => 5,
                             'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.'
                         ),
                     ),
+                ),
+
+                // Timeline Icon / Image 
+                'timeline_img_icon'       => array(
+                    'title'         => __( 'Timeline Icon / Image', 'bb-timeline' ),
+                    'fields'        => array(
+                        'timeline_img_icon_type'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Type', 'bb-timeline'),
+                            'default'       => 'icon',
+                            'options'       => array(
+                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
+                                'icon'          => __('Icon', 'bb-timeline'),
+                                'photo'         => __('Image', 'bb-timeline'),
+                            ),
+                            'toggle'        => array(
+                                'icon'          => array(
+                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors' ),
+                                ),
+                                'photo'         => array(
+                                    'sections'   => array( 'timeline_img' ),
+                                )
+                            ),
+                        ),
+                    ),
+                ),
+
+                // Icon Basic Setting 
+                'timeline_icon'        => array( // Section
+                    'title'         => 'Icon', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline_icon_style'          => array(
+                            'type'          => 'icon',
+                            'label'         => __('Icon', 'bb-timeline'),
+                            'default' => 'fa fa-circle-o',
+                            'show_remove' => true,
+                        ),
+
+                        'timeline_icon_colors' => array( 
+                            'type'       => 'color',
+                            'label'      => __('Icon Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+                    )
+                ),
+
+
+                // Image Basic Setting
+                'timeline_img'     => array( // Section
+                    'title'         => 'Image', // Section Title
+                    'fields'        => array( // Section Fields
+                        'photo'         => array(
+                            'type'          => 'photo',
+                            'label'         => __('Image', 'bb-timeline'),
+                            'show_remove'   => true,
+                        ),
+                    )
                 ),
             )
         ),
@@ -722,7 +690,6 @@ FLBuilder::register_settings_form('timeline_form', array(
                 'timeline_bg_sections'     => array(
                     'title'         => __('Timeline Sections', 'bb-timeline'),
                     'fields'        => array(
-
                         'sections_bg_color' => array( 
                             'type'       => 'color',
                             'label'         => __('Background Color', 'bb-timeline'),
@@ -740,6 +707,95 @@ FLBuilder::register_settings_form('timeline_form', array(
                         ),
                     )
                 ),
+
+                //Separator
+                'timeline_title_border'     => array(
+                    'title'         => __('Separator', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'timeline_title_border_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Separator Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'options'       => array(
+                                'none'      =>  __('None', 'bb-timeline'),
+                                'solid'     => _x( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed'    => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted'    => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double'    => _x( 'Double', 'Border type.', 'bb-timeline' )
+                            ),
+                            'help'         => __('For Double style effect Separator Height must be above 3px', 'bb-timeline'),
+                            'toggle'        => array(
+                                'solid'        => array(
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array( 'timeline_title_border_width', 'timeline_title_border_color', 'timeline_title_seperator_width', 'timeline_title_border_align'  )
+                                )
+                            ),
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmlabel-border-bottom',
+                                'property'      => 'border-bottom-style'
+                            ),
+                        ),
+
+                        'timeline_title_border_color'         => array(
+                            'type'          => 'color',
+                            'label'         => __('Separator Color', 'bb-timeline'),
+                            'default'       => 'ffffff',
+                            'show_reset' => true,
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmlabel-border-bottom',
+                                'property'      => 'border-bottom-color'
+                            )
+                        ),
+
+                        'timeline_title_border_width'        => array(
+                            'type'          => 'text',
+                            'label'         => __('Separator Height', 'bb-timeline'),
+                            'default'       => '1',
+                            'maxlength'     => '2',
+                            'size'          => '3',
+                            'description'   => 'px',
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb-tmlabel-border-bottom',
+                                'property'      => 'border-bottom-width',
+                                'unit'          => 'px'
+                            )
+                        ),
+
+                        'timeline_title_seperator_width'        => array(
+                            'type'          => 'text',
+                            'label'         => __('Seperator Width', 'bb-timeline'),
+                            'default'       => '10',
+                            'maxlength'     => '3',
+                            'size'          => '3',
+                            'description'   => '%',
+                            
+                        ),
+
+                        'timeline_title_border_align'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Separator Alignment', 'bb-timeline'),
+                            'default'       => 'Left',
+                            'options'       => array(
+                                'left'      =>  __('Left', 'bb-timeline'),
+                                'center'    =>  __('Center', 'bb-timeline'),
+                                'right'     =>  __('Right', 'bb-timeline')
+                            ),
+                            'help'         => __('This is the alignment option for title border', 'bb-timeline'),
+                        )
+                    )
+                ),
             )
         ),  
 
@@ -747,7 +803,6 @@ FLBuilder::register_settings_form('timeline_form', array(
         'timeline_date'       => array(
             'title'         => __('Timeline Date', 'bb-timeline'),
             'sections'      => array(
-
                 //Title
                 'date_show_hide_section'       => array( // Section
                     'title'         => __('Date Show / Hide', 'bb-timeline'), // Section Title
@@ -797,75 +852,7 @@ FLBuilder::register_settings_form('timeline_form', array(
                         ),
                     )
                 ),
-
-
             ),
-        ),
-
-        //Timeline Icon / Image
-        'timeline_item_image'      => array(
-            'title'         => __('Icon / Image', 'bb-timeline'),
-            'sections'      => array(
-                'title'       => array(
-                    'title'         => __( 'Icon / Image', 'bb-timeline' ),
-                    'fields'        => array(
-                        'timeline_img_icon_type'    => array(
-                            'type'          => 'select',
-                            'label'         => __('Image Type', 'bb-timeline'),
-                            'default'       => 'icon',
-                            'options'       => array(
-                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
-                                'icon'          => __('Icon', 'bb-timeline'),
-                                'photo'         => __('Photo', 'bb-timeline'),
-                            ),
-                            'toggle'        => array(
-                                'icon'          => array(
-                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors' ),
-                                ),
-                                'photo'         => array(
-                                    'sections'   => array( 'timeline_img' ),
-                                )
-                            ),
-                        ),
-                    ),
-                ),
-
-                /* Icon Basic Setting */
-                'timeline_icon'        => array( // Section
-                    'title'         => 'Icon', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline_icon_style'          => array(
-                            'type'          => 'icon',
-                            'label'         => __('Icon', 'bb-timeline'),
-                            'default' => 'fa fa-circle-o',
-                            'show_remove' => true,
-                        ),
-
-                        'timeline_icon_colors' => array( 
-                            'type'       => 'color',
-                            'label'      => __('Icon Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true,
-                        ),
-                    )
-                ),
-
-
-                /* Image Basic Setting */
-                'timeline_img'     => array( // Section
-                    'title'         => 'Image', // Section Title
-                    'fields'        => array( // Section Fields
-                        'photo'         => array(
-                            'type'          => 'photo',
-                            'label'         => __('Photo', 'bb-timeline'),
-                            'show_remove'   => true,
-                        ),
-                    )
-                ),
-
-            ),
-        ),
-
-         
+        ),      
     )
 ));
