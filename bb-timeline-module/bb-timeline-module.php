@@ -111,7 +111,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Timeline Connector Styling
                 'timeline_connector'     => array(
-                    'title'         => __('Timeline Connector', 'bb-timeline'),
+                    'title'         => __('Connector', 'bb-timeline'),
                     'fields'        => array(
 
                         'connector_border_style'         => array(
@@ -122,10 +122,9 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'none'       =>  __('None', 'bb-timeline'),
                                 'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
                                 'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
-                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
-                                'double'        => _x( 'Double', 'Border type.', 'bb-timeline' )
+                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' )
                             ),
-                            'help'         => __('For Double style effect, Connector line Width must be above 4px.', 'bb-timeline'),
+                            'help'         => __('To set Connector Line style.', 'bb-timeline'),
 
                             'toggle'        => array(
                                 'solid'        => array(
@@ -135,9 +134,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                     'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
-                                ),
-                                'double'        => array(
                                     'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
                                 )
                             )
@@ -170,24 +166,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'size'        => '4',
                             'help'         => __('To manage connector line opacity.', 'bb-timeline')
                         ),
-
-                        'timeline_icon_border_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Icon Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        'connector_border_radius' => array(
-                            'type'          => 'text',
-                            'label'         => __('Icon Border Corners', 'bb-timeline'),
-                            'default'     => '50',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => '%',
-                            'help'         => __('To manage icon border corners.', 'bb-timeline')
-                        ),
-
                     )
                 ),
 
@@ -200,8 +178,8 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Select Show / Hide', 'bb-timeline'),
                             'default'       => 'show',
                             'options'       => array(
+                                'show'      => __( 'Show', 'bb-timeline' ),
                                 'hide'      =>  __('Hide', 'bb-timeline'),
-                                'show'      => __( 'Show', 'bb-timeline' )
                             ),
                             'help'         => __(' To Show or Hide Date on timeline. It works globally for timeline module', 'bb-timeline'),
                             'toggle'        => array(
@@ -238,11 +216,11 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Time Date Show / Hide
                 'anim_on_off_section'       => array( // Section
-                    'title'         => __('Timeline Animation On / Off', 'bb-timeline'), // Section Title
+                    'title'         => __('Animation On / Off', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'anim_on_off'         => array(
                             'type'          => 'select',
-                            'label'         => __('Set Animation On / Off', 'bb-timeline'),
+                            'label'         => __('Select Animation On / Off', 'bb-timeline'),
                             'default'       => 'on',
                             'options'       => array(
                                 'off'      =>  __('Off', 'bb-timeline'),
@@ -260,11 +238,11 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Timeline Animation
                 'anim_general'          => array(
-                    'title'         => 'Timeline Animation',
+                    'title'         => 'Set Animation',
                     'fields'        => array(
                         'tm_animation'         => array(
                             'type'          => 'select',
-                            'label'         => __('Animation', 'bb-timeline'),
+                            'label'         => __('Animation Effect', 'bb-timeline'),
                             'default'       => 'no',
                             'help'          => __('Choose one of the animation types for timeline.','bb-timeline'),
                             'options'       => array(
@@ -329,7 +307,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'tm_animation_duration'          => array(
                             'type'          => 'text',
                             'label'         => __('Animation Duration', 'bb-timeline'),
-                            'default'       => '1',
+                            'default'       => '',
                             'placeholder'   => '1',
                             'help'          => 'How long the animation effect should last. Decides the speed of effect.',
                             'maxlength'     => '3',
@@ -346,24 +324,20 @@ FLBuilder::register_module('BSFBBTimelines',
                             'size'          => '6',
                             'description'   => '%',
                         ),
-                    )
-                ),
 
-                //Time Date Show / Hide
-                'anim_mobile_on_off_section'       => array( // Section
-                    'title'         => __('Timeline Animation On / Off On Mobile', 'bb-timeline'), // Section Title
-                    'fields'        => array( // Section Fields
+                        //Select On / Off for Mobile
                         'anim_mobile_on_off'         => array(
                             'type'          => 'select',
-                            'label'         => __('Set Animation On / Off', 'bb-timeline'),
+                            'label'         => __('Select On / Off for Mobile', 'bb-timeline'),
                             'default'       => 'on',
+                            'description'       => '<br/><br/>By default it will ON for Mobile.',
                             'options'       => array(
                                 'off'      =>  __('Off', 'bb-timeline'),
                                 'on'      => __( 'On', 'bb-timeline' )
                             ),
                             'help'         => __(' To set On or Off Animation on Mobile Timeline Animation.', 'bb-timeline'),
                         )
-                    ),
+                    )
                 ),
             )
         ),   
@@ -649,7 +623,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 //Description
                 'timeline_editor_section'       => array( // Section
-                    'title'         => __('', 'bb-timeline'), // Section Title
+                    'title'         => __('Description', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_editor'          => array(
                             'type'          => 'editor',
@@ -661,7 +635,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Icon / Image 
                 'timeline_img_icon'       => array(
-                    'title'         => __( 'Timeline Icon / Image', 'bb-timeline' ),
+                    'title'         => __( 'Thumbnail Type', 'bb-timeline' ),
                     'fields'        => array(
                         'timeline_img_icon_type'    => array(
                             'type'          => 'select',
@@ -674,10 +648,10 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle'        => array(
                                 'icon'          => array(
-                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors' ),
+                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors', 'timeline_thumb' ),
                                 ),
                                 'photo'         => array(
-                                    'sections'   => array( 'timeline_img' ),
+                                    'sections'   => array( 'timeline_img', 'timeline_thumb' ),
                                 )
                             ),
                         ),
@@ -704,7 +678,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                     )
                 ),
 
-
                 // Image Basic Setting
                 'timeline_img'     => array( // Section
                     'title'         => 'Image', // Section Title
@@ -713,6 +686,28 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'type'          => 'photo',
                             'label'         => __('Image', 'bb-timeline'),
                             'show_remove'   => true,
+                        ),
+                    )
+                ),
+
+                'timeline_thumb'     => array( // Section
+                    'title'         => 'Thumbnail Style', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline_icon_border_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Icon Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'connector_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Icon Border Corners', 'bb-timeline'),
+                            'default'     => '50',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage icon border corners.', 'bb-timeline')
                         ),
                     )
                 ),
