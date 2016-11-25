@@ -422,15 +422,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'description'   => 'px'
                         ),
 
-                        'timeline_title_custom_letter_spacing' => array(
-                            'type'          => 'text',
-                            'label'         => __('Letter Spacing', 'bb-timeline'),
-                            'default'       => '0',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
-
                         'timeline_title_color'    => array( 
                             'type'       => 'color',
                             'label'         => __('Text Color', 'bb-timeline'),
@@ -520,15 +511,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'label'         => __('Line Height', 'bb-timeline'),
                             'default'       => '30',
                             'maxlength'     => '4',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
-
-                        'timeline_dec_custom_letter_spacing' => array(
-                            'type'          => 'text',
-                            'label'         => __('Letter Spacing', 'bb-timeline'),
-                            'default'       => '0',
-                            'maxlength'     => '3',
                             'size'          => '4',
                             'description'   => 'px'
                         ),

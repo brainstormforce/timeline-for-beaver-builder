@@ -8,7 +8,6 @@
 .fl-node-<?php echo $id; ?> .bb-timline-title {
 	font-size: <?php echo $settings->timeline_title_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_title_custom_line_height; ?>px;
-	letter-spacing: <?php echo $settings->timeline_title_custom_letter_spacing; ?>px;
 	color: #<?php echo $settings->timeline_title_color; ?>;
 	text-align: <?php echo $settings->timeline_title_align; ?>;
 }
@@ -29,7 +28,6 @@
 	color: #<?php echo $settings->timeline_dec_color; ?>;
 	font-size: <?php echo $settings->timeline_dec_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_dec_custom_line_height; ?>px;
-	letter-spacing: <?php echo $settings->timeline_dec_custom_letter_spacing; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .bb-timline-dec {
