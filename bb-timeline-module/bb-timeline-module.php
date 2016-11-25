@@ -243,7 +243,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'anim_on_off'         => array(
                             'type'          => 'select',
                             'label'         => __('Set Animation On / Off', 'bb-timeline'),
-                            'default'       => 'off',
+                            'default'       => 'on',
                             'options'       => array(
                                 'off'      =>  __('Off', 'bb-timeline'),
                                 'on'      => __( 'On', 'bb-timeline' )
