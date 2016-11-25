@@ -54,10 +54,29 @@ class BSFBBTimelines extends FLBuilderModule {
 FLBuilder::register_module('BSFBBTimelines', 
     array(
 
-        //General
-        'general'       => array( // Tab
-            'title'         => __('General', 'bb-timeline'), // Tab title
+        //Add Timeline
+        'timeline'      => array( // Tab
+            'title'         => __('Timeline', 'bb-timeline'), // Tab title
             'sections'      => array( // Tab Sections
+                'general'       => array( // Section
+                    'title'         => '', // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline1'     => array(
+                            'type'          => 'form',
+                            'label'         => __('Timeline', 'bb-timeline'),
+                            'form'          => 'bb_timeline_form', // ID from registered form below
+                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
+                            'multiple'      => true
+                        ),
+                    )
+                )
+            )
+        ),
+
+        //Timeline Style
+        'timeline_style'     => array(
+            'title'         => __('Style', 'bb-timeline'),
+            'sections'      => array(
                 //Timeline layout Option
                 'layout'       => array( // Section
                     'title'         => 'Select Layout', // Section Title
@@ -90,6 +109,110 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
+                //Timeline Connector Styling
+                'timeline_connector'     => array(
+                    'title'         => __('Timeline Connector', 'bb-timeline'),
+                    'fields'        => array(
+
+                        'connector_border_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Connector line Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'options'       => array(
+                                'none'       =>  __('None', 'bb-timeline'),
+                                'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double'        => _x( 'Double', 'Border type.', 'bb-timeline' )
+                            ),
+                            'help'         => __('For Double style effect, Connector line Width must be above 4px.', 'bb-timeline'),
+
+                            'toggle'        => array(
+                                'solid'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
+                                )
+                            )
+                        ),
+
+                        'connector_border_width'        => array(
+                            'type'          => 'text',
+                            'label'         => __('Connector line Width', 'bb-timeline'),
+                            'default'       => '5',
+                            'maxlength'     => '2',
+                            'size'          => '4',
+                            'description'   => 'px',
+                            'help'         => __('To manage connector line width this width will also applied to icon border.', 'bb-timeline')
+                        ),
+
+
+                        'connector_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Connector line Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'connector_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Connector line Opacity', 'bb-timeline'),
+                            'default'     => '50',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
+                        ),
+
+                        'timeline_icon_border_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Icon Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'connector_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Icon Border Corners', 'bb-timeline'),
+                            'default'     => '50',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage icon border corners.', 'bb-timeline')
+                        ),
+
+                    )
+                ),
+
+                //Time Date Show / Hide
+                'date_show_hide_section'       => array( // Section
+                    'title'         => __('Date Show / Hide', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'date_show_hide'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Show / Hide', 'bb-timeline'),
+                            'default'       => 'show',
+                            'options'       => array(
+                                'hide'      =>  __('Hide', 'bb-timeline'),
+                                'show'      => __( 'Show', 'bb-timeline' )
+                            ),
+                            'help'         => __(' To Show or Hide Date on timeline. It works globally for timeline module', 'bb-timeline'),
+                            'toggle'        => array(
+                                'show'        => array(
+                                    'sections'            => array( 'date', 'date_format_section', 'timeline_date_typography' ),
+                                ),
+                            )
+                        )
+                    ),
+                ),
+
                 //Date Format
                 'date_format_section'       => array( // Section
                     'title'         => __('Select Date Format', 'bb-timeline'), // Section Title
@@ -111,32 +234,30 @@ FLBuilder::register_module('BSFBBTimelines',
                         ),
                     ),
                 ),
-            )
-        ),
 
-        //Add Timeline
-        'timeline'      => array( // Tab
-            'title'         => __('Timeline', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                'general'       => array( // Section
-                    'title'         => '', // Section Title
+
+                //Time Date Show / Hide
+                'anim_on_off_section'       => array( // Section
+                    'title'         => __('Timeline Animation On / Off', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
-                        'timeline1'     => array(
-                            'type'          => 'form',
-                            'label'         => __('Timeline', 'bb-timeline'),
-                            'form'          => 'bb_timeline_form', // ID from registered form below
-                            'preview_text'  => 'timeline_title', // Name of a field to use for the preview text
-                            'multiple'      => true
-                        ),
-                    )
-                )
-            )
-        ),
+                        'anim_on_off'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Set Animation On / Off', 'bb-timeline'),
+                            'default'       => 'off',
+                            'options'       => array(
+                                'off'      =>  __('Off', 'bb-timeline'),
+                                'on'      => __( 'On', 'bb-timeline' )
+                            ),
+                            'help'         => __(' To set Animation On or Off for your Timeline.', 'bb-timeline'),
+                            'toggle'        => array(
+                                'on'        => array(
+                                    'sections'            => array( 'anim_general', 'anim_mobile_on_off_section' ),
+                                ),
+                            )
+                        )
+                    ),
+                ),
 
-        //Timeline Style
-        'timeline_style'     => array(
-            'title'         => __('Style', 'bb-timeline'),
-            'sections'      => array(
                 //Timeline Animation
                 'anim_general'          => array(
                     'title'         => 'Timeline Animation',
@@ -228,86 +349,21 @@ FLBuilder::register_module('BSFBBTimelines',
                     )
                 ),
 
-                //Timeline Connector Styling
-                'timeline_connector'     => array(
-                    'title'         => __('Timeline Connector', 'bb-timeline'),
-                    'fields'        => array(
-
-                        'connector_border_style'         => array(
+                //Time Date Show / Hide
+                'anim_mobile_on_off_section'       => array( // Section
+                    'title'         => __('Timeline Animation On / Off On Mobile', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'anim_mobile_on_off'         => array(
                             'type'          => 'select',
-                            'label'         => __('Connector line Style', 'bb-timeline'),
-                            'default'       => 'solid',
+                            'label'         => __('Set Animation On / Off', 'bb-timeline'),
+                            'default'       => 'on',
                             'options'       => array(
-                                'none'       =>  __('None', 'bb-timeline'),
-                                'solid'         => _x( 'Solid', 'Border type.', 'bb-timeline' ),
-                                'dashed'        => _x( 'Dashed', 'Border type.', 'bb-timeline' ),
-                                'dotted'        => _x( 'Dotted', 'Border type.', 'bb-timeline' ),
-                                'double'        => _x( 'Double', 'Border type.', 'bb-timeline' )
+                                'off'      =>  __('Off', 'bb-timeline'),
+                                'on'      => __( 'On', 'bb-timeline' )
                             ),
-                            'help'         => __('For Double style effect, Connector line Width must be above 4px.', 'bb-timeline'),
-
-                            'toggle'        => array(
-                                'solid'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
-                                ),
-                                'dashed'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
-                                ),
-                                'dotted'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
-                                ),
-                                'double'        => array(
-                                    'fields'        => array( 'connector_border_width', 'connector_border_color', 'connector_bg_color', 'connector_bg_color_opc', 'timeline_icon_border_bg_color' )
-                                )
-                            )
-                        ),
-
-                        'connector_border_width'        => array(
-                            'type'          => 'text',
-                            'label'         => __('Connector line Width', 'bb-timeline'),
-                            'default'       => '5',
-                            'maxlength'     => '2',
-                            'size'          => '4',
-                            'description'   => 'px',
-                            'help'         => __('To manage connector line width this width will also applied to icon border.', 'bb-timeline')
-                        ),
-
-
-                        'connector_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Connector line Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        'connector_bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Connector line Opacity', 'bb-timeline'),
-                            'default'     => '50',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '4',
-                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
-                        ),
-
-                        'timeline_icon_border_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Icon Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        'connector_border_radius' => array(
-                            'type'          => 'text',
-                            'label'         => __('Icon Border Corners', 'bb-timeline'),
-                            'default'     => '50',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => '%',
-                            'help'         => __('To manage icon border corners.', 'bb-timeline')
-                        ),
-
-                    )
+                            'help'         => __(' To set On or Off Animation on Mobile Timeline Animation.', 'bb-timeline'),
+                        )
+                    ),
                 ),
             )
         ),   
@@ -678,6 +734,35 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         ),
                     )
                 ),
+
+                //Set Date
+                'date'       => array(
+                    'title'         => __( 'Date', 'bb-timeline' ),
+                    'fields'        => array(
+                        'day'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Day', 'bb-timeline'),
+                            'default'       => date( 'd' ),
+                            'maxlength'     => '2',
+                            'size'          => '5',
+                        ),
+                        'month'         => array(
+                            'type'          => 'text',
+                            'label'         => __('Month', 'bb-timeline'),
+                            'default'       => date( 'm' ),
+                            'maxlength'     => '2',
+                            'size'          => '5',
+                        ),
+                        'year'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Year', 'bb-timeline'),
+                            'default'       => date( 'Y' ),
+                            'maxlength'     => '4',
+                            'size'          => '5',
+                            'description'   => __('<br/><br/>Please fill all three fields to display date.', 'bb-timeline'),
+                        ),
+                    )
+                ),
             )
         ),
 
@@ -797,62 +882,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                     )
                 ),
             )
-        ),  
-
-        //Add Date
-        'timeline_date'       => array(
-            'title'         => __('Timeline Date', 'bb-timeline'),
-            'sections'      => array(
-                //Title
-                'date_show_hide_section'       => array( // Section
-                    'title'         => __('Date Show / Hide', 'bb-timeline'), // Section Title
-                    'fields'        => array( // Section Fields
-                        'date_show_hide'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Select Show / Hide', 'bb-timeline'),
-                            'default'       => 'show',
-                            'options'       => array(
-                                'hide'      =>  __('Hide', 'bb-timeline'),
-                                'show'      => __( 'Show', 'bb-timeline' )
-                            ),
-                            'toggle'        => array(
-                                'show'        => array(
-                                    'sections'            => array( 'date', 'date_format_section' ),
-                                ),
-                            )
-                        )
-                    ),
-                ),
-
-                //Set Date
-                'date'       => array(
-                    'title'         => __( 'Date', 'bb-timeline' ),
-                    'fields'        => array(
-                        'day'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Day', 'bb-timeline'),
-                            'default'       => date( 'd' ),
-                            'maxlength'     => '2',
-                            'size'          => '5',
-                        ),
-                        'month'         => array(
-                            'type'          => 'text',
-                            'label'         => __('Month', 'bb-timeline'),
-                            'default'       => date( 'm' ),
-                            'maxlength'     => '2',
-                            'size'          => '5',
-                        ),
-                        'year'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Year', 'bb-timeline'),
-                            'default'       => date( 'Y' ),
-                            'maxlength'     => '4',
-                            'size'          => '5',
-                            'description'   => __('<br/><br/>Please fill all three fields to display date.', 'bb-timeline'),
-                        ),
-                    )
-                ),
-            ),
-        ),      
+        ),     
     )
 ));

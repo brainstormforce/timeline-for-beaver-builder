@@ -12,7 +12,7 @@
 		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
-			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
+			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date($settings->date_format, strtotime($current_date)); ?>
@@ -44,8 +44,8 @@
 
 				<?php
 					$hideClass = '';
-					if( $settings->tm_animation != 'no' ){
-					$hideClass = 'bb-hide-it';
+					if( $settings->tm_animation != 'no' && $settings->anim_on_off == 'on' ){
+						$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
 					<!--Timline-Title-->
@@ -85,7 +85,7 @@
 		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
-			<div class="bb-tmtime bb-tmtime-<?php echo $timeline1->date_show_hide; ?>">
+			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date($settings->date_format, strtotime($current_date)); ?>
@@ -114,7 +114,7 @@
 			<div class="tm-conatiner-main">
 				<?php
 					$hideClass = '';
-					if( $settings->tm_animation != 'no' ){
+					if( $settings->tm_animation != 'no' && $settings->anim_on_off == 'on' ){
 					$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">

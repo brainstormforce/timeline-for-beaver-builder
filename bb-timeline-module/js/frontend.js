@@ -4,6 +4,7 @@
 	{
 		this.settings 	  = settings;
 		this.timeline    = settings.timeline;
+		this.mobile_screen    = settings.mobile_screen;
 		this.animation    = settings.animation;
 		this.animation_delay	  = settings.animation_delay;
 		this.viewport_position =	settings.viewport_position;
@@ -19,6 +20,7 @@
 		settings	: {},
 		nodeClass   : '',
 		timeline   : '',
+		mobile_screen   : '',
 		animation   : '',
 		animation_delay : 0,
 		viewport_position : 90,
@@ -32,11 +34,26 @@
 		 */ 
 		_initAnimations: function()
 		{
-			if(typeof jQuery.fn.waypoint !== 'undefined' /*&& !FLBuilderLayout._isMobile()*/ ) {
-				$( this.nodeClass ).find('.bb-tmtimeline .tm-timeline-li-'+ this.timeline +' .bb-tmlabel').waypoint({
-					offset: this.viewport_position + '%',
-					handler: $.proxy( this._executeAnimation, this ) //this._executeAnimation
-				});
+			console.log('$(window).width()');
+			if( $(window).width() < 768 ) {
+				if( this.mobile_screen == 'on' ) {
+					if(typeof jQuery.fn.waypoint !== 'undefined' /*&& !FLBuilderLayout._isMobile()*/ ) {
+						$( this.nodeClass ).find('.bb-tmtimeline .tm-timeline-li-'+ this.timeline +' .bb-tmlabel').waypoint({
+							offset: this.viewport_position + '%',
+							handler: $.proxy( this._executeAnimation, this ) //this._executeAnimation
+						});
+					}	
+				} else {
+					var module = $( this.nodeClass ).find('.bb-tmtimeline .tm-timeline-li-'+ this.timeline +' .bb-tmlabel');
+					module.removeClass('bb-hide-it');
+				}
+			} else {
+				if(typeof jQuery.fn.waypoint !== 'undefined' /*&& !FLBuilderLayout._isMobile()*/ ) {
+					$( this.nodeClass ).find('.bb-tmtimeline .tm-timeline-li-'+ this.timeline +' .bb-tmlabel').waypoint({
+						offset: this.viewport_position + '%',
+						handler: $.proxy( this._executeAnimation, this ) //this._executeAnimation
+					});
+				}
 			}
 		},
 		
