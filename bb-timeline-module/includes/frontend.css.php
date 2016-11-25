@@ -96,7 +96,7 @@
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main .bb-tmicon, 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main .bb-tmicon img{
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon img{
 	<?php if(!empty($item->connector_border_radius)) : ?>	
 	border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->connector_border_radius; ?>%;
