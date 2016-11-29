@@ -628,85 +628,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                     ),
                 ),
 
-                // Timeline Icon / Image 
-                'timeline_img_icon'       => array(
-                    'title'         => __( 'Image / Icon', 'bb-timeline' ),
-                    'fields'        => array(
-                        'timeline_img_icon_type'    => array(
-                            'type'          => 'select',
-                            'label'         => __('Select Type', 'bb-timeline'),
-                            'default'       => 'icon',
-                            'options'       => array(
-                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
-                                'icon'          => __('Icon', 'bb-timeline'),
-                                'photo'         => __('Image', 'bb-timeline'),
-                            ),
-                            'toggle'        => array(
-                                'icon'          => array(
-                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors', 'timeline_thumb' ),
-                                ),
-                                'photo'         => array(
-                                    'sections'   => array( 'timeline_img', 'timeline_thumb' ),
-                                )
-                            ),
-                        ),
-                    ),
-                ),
-
-                // Icon Basic Setting 
-                'timeline_icon'        => array( // Section
-                    'title'         => 'Icon Basics', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline_icon_style'          => array(
-                            'type'          => 'icon',
-                            'label'         => __('Icon', 'bb-timeline'),
-                            'default' => 'fa fa-circle-o',
-                            'show_remove' => true,
-                        ),
-
-                        'timeline_icon_colors' => array( 
-                            'type'       => 'color',
-                            'label'      => __('Icon Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true,
-                        ),
-                    )
-                ),
-
-                // Image Basic Setting
-                'timeline_img'     => array( // Section
-                    'title'         => 'Image', // Section Title
-                    'fields'        => array( // Section Fields
-                        'photo'         => array(
-                            'type'          => 'photo',
-                            'label'         => __('Image', 'bb-timeline'),
-                            'show_remove'   => true,
-                        ),
-                    )
-                ),
-
-                'timeline_thumb'     => array( // Section
-                    'title'         => 'Style', // Section Title
-                    'fields'        => array( // Section Fields
-                        'timeline_icon_border_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Icon Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        'connector_border_radius' => array(
-                            'type'          => 'text',
-                            'label'         => __('Icon Border Radius', 'bb-timeline'),
-                            'default'     => '50',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => '%',
-                            'help'         => __('To manage icon border corners.', 'bb-timeline')
-                        ),
-                    )
-                ),
-
                 //Set Date
                 'date'       => array(
                     'title'         => __( 'Date', 'bb-timeline' ),
@@ -737,6 +658,193 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                 ),
             )
         ),
+
+        //Timeline Style
+        'timeline_img_icon'     => array(
+            'title'         => __('Image / Icon Settings', 'bb-timeline'),
+            'sections'      => array(
+
+                // Timeline Icon / Image 
+                'timeline_img_icon'       => array(
+                    'title'         => __( 'Image / Icon', 'bb-timeline' ),
+                    'fields'        => array(
+                        
+                        'timeline_img_icon_type'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Type', 'bb-timeline'),
+                            'default'       => 'icon',
+                            'options'       => array(
+                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
+                                'icon'          => __('Icon', 'bb-timeline'),
+                                'photo'         => __('Image', 'bb-timeline'),
+                            ),
+                            'toggle'        => array(
+                                'icon'          => array(
+                                    'sections'   => array( 'timeline_icon' ),
+                                ),
+                                'photo'         => array(
+                                    'sections'   => array( 'photo'),
+                                )
+                            ),
+                        ),
+
+                        // Image/icon Border Radius
+                        'connector_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Radius', 'bb-timeline'),
+                            'default'     => '50',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage icon border corners.', 'bb-timeline')
+                        ),
+
+                        // Image/icon Background Color 
+                        'timeline_tmb_icon_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'timeline_tmb_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bb-timeline'),
+                            'default'     => '',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
+                        ),
+
+                    ),
+                ),
+
+                // Timeline Icon 
+                'timeline_icon'       => array(
+                    'title'         => __( 'Icon', 'bb-timeline' ),
+                    'fields'        => array(
+
+                        // Select Icon  
+                        'timeline_icon_style'          => array(
+                            'type'          => 'icon',
+                            'label'         => __('Icon', 'bb-timeline'),
+                            'default' => 'fa fa-circle-o',
+                            'show_remove' => true,
+                        ),
+
+                        // Icon colors 
+                        'timeline_icon_colors' => array( 
+                            'type'       => 'color',
+                            'label'      => __('Icon Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+
+                        /* Icon Style */
+                        'icon_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Icon Background Style', 'bb-timeline'),
+                            'default'       => 'simple',
+                            'options'       => array(
+                                'simple'        => __('Simple', 'bb-timeline'),
+                                'custom'         => __('Customize', 'bb-timeline'),
+                            ),
+                            'toggle' => array(
+                                'simple' => array(
+                                    'fields' => array('timeline_icon_border_bg_color', 'connector_border_radius'),
+                                    /*'sections' => array( 'colors' )*/
+                                ),
+
+                                'custom' => array(
+                                    /*'sections' => array( 'colors' ),*/
+                                    'fields'   => array( 'icon_border_style', 'icon_border_width', 'icon_border_color', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
+                                )
+                            )
+                        ),
+
+                        /* Border Style */
+                        'icon_border_style'   => array(
+                            'type'          => 'select',
+                            'label'         => __('Border Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'help'          => __('The type of border to use. Double borders must have a width of at least 3px to render properly.', 'bb-timeline'),
+                            'options'       => array(
+                                'none'   => __( 'None', 'Border type.', 'bb-timeline' ),
+                                'solid'  => __( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed' => __( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted' => __( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double' => __( 'Double', 'Border type.', 'bb-timeline' )
+                            ),
+                            'toggle'        => array(
+                                'solid'         => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                )
+                            ),
+                        ),
+
+                        'icon_border_width'    => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Width', 'bb-timeline'),
+                            'default'       => '',
+                            'description'   => 'px',
+                            'maxlength'     => '3',
+                            'size'          => '6',
+                            'placeholder'   => '1',
+                            'preview'       => array(
+                                    'type'      => 'css',
+                                    'selector'  => '.bb-tmicon',
+                                    'property'  => 'border-width',
+                                    'unit'      => 'px'
+                            )
+                        ),
+
+                        'icon_border_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Border Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'icon_border_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Border Color Opacity', 'bb-timeline'),
+                            'default'     => '50',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
+                        ),
+                        
+                    ),
+                ),
+
+                // Timeline Image 
+                'photo'       => array(
+                    'title'         => __( 'Image', 'bb-timeline' ),
+                    'fields'        => array(
+                        
+                        // Select Image 
+                        'photo'         => array(
+                            'type'          => 'photo',
+                            'label'         => __('Image', 'bb-timeline'),
+                            'show_remove'   => true,
+                        ),
+                        
+                    ),
+                ),
+
+            )
+        ), 
 
         //Timeline Style
         'timeline_style'     => array(

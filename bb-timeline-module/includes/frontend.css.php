@@ -49,17 +49,7 @@
     letter-spacing: <?php echo $settings->timeline_date_custom_letter_spacing; ?>px;
 }
 
-/* Timeline Connector */
-
 <?php $connector_bg_color = ( !empty($settings->connector_bg_color) ) ? $settings->connector_bg_color : '46a4da' ; ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
-	border-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
-    border-style: <?php echo $settings->connector_border_style; ?>;
-    border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($connector_bg_color)) ?>, <?php echo ( $settings->connector_bg_color_opc != '' ) ? $settings->connector_bg_color_opc/100 : 100; ?>);
-    box-sizing: content-box;
-    box-shadow: none;
-}
-
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-conatiner-main:before {
 	width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 	border-left-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
@@ -84,15 +74,30 @@
 	animation-duration: <?php echo $settings->tm_animation_duration; ?>s;
 }
 
+
 /* foreach child section*/
 <?php
 	foreach( $settings->timeline1 as $i => $item ) {
 ?>
 
+<?php $icon_border_color = ( !empty($item->icon_border_color) ) ? $item->icon_border_color : '46a4da' ; ?>
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon {
+	border-width: <?php echo ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20'; ?>px;
+    border-style: <?php echo $item->connector_border_style; ?>;
+    border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($icon_border_color)) ?>, <?php echo ( $item->icon_border_color_opc != '' ) ? $item->icon_border_color_opc/100 : 100; ?>);
+    box-sizing: content-box;
+    box-shadow: none;
+}
+
+/* Timeline Connector */
+<?php if( $item->icon_style != 'simple' ) { // Rounded Styles ?>
+
 /* Timeline Thumbnail options */
 <?php $timeline_icon_border_bg_color = ( !empty($item->timeline_icon_border_bg_color) ) ? $item->timeline_icon_border_bg_color : '6CBFEE' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	background-color: #<?php echo $timeline_icon_border_bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_icon_border_bg_color)) ?>, <?php echo ( $item->timeline_icon_border_bg_color_opc != '' ) ? $item->timeline_icon_border_bg_color_opc/100 : 100; ?>);
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main .bb-tmicon, 
@@ -103,6 +108,10 @@
 	-webkit-border-radius: <?php echo $item->connector_border_radius; ?>%;
 	<?php endif; ?>	
 }
+<?php } ?> 
+
+
+
 
 /* Timeline Title border */
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel-border-bottom {
