@@ -643,20 +643,15 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle'        => array(
                                 'icon'          => array(
-                                    'sections'   => array( 'timeline_icon',  'timeline_icon_style', 'timeline_icon_colors', 'timeline_thumb' ),
+                                    'fields'   => array( 'timeline_icon_style', 'timeline_icon_colors', 'timeline_thumb', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
                                 ),
                                 'photo'         => array(
-                                    'sections'   => array( 'timeline_img', 'timeline_thumb' ),
+                                    'fields'   => array( 'photo', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
                                 )
                             ),
                         ),
-                    ),
-                ),
 
-                // Icon Basic Setting 
-                'timeline_icon'        => array( // Section
-                    'title'         => 'Icon Basics', // Section Title
-                    'fields'        => array( // Section Fields
+                        // Icon style 
                         'timeline_icon_style'          => array(
                             'type'          => 'icon',
                             'label'         => __('Icon', 'bb-timeline'),
@@ -664,48 +659,42 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'show_remove' => true,
                         ),
 
+                        // Icon colors 
                         'timeline_icon_colors' => array( 
                             'type'       => 'color',
                             'label'      => __('Icon Color', 'bb-timeline'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
-                    )
-                ),
 
-                // Image Basic Setting
-                'timeline_img'     => array( // Section
-                    'title'         => 'Image', // Section Title
-                    'fields'        => array( // Section Fields
+                        // Select Image 
                         'photo'         => array(
                             'type'          => 'photo',
                             'label'         => __('Image', 'bb-timeline'),
                             'show_remove'   => true,
                         ),
-                    )
-                ),
 
-                'timeline_thumb'     => array( // Section
-                    'title'         => 'Style', // Section Title
-                    'fields'        => array( // Section Fields
+                        // Image/icon Background Color 
                         'timeline_icon_border_bg_color' => array( 
                             'type'       => 'color',
-                            'label'         => __('Icon Background Color', 'bb-timeline'),
+                            'label'         => __('Background Color', 'bb-timeline'),
                             'default'    => '',
                             'show_reset' => true
                         ),
 
+                        // Image/icon Border Radius
                         'connector_border_radius' => array(
                             'type'          => 'text',
-                            'label'         => __('Icon Border Radius', 'bb-timeline'),
+                            'label'         => __('Border Radius', 'bb-timeline'),
                             'default'     => '50',
                             'maxlength'     => '3',
                             'size'          => '4',
                             'description'   => '%',
                             'help'         => __('To manage icon border corners.', 'bb-timeline')
                         ),
-                    )
+                    ),
                 ),
+
 
                 //Set Date
                 'date'       => array(
