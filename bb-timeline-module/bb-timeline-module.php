@@ -594,7 +594,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                 
                 //Title
                 'timeline_title_section'       => array( // Section
-                    'title'         => __('', 'bb-timeline'), // Section Title
+                    'title'         => __('Title', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_title' => array(
                             'type'          => 'text',
@@ -679,10 +679,10 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle'        => array(
                                 'icon'          => array(
-                                    'sections'   => array( 'timeline_icon' ),
+                                    'sections'   => array( 'timeline_icon', 'common_setting_icon_img' ),
                                 ),
                                 'photo'         => array(
-                                    'sections'   => array( 'photo'),
+                                    'sections'   => array( 'photo', 'common_setting_icon_img'),
                                 )
                             ),
                         ),
@@ -714,7 +714,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         /* Icon Background Style */
                         'icon_bg_style'         => array(
                             'type'          => 'select',
-                            'label'         => __('Icon Background Style', 'bb-timeline'),
+                            'label'         => __('Icon Border Style', 'bb-timeline'),
                             'default'       => 'simple',
                             'options'       => array(
                                 'simple'        => __('Simple', 'bb-timeline'),
@@ -812,7 +812,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'type'          => 'photo',
                             'label'         => __('Image', 'bb-timeline'),
                             'show_remove'   => true,
-                        ),
+                        ), 
                         
                     ),
                 ),

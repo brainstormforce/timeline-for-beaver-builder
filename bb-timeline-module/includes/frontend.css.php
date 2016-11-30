@@ -79,6 +79,7 @@
 }
 
 /* Timeline Connector */
+/* for icon border */
 <?php if( $item->icon_bg_style == 'custom' ) { // Rounded Styles ?>
 <?php $icon_border_color = ( !empty($item->icon_border_color) ) ? $item->icon_border_color : '46a4da' ; ?>
 
@@ -99,14 +100,15 @@
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_tmb_icon_bg_color)) ?>, <?php echo ( $item->timeline_tmb_bg_color_opc != '' ) ? $item->timeline_tmb_bg_color_opc/100 : 100; ?>);
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main .bb-tmicon, 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon img{
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon img {
 	<?php if(!empty($item->connector_border_radius)) : ?>	
 	border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-webkit-border-radius: <?php echo $item->connector_border_radius; ?>%;
 	<?php endif; ?>	
 }
+
 
 /* Timeline Title border */
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel-border-bottom {

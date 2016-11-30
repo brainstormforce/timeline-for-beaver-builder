@@ -382,7 +382,8 @@
 	.bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
 		width: 100%;
 		position: relative;
-        padding: 0 0 20px 45px;
+        padding: 0 0 20px 0px;
+        margin-left: 65px;
         text-align: left;
 	}
 
@@ -459,7 +460,8 @@
 	.bb-timeline-both .bb-tmtimeline > li .bb-tmtime {
 	    width: 100%;
 	    position: relative;
-	    padding: 0 0 20px 45px;
+	    padding: 0 0 20px 0px;
+        margin-left: 65px;
         text-align: left;
 	}
 
