@@ -49,7 +49,7 @@
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
+					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
 					</<?php echo $settings->tmtitle_tag; ?>>
 					<!--/.Timline-Title-->
@@ -119,7 +119,7 @@
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
+					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
 					</<?php echo $settings->tmtitle_tag; ?>>
 					<!--/.Timline-Title-->

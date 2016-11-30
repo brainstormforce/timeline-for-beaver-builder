@@ -86,7 +86,7 @@
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	border-width: <?php echo ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20'; ?>px;
     border-style: <?php echo $item->icon_border_style; ?>;
-    border-color: <?php echo $item->icon_border_color; ?>;
+    border-color: #<?php echo $item->icon_border_color; ?>;
     border-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($icon_border_color)) ?>, <?php echo ( $item->icon_border_color_opc != '' ) ? $item->icon_border_color_opc/100 : 100; ?>);
     box-sizing: content-box;
     box-shadow: none;
@@ -100,8 +100,7 @@
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_tmb_icon_bg_color)) ?>, <?php echo ( $item->timeline_tmb_bg_color_opc != '' ) ? $item->timeline_tmb_bg_color_opc/100 : 100; ?>);
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon img {
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	<?php if(!empty($item->connector_border_radius)) : ?>	
 	border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->connector_border_radius; ?>%;
