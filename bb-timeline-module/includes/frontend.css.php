@@ -125,6 +125,10 @@
 	color: #<?php echo $item->timeline_icon_colors; ?>;
 }
 
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?>:hover .bb-tmicon i {
+	color: #<?php echo $item->timeline_icon_hover_colors; ?>;
+}
+
 /* Timeline Sections */
 <?php $sections_bg_color = ( !empty($item->sections_bg_color) ) ? $item->sections_bg_color : '6cbfee' ; ?>
 

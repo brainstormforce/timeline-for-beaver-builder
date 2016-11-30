@@ -228,7 +228,7 @@
 .bb-timeline-both .bb-tmtimeline:before {
     content: '';
     position: absolute;
-    top: 12px;
+    top: 20px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -333,12 +333,6 @@
         display: block;
     }
 
-    .bb-timeline-left .bb-tmtimeline > li .bb-tmicon{
-        right: auto;
-        left: -20px;
-        margin: 0;
-    }
-
     .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
         padding: 20px;
         margin-left: 40px !important;
@@ -405,6 +399,13 @@
 
 
 	/*left responsive*/
+    .bb-timeline-left .bb-tmtimeline > li .bb-tmicon{
+        right: auto;
+        left: 20px;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
     .bb-timeline-left .tm-conatiner-main:before {
         content: '';
         position: absolute;
@@ -421,7 +422,8 @@
 	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
 	    width: 100%;
 	    position: relative;
-	    padding: 0 0 20px 45px;
+	    padding: 0 0 20px 0px;
+        margin-left: 65px;
 	}
 
 	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
@@ -448,7 +450,7 @@
     .bb-timeline-both .bb-tmtimeline:before {
         content: '';
         position: absolute;
-        top: 12px;
+        top: 20px;
         bottom: 0;
         right: auto;
         left: 20px;
@@ -489,9 +491,10 @@
 
     .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
         right: auto;
-        left: 0;
+        left: 20px;
         top: 0;
         margin: 0;
+        transform: translateX(-50%) !important;
     }
     
 }

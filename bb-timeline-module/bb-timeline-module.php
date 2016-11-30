@@ -729,6 +729,14 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'default'    => '5b9dd9',
                             'show_reset' => true,
                         ),  
+
+                        // Icon hover colors 
+                        'timeline_icon_hover_colors' => array( 
+                            'type'       => 'color',
+                            'label'      => __('Icon Hover Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ), 
                     ),
                 ),
 
