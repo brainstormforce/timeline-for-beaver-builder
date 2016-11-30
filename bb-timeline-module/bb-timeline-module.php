@@ -403,17 +403,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             )
                         ),
 
-                        'timeline_title_align'     => array(
-                            'type'          => 'select',
-                            'label'         => __('Title Alignment', 'bb-timeline'),
-                            'default'       => 'Left',
-                            'options'       => array(
-                                'left'      =>  __('Left', 'bb-timeline'),
-                                'center'    =>  __('Center', 'bb-timeline'),
-                                'right'     =>  __('Right', 'bb-timeline')
-                            ),
-                        ),
-
                         'timeline_title_margin_top' => array(
                             'type'              => 'text',
                             'label'             => __('Margin Top', 'bb-timeline'),
@@ -611,7 +600,17 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'type'          => 'text',
                             'label'         => __('Timeline Title', 'bb-timeline'),
                             'default'       => 'Title of section',
-                        )
+                        ),
+                        'timeline_title_align'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Title Alignment', 'bb-timeline'),
+                            'default'       => 'Left',
+                            'options'       => array(
+                                'left'      =>  __('Left', 'bb-timeline'),
+                                'center'    =>  __('Center', 'bb-timeline'),
+                                'right'     =>  __('Right', 'bb-timeline')
+                            ),
+                        ),
 
                     ),
                 ),
@@ -661,7 +660,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
         //Timeline Style
         'timeline_img_icon'     => array(
-            'title'         => __('Image / Icon Settings', 'bb-timeline'),
+            'title'         => __('Image / Icon', 'bb-timeline'),
             'sections'      => array(
 
                 // Timeline Icon / Image 
@@ -688,35 +687,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                         ),
 
-                        // Image/icon Border Radius
-                        'connector_border_radius' => array(
-                            'type'          => 'text',
-                            'label'         => __('Border Radius', 'bb-timeline'),
-                            'default'     => '50',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => '%',
-                            'help'         => __('To manage icon border corners.', 'bb-timeline')
-                        ),
-
-                        // Image/icon Background Color 
-                        'timeline_tmb_icon_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        'timeline_tmb_bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bb-timeline'),
-                            'default'     => '',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '4',
-                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
-                        ),
-
                     ),
                 ),
 
@@ -729,7 +699,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         'timeline_icon_style'          => array(
                             'type'          => 'icon',
                             'label'         => __('Icon', 'bb-timeline'),
-                            'default' => 'fa fa-circle-o',
+                            'default' => 'fa fa-circle',
                             'show_remove' => true,
                         ),
 
@@ -737,12 +707,12 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         'timeline_icon_colors' => array( 
                             'type'       => 'color',
                             'label'      => __('Icon Color', 'bb-timeline'),
-                            'default'    => '',
+                            'default'    => '5b9dd9',
                             'show_reset' => true,
                         ),
 
-                        /* Icon Style */
-                        'icon_style'         => array(
+                        /* Icon Background Style */
+                        'icon_bg_style'         => array(
                             'type'          => 'select',
                             'label'         => __('Icon Background Style', 'bb-timeline'),
                             'default'       => 'simple',
@@ -752,17 +722,21 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle' => array(
                                 'simple' => array(
-                                    'fields' => array('timeline_icon_border_bg_color', 'connector_border_radius'),
-                                    /*'sections' => array( 'colors' )*/
+                                    'fields' => array(),
                                 ),
 
                                 'custom' => array(
-                                    /*'sections' => array( 'colors' ),*/
-                                    'fields'   => array( 'icon_border_style', 'icon_border_width', 'icon_border_color', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
+                                    'sections'   => array( 'icon_boder_settings' )
                                 )
                             )
-                        ),
+                        ),  
+                    ),
+                ),
 
+                // Timeline Image 
+                'icon_boder_settings'       => array(
+                    'title'         => __( 'Icon Border Style', 'bb-timeline' ),
+                    'fields'        => array(
                         /* Border Style */
                         'icon_border_style'   => array(
                             'type'          => 'select',
@@ -778,16 +752,16 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle'        => array(
                                 'solid'         => array(
-                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
                                 ),
                                 'dashed'        => array(
-                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
                                 ),
                                 'dotted'        => array(
-                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
                                 ),
                                 'double'        => array(
-                                    'fields'        => array('icon_border_width', 'icon_border_color','icon_border_hover_color' )
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
                                 )
                             ),
                         ),
@@ -798,7 +772,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'default'       => '',
                             'description'   => 'px',
                             'maxlength'     => '3',
-                            'size'          => '6',
+                            'size'          => '4',
                             'placeholder'   => '1',
                             'preview'       => array(
                                     'type'      => 'css',
@@ -818,7 +792,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         'icon_border_color_opc' => array( 
                             'type'        => 'text',
                             'label'       => __('Border Color Opacity', 'bb-timeline'),
-                            'default'     => '50',
+                            'default'     => '100',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '4',
@@ -838,6 +812,44 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'type'          => 'photo',
                             'label'         => __('Image', 'bb-timeline'),
                             'show_remove'   => true,
+                        ),
+                        
+                    ),
+                ),
+
+                // Timeline Image 
+                'common_setting_icon_img'       => array(
+                    'title'         => __( 'Image / Icon Basic Style', 'bb-timeline' ),
+                    'fields'        => array(
+                        
+                        // Image/icon Border Radius
+                        'connector_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Radius', 'bb-timeline'),
+                            'default'     => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage Icon / Image border corners.', 'bb-timeline')
+                        ),
+
+                        // Image/icon Background Color 
+                        'timeline_tmb_icon_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                            'help'         => __('To manage background color.', 'bb-timeline')
+                        ),
+
+                        'timeline_tmb_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Background Opacity', 'bb-timeline'),
+                            'default'     => '0',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage background opacity.', 'bb-timeline')
                         ),
                         
                     ),
@@ -869,7 +881,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5'
-                        ),
+                        )
                     )
                 ),
 
