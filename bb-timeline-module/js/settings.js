@@ -23,12 +23,39 @@
 		init: function()
 		{
 			var form	= $('.fl-builder-settings'),
-				width	= form.find('input[name=timeline_title_seperator_width]');
+				width	= form.find('input[name=timeline_title_seperator_width]'),
+				imgIconType = form.find('select[name=timeline_img_icon_type]'),
+				iconBgStyle = form.find('select[name=icon_bg_style]'),
+				imgBgStyle = form.find('select[name=img_bg_style]');
 				
 			this._toggleLayoutOptions();
+			this._toggleImgIconOptions();
 			this._toggleSeparatorAlignment();
 
 			width.on('keyup', $.proxy( this._toggleSeparatorAlignment, this ) );
+			imgIconType.on('change', $.proxy( this._toggleImgIconOptions, this ) );
+			iconBgStyle.on('change', $.proxy( this._toggleImgIconOptions, this ) );
+			imgBgStyle.on('change', $.proxy( this._toggleImgIconOptions, this ) );
+		},
+
+		_toggleImgIconOptions: function() {
+
+			var form	= $('.fl-builder-settings'),
+				width	= form.find('input[name=timeline_title_seperator_width]'),
+				imgIconType = form.find('select[name=timeline_img_icon_type]'),
+				iconBgStyle = form.find('select[name=icon_bg_style]'),
+				imgBgStyle = form.find('select[name=img_bg_style]'),
+				iconBorderSetting	= form.find('#fl-builder-settings-section-icon_boder_settings'),
+				imgBorderSetting	= form.find('#fl-builder-settings-section-img_boder_settings');
+			console.log(imgIconType);
+			imgBorderSetting.hide();
+			iconBorderSetting.hide();
+
+			if( imgIconType.val() == 'icon' && iconBgStyle.val() == 'custom' ) {
+				iconBorderSetting.show();
+			} if( imgIconType.val() == 'photo' && imgBgStyle.val() == 'imgcustom' ) {
+				imgBorderSetting.show();
+			}
 		},
 
 		_toggleSeparatorAlignment: function() {

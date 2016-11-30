@@ -33,7 +33,7 @@
 			    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
 
 			    <!--image-->
-				<div class="bb-tmicon">
+				<div class="bb-tmicon bb-tm-image">
 				    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
 					   <img src="<?php echo $timeline1->photo_src; ?>"/>
 					<?php } ?>
@@ -102,7 +102,7 @@
 			<!--/.icon-->
 		    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
 		    <!--image-->
-			<div class="bb-tmicon">
+			<div class="bb-tmicon bb-tm-image">
 			    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
 				   <img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>

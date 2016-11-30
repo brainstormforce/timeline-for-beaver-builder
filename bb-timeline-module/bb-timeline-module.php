@@ -590,8 +590,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
     'tabs'  => array(
         'general'      => array( // Tab
             'title'         => __('General', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                
+            'sections'      => array( // Tab Sections            
                 //Title
                 'timeline_title_section'       => array( // Section
                     'title'         => __('Title', 'bb-timeline'), // Section Title
@@ -692,6 +691,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Icon 
                 'timeline_icon'       => array(
+                    'title'         => 'Icon Style', // Section Title
                     'fields'        => array(
                         // Select Icon  
                         'timeline_icon_style'          => array(
@@ -743,6 +743,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Image 
                 'icon_boder_settings'       => array(
+                    'title'         => ' Icon Border Setting', // Section Title
                     'fields'        => array(
 
                         // Image/icon Background Color 
@@ -841,6 +842,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Image 
                 'photo'       => array(
+                    'title'         => 'Image', // Section Title
                     'fields'        => array(
                         // Select Image 
                         'photo'         => array(
@@ -873,12 +875,13 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Image 
                 'img_boder_settings'       => array(
+                    'title'         => 'Image Border Setting', // Section Title
                     'fields'        => array(
                         // Image/icon Background Color 
                         'timeline_tmb_img_bg_color' => array( 
                             'type'       => 'color',
                             'label'         => __('Background Color', 'bb-timeline'),
-                            'default'    => 'ffffff',
+                            'default'    => '',
                             'show_reset' => true,
                             'help'         => __('To manage background color.', 'bb-timeline')
                         ),
@@ -932,7 +935,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'placeholder'   => '1',
                             'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.bb-tmicon',
+                                    'selector'  => '.bb-tm-image',
                                     'property'  => 'border-width',
                                     'unit'      => 'px'
                             )
@@ -967,7 +970,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         ),
                     ),
                 ),
-
             )
         ), 
 
