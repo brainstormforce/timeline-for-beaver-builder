@@ -1,6 +1,6 @@
 (function($) {
 
-	Animation = function( settings )
+	BBTimelineAnimation = function( settings )
 	{
 		this.settings 	  = settings;
 		this.timeline    = settings.timeline;
@@ -11,11 +11,11 @@
 		// console.log( this.animation );
 		if ( this.animation != 'no' ) {
 			this.nodeClass  = '.fl-node-' + settings.id;
-			this._initAnimations();
+			this._initBBTimelineAnimation();
 		};
 	};
 
-	Animation.prototype = {
+	BBTimelineAnimation.prototype = {
 	
 		settings	: {},
 		nodeClass   : '',
@@ -32,7 +32,7 @@
 		 * @access private
 		 * @method _initAnimations
 		 */ 
-		_initAnimations: function()
+		_initBBTimelineAnimation: function()
 		{
 			console.log('$(window).width()');
 			if( $(window).width() < 768 ) {
