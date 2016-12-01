@@ -179,7 +179,11 @@
     border-left-color: transparent;
 }
 
-@media screen and (max-width: 980px) {
+
+<?php if($global_settings->responsive_enabled) { // Global Setting If started ?>
+
+@media screen and (max-width: <?php echo $global_settings->responsive_breakpoint .'px'; ?>) {
+
 	<?php if($settings->connector_show_hide == 'chide') : ?>
 		
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
@@ -225,6 +229,203 @@
 	}
 	<?php endif; ?>	
 
+	/*common css*/
+	
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmicon,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+        display: block;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tm-image,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tm-image,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
+        display: block;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
+        padding: 20px;
+        margin-left: 40px !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel .bb-timline-title {
+        text-align: left !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel .tm-title-border-bottom {
+        text-align: left !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel .bb-timline-dec p {
+        text-align: left !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel .bb-timline-dec img {
+        margin-left: 0 !important;
+    }
+
+	/*right responsive*/
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
+        right: auto;
+        left: 20px;
+        margin: 0;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tm-image {
+        right: auto;
+        left: 20px;
+        margin: 0;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .tm-conatiner-main:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        right: auto;
+        left: 20px;
+        margin: 0;
+        border-radius: 0;
+        transform: translateX(-50%) !important;
+    }
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
+		width: 100%;
+		position: relative;
+        padding: 0 0 20px 0px;
+        margin-left: 65px;
+        text-align: left;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
+		margin: 0 0 40px 40px;
+		padding: 20px;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		top: -20px;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+		border-right-color: transparent;
+	}
+
+	/*left responsive*/
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon{
+        right: auto;
+        left: 20px;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tm-image{
+        right: auto;
+        left: 20px;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .tm-conatiner-main:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        right: auto;
+        left: 20px;
+        margin: 0;
+        border-radius: 0;
+        transform: translateX(-50%) !important;
+    }
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
+	    width: auto;
+	    position: relative;
+	    padding: 0 0 20px 0px;
+        margin-left: 65px;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
+	    text-align: left;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
+	    margin: 0 0 40px 40px;
+	    padding: 20px;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+		border-left-color: transparent;
+	}
+	
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after{
+		right: auto;
+    	left: 20px;
+    	border-left-color: transparent;
+    	top: -20px;
+	}
+
+	/*both responsive*/
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        right: auto;
+        left: 20px;
+        margin: 0;
+        border-radius: 0;
+        transform: translateX(-50%) !important;
+    }
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime {
+	    width: auto;
+	    position: relative;
+	    padding: 0 0 20px 0px;
+        margin-left: 65px;
+        text-align: left;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime span {
+	    text-align: left;
+	}
+	
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
+	    margin: 1px 0 40px 0;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
+	    border-left-color: transparent;
+	    right: auto;
+	    left: 20px;
+	    top: -20px;
+	}
+	
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
+		right: auto;
+	    left: 20px;
+	    border-right-color: transparent;
+	    top: -20px;
+	}
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+        right: auto;
+        left: 20px;
+        top: 0;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
+        right: auto;
+        left: 20px;
+        top: 0;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
 	/* Connector */
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
 	    border-bottom-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($sections_bg_color)) ?>, <?php echo ( $item->sections_bg_color_opc != '' ) ? $item->sections_bg_color_opc/100 : 100; ?>);
@@ -249,6 +450,6 @@
 	}
 }
 
-<?php
+<?php }
 }
 ?>
