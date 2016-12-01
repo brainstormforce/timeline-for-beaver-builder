@@ -382,7 +382,10 @@
 
 @media screen and (max-width: 980px) {
     /*common css*/
-
+    .bb-tmtimeline-container .bb-tmtimeline > li {
+        position: relative;
+        margin: 0 0 0 5px !important;
+    }
     .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
     .bb-timeline-right .bb-tmtimeline > li .bb-tmicon,
     .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
