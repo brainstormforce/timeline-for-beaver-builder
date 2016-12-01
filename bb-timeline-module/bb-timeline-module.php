@@ -212,21 +212,6 @@ FLBuilder::register_module('BSFBBTimelines',
                 'anim_on_off_section'       => array( // Section
                     'title'         => __('Animation', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
-                        'anim_on_off'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Display Animation On / Off', 'bb-timeline'),
-                            'default'       => 'on',
-                            'options'       => array(
-                                'off'      =>  __('Off', 'bb-timeline'),
-                                'on'      => __( 'On', 'bb-timeline' )
-                            ),
-                            'help'         => __(' To set Animation On or Off for your Timeline.', 'bb-timeline'),
-                            'toggle'        => array(
-                                'on'        => array(
-                                    'fields'            => array( 'tm_animation', 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
-                                ),
-                            )
-                        ),
                         //Timeline Animation Style
                         'tm_animation'         => array(
                             'type'          => 'select',
@@ -279,7 +264,141 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'slideInLeft'       => __( 'slideInLeft' , 'bb-timeline' ),
                                 'slideInRight'      => __( 'slideInRight' , 'bb-timeline' ),
                                 'slideInUp'         => __( 'slideInUp' , 'bb-timeline' ),
-                            ),                      
+                            ), 
+                            'toggle'        => array(
+                                'bounce'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flash'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'pulse'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rubberBand'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'shake'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'headShake'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'swing'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'tada'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'wobble'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'jello'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInDownBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInLeftBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInRightBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInUpBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipInX'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipInY'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipOutX'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipOutY'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'lightSpeedIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInDownLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInDownRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInUpLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInUpRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rollIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                )
+                            )                     
                         ),
                         //Timeline Animation delay
                         'tm_animation_delay'          => array(
@@ -325,14 +444,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'help'         => __(' To set On or Off Animation on Mobile Timeline Animation.', 'bb-timeline'),
                         )
                     ),
-                ),
-
-                
-                'anim_general'          => array(
-                    'title'         => '',
-                    'fields'        => array(
-                        
-                    )
                 ),
             )
         ),   

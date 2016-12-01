@@ -59,7 +59,7 @@
     display: none;
 }
 
-.bb-tmtimeline-container .bb-tmtimeline > li .bb-tmicon img {
+.bb-tmtimeline-container .bb-tmtimeline > li .bb-tm-image img {
     max-width: 100%;
     width: 40px;
     height: 40px;
@@ -144,6 +144,24 @@
     margin: 0;
     transform: translateX(-50%);
 }
+.bb-timeline-right .bb-tmtimeline > li .bb-tm-image {
+    width: 40px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 37px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    left: 20%;
+    top: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
 
 .bb-timeline-right .bb-tm-title-left {
     text-align: left;
@@ -202,6 +220,25 @@
     transform: translateX(50%);
 }
 
+.bb-timeline-left .bb-tmtimeline > li .bb-tm-image {
+    width: 40px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 37px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    right: 20%;
+    top: 0;
+    margin: 0;
+    transform: translateX(50%);
+}
+
 .bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
     display: block;
     width: 25%;
@@ -237,6 +274,24 @@
 }
 
 .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+    width: 40px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 37px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
     width: 40px;
     height: 40px;
     speak: none;
@@ -333,6 +388,12 @@
         display: block;
     }
 
+    .bb-timeline-left .bb-tmtimeline > li .bb-tm-image,
+    .bb-timeline-right .bb-tmtimeline > li .bb-tm-image,
+    .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
+        display: block;
+    }
+
     .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
         padding: 20px;
         margin-left: 40px !important;
@@ -356,6 +417,12 @@
 
 	/*right responsive*/
     .bb-timeline-right .bb-tmtimeline > li .bb-tmicon {
+        right: auto;
+        left: 20px;
+        margin: 0;
+    }
+
+    .bb-timeline-right .bb-tmtimeline > li .bb-tm-image {
         right: auto;
         left: 20px;
         margin: 0;
@@ -400,6 +467,13 @@
 
 	/*left responsive*/
     .bb-timeline-left .bb-tmtimeline > li .bb-tmicon{
+        right: auto;
+        left: 20px;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
+    .bb-timeline-left .bb-tmtimeline > li .bb-tm-image{
         right: auto;
         left: 20px;
         margin: 0;
@@ -490,6 +564,14 @@
 	}
 
     .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+        right: auto;
+        left: 20px;
+        top: 0;
+        margin: 0;
+        transform: translateX(-50%) !important;
+    }
+
+    .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
         right: auto;
         left: 20px;
         top: 0;

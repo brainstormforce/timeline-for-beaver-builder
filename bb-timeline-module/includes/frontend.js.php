@@ -2,7 +2,7 @@
 	
 	$(document).ready(function() {
 	
-		<?php if ($settings->anim_on_off == 'on') { 
+		<?php if ($settings->tm_animation != 'no') { 
 			foreach( $settings->timeline1 as $i => $item ) { ?>
 				new Animation({
 					id: '<?php echo $id ?>',

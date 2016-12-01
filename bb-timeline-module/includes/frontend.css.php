@@ -79,9 +79,9 @@
 }
 
 /* Timeline Connector */
-
+<?php if($item->timeline_img_icon_type == 'icon' && $item->icon_bg_style == 'custom') : ?>
 /* for icon setting */
-<?php $icon_border_color = ( !empty($item->icon_border_color) ) ? $item->icon_border_color : '46a4da' ; ?>
+<?php $icon_border_color = ( !empty($item->icon_border_color) ) ? $item->icon_border_color : '' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	border-width: <?php echo ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20'; ?>px;
     border-style: <?php echo $item->icon_border_style; ?>;
@@ -104,11 +104,11 @@
 	-webkit-border-radius: <?php echo $item->connector_border_radius; ?>%;
 	<?php endif; ?>	
 }
-
+ <?php endif; ?>
 
 /* for image setting */
-
-<?php $img_border_color = ( !empty($item->img_border_color) ) ? $item->img_border_color : '46a4da' ; ?>
+<?php if($item->timeline_img_icon_type == 'photo' && $item->img_bg_style == 'imgcustom') : ?>
+<?php $img_border_color = ( !empty($item->img_border_color) ) ? $item->img_border_color : '' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 	border-width: <?php echo ( $item->img_border_width < '20' ) ? $item->img_border_width : '20'; ?>px;
     border-style: <?php echo $item->img_border_style; ?>;
@@ -118,7 +118,7 @@
     box-shadow: none;
 }
 
-<?php $timeline_tmb_img_bg_color = ( !empty($item->timeline_tmb_img_bg_color) ) ? $item->timeline_tmb_img_bg_color : '6CBFEE' ; ?>
+<?php $timeline_tmb_img_bg_color = ( !empty($item->timeline_tmb_img_bg_color) ) ? $item->timeline_tmb_img_bg_color : '' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 	background-color: #<?php echo $timeline_tmb_img_bg_color; ?>;
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_tmb_img_bg_color)) ?>, <?php echo ( $item->timeline_tmb_img_bg_color_opc != '' ) ? $item->timeline_tmb_img_bg_color_opc/100 : 100; ?>);
@@ -131,7 +131,7 @@
 	-webkit-border-radius: <?php echo $item->img_border_radius; ?>%;
 	<?php endif; ?>	
 }
-
+ <?php endif; ?>
 
 
 /* Timeline Title border */
