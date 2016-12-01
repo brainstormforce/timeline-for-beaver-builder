@@ -180,6 +180,38 @@
 }
 
 @media screen and (max-width: 980px) {
+	<?php if($settings->connector_show_hide == 'chide') : ?>
+		
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmicon,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+        display: none !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tm-image,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tm-image,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
+        display: none !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-conatiner-main:before,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before{
+    	display: none !important;
+    }
+
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel,
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
+	    margin: 0 0 40px 0 !important;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime,
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmtime,
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime {
+    	margin-left: 0;
+	}
+	<?php endif; ?>	
+
 	/* Connector */
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
 	    border-bottom-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($sections_bg_color)) ?>, <?php echo ( $item->sections_bg_color_opc != '' ) ? $item->sections_bg_color_opc/100 : 100; ?>);
@@ -202,7 +234,6 @@
 	    border-left-color: transparent;
 	    border-right-color: transparent;
 	}
-
 }
 
 <?php

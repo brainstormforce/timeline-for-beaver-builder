@@ -166,6 +166,17 @@ FLBuilder::register_module('BSFBBTimelines',
                             'size'        => '4',
                             'help'         => __('To manage connector line opacity.', 'bb-timeline')
                         ),
+
+                        'connector_show_hide'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Display On/ Off for Mobile', 'bb-timeline'),
+                            'default'       => 'chide',
+                            'options'       => array(
+                                'chide'      =>  __('Hide', 'bb-timeline'),
+                                'cshow'      => __( 'Show', 'bb-timeline' ),
+                            ),
+                            'help'         => __(' To Show or Hide connector on mobile.', 'bb-timeline'),
+                        )
                     )
                 ),
 
