@@ -182,33 +182,46 @@
 @media screen and (max-width: 980px) {
 	<?php if($settings->connector_show_hide == 'chide') : ?>
 		
-	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
-    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmicon,
-    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
         display: none !important;
     }
 
-    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tm-image,
-    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tm-image,
-    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tm-image {
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tm-image,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
         display: none !important;
     }
 
     .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-conatiner-main:before,
-    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before{
+    .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-timeline-both .bb-tmtimeline:before{
     	display: none !important;
     }
 
-    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel,
-    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel,
-    .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
+    .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel,
+    .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
 	    margin: 0 0 40px 0 !important;
 	}
 
-	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime,
-	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmtime,
-	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime {
+	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmtime,
+	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmtime {
     	margin-left: 0;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before{
+		display: none !important;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tm-image{
+		display: none !important;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmtime {
+	    margin-left: 0 !important;
+	}
+
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
+	    margin-left: 0px !important;
 	}
 	<?php endif; ?>	
 
