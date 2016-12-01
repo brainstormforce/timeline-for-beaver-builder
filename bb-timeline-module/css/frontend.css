@@ -22,6 +22,7 @@
     padding: 0;
     list-style: none !important;
     position: relative;
+    overflow-x: hidden;
 } 
 
 .bb-tmtimeline-container .bb-tmtimeline > li {
@@ -494,7 +495,7 @@
 
 
 	.bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
-	    width: 100%;
+	    width: auto;
 	    position: relative;
 	    padding: 0 0 20px 0px;
         margin-left: 65px;
