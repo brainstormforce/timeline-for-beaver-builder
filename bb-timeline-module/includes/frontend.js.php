@@ -4,7 +4,7 @@
 	
 		<?php if ($settings->tm_animation != 'no') { 
 			foreach( $settings->timeline1 as $i => $item ) { ?>
-				new Animation({
+				new BBTimelineAnimation({
 					id: '<?php echo $id ?>',
 					timeline: <?php echo $i; ?>,
 					mobile_screen: '<?php echo $settings->anim_mobile_on_off; ?>',

@@ -47,7 +47,6 @@
 				imgBgStyle = form.find('select[name=img_bg_style]'),
 				iconBorderSetting	= form.find('#fl-builder-settings-section-icon_boder_settings'),
 				imgBorderSetting	= form.find('#fl-builder-settings-section-img_boder_settings');
-			console.log(imgIconType);
 			imgBorderSetting.hide();
 			iconBorderSetting.hide();
 

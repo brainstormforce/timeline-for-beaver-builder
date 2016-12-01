@@ -8,10 +8,9 @@
 		this.animation    = settings.animation;
 		this.animation_delay	  = settings.animation_delay;
 		this.viewport_position =	settings.viewport_position;
-		// console.log( this.animation );
 		if ( this.animation != 'no' ) {
 			this.nodeClass  = '.fl-node-' + settings.id;
-			this._initBBTimelineAnimation();
+			this._initAnimations();
 		};
 	};
 
@@ -32,9 +31,8 @@
 		 * @access private
 		 * @method _initAnimations
 		 */ 
-		_initBBTimelineAnimation: function()
+		_initAnimations: function()
 		{
-			console.log('$(window).width()');
 			if( $(window).width() < 768 ) {
 				if( this.mobile_screen == 'on' ) {
 					if(typeof jQuery.fn.waypoint !== 'undefined' /*&& !FLBuilderLayout._isMobile()*/ ) {
