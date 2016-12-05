@@ -224,7 +224,8 @@
 	    margin-left: 0 !important;
 	}
 
-	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
+	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel,
+    body .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
 	    margin-left: 0px !important;
 	}
 	<?php endif; ?>	
