@@ -1,4 +1,4 @@
-=== BB Timeline ===
+=== Timeline for Beaver Builder ===
 Contributors: brainstormforce, bhushansbobade20
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
@@ -8,11 +8,11 @@ Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Timeline for Beaver Builder is custom modules for Beaver Builder that create the awesome Responsive timeline in a simple way.
+Timeline for Beaver Builder is custom modules for Beaver Builder that create the Awesome Responsive Timeline in a simple way.
 
 == Description ==
 
-Timeline for Beaver Builder is custom modules for Beaver Builder that create the awesome Responsive timeline in a simple way. BB Timeline provides options for Title, Description, Customize Date, Date format, Date Show / Hide, Customize Separator, Customize Connector, Connector also has ON / OFF option on Responsive, and related typography options for Title, Description, Date etc, BB Timeline also provides Animation options. Now user can customize Animations effects, Animation Duration, Animation Delay, Animation ON / OFF. 
+Timeline for Beaver Builder is custom modules for Beaver Builder that create the awesome Responsive timeline in a simple way. Timeline for Beaver Builder provides options for Title, Description, Customize Date, Date format, Date Show / Hide, Customize Separator, Customize Connector, Connector also has ON / OFF option on Responsive, and related typography options for Title, Description, Date etc, Timeline for Beaver Builder also provides Animation options. Now user can customize Animations effects, Animation Duration, Animation Delay, Animation ON / OFF. 
 
 == Installation ==
 
