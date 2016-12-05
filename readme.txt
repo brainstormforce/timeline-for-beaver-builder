@@ -2,17 +2,17 @@
 Contributors: brainstormforce, bhushansbobade20
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
-Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline
+Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Responsive timeline, Responsive, timeline, Animation, Animated Timeline.
 Stable tag: 1.0.0
 Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Timeline for Beaver Builder is a custom modules for Beaver Builder that create timeline.
+Timeline for Beaver Builder is custom modules for Beaver Builder that create the awesome Responsive timeline in a simple way.
 
 == Description ==
 
-Timeline for Beaver Builder is a custom modules for Beaver Builder that create awesome timeline in three different layouts in simple way.
+Timeline for Beaver Builder is custom modules for Beaver Builder that create the awesome Responsive timeline in a simple way. BB Timeline provides options for Title, Description, Customize Date, Date format, Date Show / Hide, Customize Separator, Customize Connector, Connector also has ON / OFF option on Responsive, and related typography options for Title, Description, Date etc, BB Timeline also provides Animation options. Now user can customize Animations effects, Animation Duration, Animation Delay, Animation ON / OFF. 
 
 == Installation ==
 
