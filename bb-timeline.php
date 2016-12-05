@@ -72,7 +72,7 @@ if ( !class_exists( 'BSFBBTimeline' ) ) {
             //To display notice 
             echo '<div class="notice notice-error">';
 
-                echo "<p>The <strong>Timeline Module For Beaver Builder</strong> " . __( 'plugin requires', 'bb-timeline' )." <strong><a href='".$url."'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-timeline' ) . "</p>";
+                echo "<p>". sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-timeline' ) . "</p>", $url );
             
             echo '</div>';
         } 

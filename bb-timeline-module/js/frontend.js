@@ -1,6 +1,6 @@
 (function($) {
 
-	Animation = function( settings )
+	BBTimelineAnimation = function( settings )
 	{
 		this.settings 	  = settings;
 		this.timeline    = settings.timeline;
@@ -8,14 +8,13 @@
 		this.animation    = settings.animation;
 		this.animation_delay	  = settings.animation_delay;
 		this.viewport_position =	settings.viewport_position;
-		// console.log( this.animation );
 		if ( this.animation != 'no' ) {
 			this.nodeClass  = '.fl-node-' + settings.id;
 			this._initAnimations();
 		};
 	};
 
-	Animation.prototype = {
+	BBTimelineAnimation.prototype = {
 	
 		settings	: {},
 		nodeClass   : '',
@@ -34,7 +33,6 @@
 		 */ 
 		_initAnimations: function()
 		{
-			console.log('$(window).width()');
 			if( $(window).width() < 768 ) {
 				if( this.mobile_screen == 'on' ) {
 					if(typeof jQuery.fn.waypoint !== 'undefined' /*&& !FLBuilderLayout._isMobile()*/ ) {

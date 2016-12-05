@@ -33,7 +33,7 @@
 			    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
 
 			    <!--image-->
-				<div class="bb-tmicon">
+				<div class="bb-tm-image">
 				    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
 					   <img src="<?php echo $timeline1->photo_src; ?>"/>
 					<?php } ?>
@@ -44,12 +44,12 @@
 
 				<?php
 					$hideClass = '';
-					if( $settings->tm_animation != 'no' && $settings->anim_on_off == 'on' ){
+					if( $settings->tm_animation != 'no' ){
 						$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
+					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
 					</<?php echo $settings->tmtitle_tag; ?>>
 					<!--/.Timline-Title-->
@@ -102,7 +102,7 @@
 			<!--/.icon-->
 		    <?php } else if($timeline1->timeline_img_icon_type == 'photo'){ ?>
 		    <!--image-->
-			<div class="bb-tmicon">
+			<div class="bb-tm-image">
 			    <?php if( $timeline1->photo != '' && isset( $timeline1->photo_src) ){ ?> 
 				   <img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>
@@ -114,12 +114,12 @@
 			<div class="tm-conatiner-main">
 				<?php
 					$hideClass = '';
-					if( $settings->tm_animation != 'no' && $settings->anim_on_off == 'on' ){
+					if( $settings->tm_animation != 'no' ){
 					$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $settings->timeline_title_align; ?>">
+					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
 					</<?php echo $settings->tmtitle_tag; ?>>
 					<!--/.Timline-Title-->

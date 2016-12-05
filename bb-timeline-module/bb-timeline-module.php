@@ -166,6 +166,17 @@ FLBuilder::register_module('BSFBBTimelines',
                             'size'        => '4',
                             'help'         => __('To manage connector line opacity.', 'bb-timeline')
                         ),
+
+                        'connector_show_hide'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Display On/ Off for Mobile', 'bb-timeline'),
+                            'default'       => 'chide',
+                            'options'       => array(
+                                'chide'      =>  __('Hide', 'bb-timeline'),
+                                'cshow'      => __( 'Show', 'bb-timeline' ),
+                            ),
+                            'help'         => __(' To Show or Hide connector on mobile.', 'bb-timeline'),
+                        )
                     )
                 ),
 
@@ -212,21 +223,6 @@ FLBuilder::register_module('BSFBBTimelines',
                 'anim_on_off_section'       => array( // Section
                     'title'         => __('Animation', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
-                        'anim_on_off'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Display Animation On / Off', 'bb-timeline'),
-                            'default'       => 'on',
-                            'options'       => array(
-                                'off'      =>  __('Off', 'bb-timeline'),
-                                'on'      => __( 'On', 'bb-timeline' )
-                            ),
-                            'help'         => __(' To set Animation On or Off for your Timeline.', 'bb-timeline'),
-                            'toggle'        => array(
-                                'on'        => array(
-                                    'fields'            => array( 'tm_animation', 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
-                                ),
-                            )
-                        ),
                         //Timeline Animation Style
                         'tm_animation'         => array(
                             'type'          => 'select',
@@ -279,7 +275,141 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'slideInLeft'       => __( 'slideInLeft' , 'bb-timeline' ),
                                 'slideInRight'      => __( 'slideInRight' , 'bb-timeline' ),
                                 'slideInUp'         => __( 'slideInUp' , 'bb-timeline' ),
-                            ),                      
+                            ), 
+                            'toggle'        => array(
+                                'bounce'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flash'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'pulse'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rubberBand'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'shake'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'headShake'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'swing'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'tada'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'wobble'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'jello'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'bounceInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInDownBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInLeftBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInRightBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'fadeInUpBig'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipInX'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipInY'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipOutX'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'flipOutY'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'lightSpeedIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInDownLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInDownRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInUpLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rotateInUpRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'rollIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomIn'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'zoomInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInDown'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInLeft'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInRight'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                ),
+                                'slideInUp'        => array(
+                                    'fields'            => array( 'tm_animation_delay', 'tm_animation_duration', 'tm_viewport_position', 'anim_mobile_on_off' ),
+                                )
+                            )                     
                         ),
                         //Timeline Animation delay
                         'tm_animation_delay'          => array(
@@ -325,14 +455,6 @@ FLBuilder::register_module('BSFBBTimelines',
                             'help'         => __(' To set On or Off Animation on Mobile Timeline Animation.', 'bb-timeline'),
                         )
                     ),
-                ),
-
-                
-                'anim_general'          => array(
-                    'title'         => '',
-                    'fields'        => array(
-                        
-                    )
                 ),
             )
         ),   
@@ -401,17 +523,6 @@ FLBuilder::register_module('BSFBBTimelines',
                                 'property' => 'color',
                                 'selector' => '.bb-timline-title'
                             )
-                        ),
-
-                        'timeline_title_align'     => array(
-                            'type'          => 'select',
-                            'label'         => __('Title Alignment', 'bb-timeline'),
-                            'default'       => 'Left',
-                            'options'       => array(
-                                'left'      =>  __('Left', 'bb-timeline'),
-                                'center'    =>  __('Center', 'bb-timeline'),
-                                'right'     =>  __('Right', 'bb-timeline')
-                            ),
                         ),
 
                         'timeline_title_margin_top' => array(
@@ -601,17 +712,26 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
     'tabs'  => array(
         'general'      => array( // Tab
             'title'         => __('General', 'bb-timeline'), // Tab title
-            'sections'      => array( // Tab Sections
-                
+            'sections'      => array( // Tab Sections            
                 //Title
                 'timeline_title_section'       => array( // Section
-                    'title'         => __('', 'bb-timeline'), // Section Title
+                    'title'         => __('Title', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_title' => array(
                             'type'          => 'text',
                             'label'         => __('Timeline Title', 'bb-timeline'),
                             'default'       => 'Title of section',
-                        )
+                        ),
+                        'timeline_title_align'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Title Alignment', 'bb-timeline'),
+                            'default'       => 'Left',
+                            'options'       => array(
+                                'left'      =>  __('Left', 'bb-timeline'),
+                                'center'    =>  __('Center', 'bb-timeline'),
+                                'right'     =>  __('Right', 'bb-timeline')
+                            ),
+                        ),
 
                     ),
                 ),
@@ -627,74 +747,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         ),
                     ),
                 ),
-
-                // Timeline Icon / Image 
-                'timeline_img_icon'       => array(
-                    'title'         => __( 'Image / Icon', 'bb-timeline' ),
-                    'fields'        => array(
-                        'timeline_img_icon_type'    => array(
-                            'type'          => 'select',
-                            'label'         => __('Select Type', 'bb-timeline'),
-                            'default'       => 'icon',
-                            'options'       => array(
-                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
-                                'icon'          => __('Icon', 'bb-timeline'),
-                                'photo'         => __('Image', 'bb-timeline'),
-                            ),
-                            'toggle'        => array(
-                                'icon'          => array(
-                                    'fields'   => array( 'timeline_icon_style', 'timeline_icon_colors', 'timeline_thumb', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
-                                ),
-                                'photo'         => array(
-                                    'fields'   => array( 'photo', 'timeline_icon_border_bg_color', 'connector_border_radius' ),
-                                )
-                            ),
-                        ),
-
-                        // Icon style 
-                        'timeline_icon_style'          => array(
-                            'type'          => 'icon',
-                            'label'         => __('Icon', 'bb-timeline'),
-                            'default' => 'fa fa-circle-o',
-                            'show_remove' => true,
-                        ),
-
-                        // Icon colors 
-                        'timeline_icon_colors' => array( 
-                            'type'       => 'color',
-                            'label'      => __('Icon Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true,
-                        ),
-
-                        // Select Image 
-                        'photo'         => array(
-                            'type'          => 'photo',
-                            'label'         => __('Image', 'bb-timeline'),
-                            'show_remove'   => true,
-                        ),
-
-                        // Image/icon Background Color 
-                        'timeline_icon_border_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Background Color', 'bb-timeline'),
-                            'default'    => '',
-                            'show_reset' => true
-                        ),
-
-                        // Image/icon Border Radius
-                        'connector_border_radius' => array(
-                            'type'          => 'text',
-                            'label'         => __('Border Radius', 'bb-timeline'),
-                            'default'     => '50',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => '%',
-                            'help'         => __('To manage icon border corners.', 'bb-timeline')
-                        ),
-                    ),
-                ),
-
 
                 //Set Date
                 'date'       => array(
@@ -728,6 +780,332 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
         ),
 
         //Timeline Style
+        'timeline_img_icon'     => array(
+            'title'         => __('Image / Icon', 'bb-timeline'),
+            'sections'      => array(
+
+                // Timeline Icon / Image 
+                'timeline_img_icon'       => array(
+                    'title'         => __( 'Image / Icon', 'bb-timeline' ),
+                    'fields'        => array(
+                        'timeline_img_icon_type'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Type', 'bb-timeline'),
+                            'default'       => 'icon',
+                            'options'       => array(
+                                'none'          => __( 'None', 'Image type.', 'bb-timeline' ),
+                                'icon'          => __('Icon', 'bb-timeline'),
+                                'photo'         => __('Image', 'bb-timeline'),
+                            ),
+                            'toggle'        => array(
+                                'icon'          => array(
+                                    'sections'   => array( 'timeline_icon' ),
+                                ),
+                                'photo'         => array(
+                                    'sections'   => array( 'photo'),
+                                )
+                            ),
+                        ),
+                    ),
+                ),
+
+                // Timeline Icon 
+                'timeline_icon'       => array(
+                    'title'         => '', // Section Title
+                    'fields'        => array(
+                        // Select Icon  
+                        'timeline_icon_style'          => array(
+                            'type'          => 'icon',
+                            'label'         => __('Icon', 'bb-timeline'),
+                            'default' => 'fa fa-circle',
+                            'show_remove' => true,
+                        ),
+
+                        /* Icon Background Style */
+                        'icon_bg_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Icon Background Style', 'bb-timeline'),
+                            'default'       => 'simple',
+                            'options'       => array(
+                                'simple'        => __('Simple', 'bb-timeline'),
+                                'custom'         => __('Customize', 'bb-timeline'),
+                            ),
+                            'toggle' => array(
+                                'simple' => array(
+                                    'fields' => array('timeline_icon_colors', 'timeline_icon_hover_colors'),
+                                ),
+
+                                'custom' => array(
+                                    'sections'   => array('icon_boder_settings'),
+                                    'fields' => array('timeline_icon_colors', 'timeline_icon_hover_colors'),
+                                    
+                                )
+                            )
+                        ), 
+
+                        // Icon colors 
+                        'timeline_icon_colors' => array( 
+                            'type'       => 'color',
+                            'label'      => __('Icon Color', 'bb-timeline'),
+                            'default'    => '5b9dd9',
+                            'show_reset' => true,
+                        ),  
+
+                        // Icon hover colors 
+                        'timeline_icon_hover_colors' => array( 
+                            'type'       => 'color',
+                            'label'      => __('Icon Hover Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ), 
+                    ),
+                ),
+
+                // Timeline Icon Border 
+                'icon_boder_settings'       => array(
+                    'title'         => '', // Section Title
+                    'fields'        => array(
+
+                        // Image/icon Background Color 
+                        'timeline_tmb_icon_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true,
+                            'help'         => __('To manage background color.', 'bb-timeline')
+                        ),
+
+                        'timeline_tmb_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Background Opacity', 'bb-timeline'),
+                            'default'     => '0',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage background opacity.', 'bb-timeline')
+                        ),
+
+                        /* Border Style */
+                        'icon_border_style'   => array(
+                            'type'          => 'select',
+                            'label'         => __('Border Style', 'bb-timeline'),
+                            'default'       => 'none',
+                            'help'          => __('The type of border to use. Double borders must have a width of at least 3px to render properly.', 'bb-timeline'),
+                            'options'       => array(
+                                'none'   => __( 'None', 'Border type.', 'bb-timeline' ),
+                                'solid'  => __( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed' => __( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted' => __( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double' => __( 'Double', 'Border type.', 'bb-timeline' )
+                            ),
+                            'toggle'        => array(
+                                'solid'         => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array('icon_border_width', 'icon_border_color', 'icon_border_color_opc' )
+                                )
+                            ),
+                        ),
+
+                        'icon_border_width'    => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Width', 'bb-timeline'),
+                            'default'       => '',
+                            'description'   => 'px',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'placeholder'   => '1',
+                            'preview'       => array(
+                                    'type'      => 'css',
+                                    'selector'  => '.bb-tmicon',
+                                    'property'  => 'border-width',
+                                    'unit'      => 'px'
+                            )
+                        ),
+
+                        'icon_border_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Border Color', 'bb-timeline'),
+                        ),
+
+                        // Select Image 
+                        'photo'         => array(
+                            'type'          => 'photo',
+                            'label'         => __('Image', 'bb-timeline'),
+                            'show_remove'   => true,
+                        ),
+
+                        // Image/icon Background Color 
+                        'timeline_icon_border_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'icon_border_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Border Color Opacity', 'bb-timeline'),
+                            'default'     => '100',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
+                        ),
+                        // Image/icon Border Radius
+                        'connector_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Radius', 'bb-timeline'),
+                            'default'     => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage Icon / Image border corners.', 'bb-timeline')
+                        ),
+                    ),
+                ),
+
+                // Timeline Image 
+                'photo'       => array(
+                    'title'         => '', // Section Title
+                    'fields'        => array(
+                        // Select Image 
+                        'photo'         => array(
+                            'type'          => 'photo',
+                            'label'         => __('Image', 'bb-timeline'),
+                            'show_remove'   => true,
+                        ),
+
+                        /* Icon Background Style */
+                        'img_bg_style'         => array(
+                            'type'          => 'select',
+                            'label'         => __('Image Background Style', 'bb-timeline'),
+                            'default'       => 'simple',
+                            'options'       => array(
+                                'imgsimple'        => __('Simple', 'bb-timeline'),
+                                'imgcustom'         => __('Customize', 'bb-timeline'),
+                            ),
+                            'toggle' => array(
+                                'imgsimple' => array(
+                                    'fields' => array(),
+                                ),
+
+                                'imgcustom' => array(
+                                    'sections'   => array('img_boder_settings'),                                
+                                )
+                            )
+                        ),            
+                    ),
+                ),
+
+                // Timeline Image Border
+                'img_boder_settings'       => array(
+                    'title'         => '', // Section Title
+                    'fields'        => array(
+                        // Image/icon Background Color 
+                        'timeline_tmb_img_bg_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Background Color', 'bb-timeline'),
+                            'default'    => 'ffffff',
+                            'show_reset' => true,
+                            'help'         => __('To manage background color.', 'bb-timeline')
+                        ),
+
+                        'timeline_tmb_img_bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Background Opacity', 'bb-timeline'),
+                            'default'     => '',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage background opacity.', 'bb-timeline')
+                        ),
+
+                        /* Border Style */
+                        'img_border_style'   => array(
+                            'type'          => 'select',
+                            'label'         => __('Border Style', 'bb-timeline'),
+                            'default'       => 'solid',
+                            'help'          => __('The type of border to use. Double borders must have a width of at least 3px to render properly.', 'bb-timeline'),
+                            'options'       => array(
+                                'none'   => __( 'None', 'Border type.', 'bb-timeline' ),
+                                'solid'  => __( 'Solid', 'Border type.', 'bb-timeline' ),
+                                'dashed' => __( 'Dashed', 'Border type.', 'bb-timeline' ),
+                                'dotted' => __( 'Dotted', 'Border type.', 'bb-timeline' ),
+                                'double' => __( 'Double', 'Border type.', 'bb-timeline' )
+                            ),
+                            'toggle'        => array(
+                                'solid'         => array(
+                                    'fields'        => array('img_border_width', 'img_border_color', 'img_border_color_opc', 'img_border_radius' )
+                                ),
+                                'dashed'        => array(
+                                    'fields'        => array('img_border_width', 'img_border_color', 'img_border_color_opc', 'img_border_radius' )
+                                ),
+                                'dotted'        => array(
+                                    'fields'        => array('img_border_width', 'img_border_color', 'img_border_color_opc', 'img_border_radius' )
+                                ),
+                                'double'        => array(
+                                    'fields'        => array('img_border_width', 'img_border_color', 'img_border_color_opc', 'img_border_radius' )
+                                )
+                            ),
+                        ),
+
+                        'img_border_width'    => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Width', 'bb-timeline'),
+                            'default'       => '',
+                            'description'   => 'px',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'placeholder'   => '1',
+                            'preview'       => array(
+                                    'type'      => 'css',
+                                    'selector'  => '.bb-tm-image',
+                                    'property'  => 'border-width',
+                                    'unit'      => 'px'
+                            )
+                        ),
+
+                        'img_border_color' => array( 
+                            'type'       => 'color',
+                            'label'         => __('Border Color', 'bb-timeline'),
+                            'default'    => '',
+                            'show_reset' => true
+                        ),
+
+                        'img_border_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Border Color Opacity', 'bb-timeline'),
+                            'default'     => '100',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '4',
+                            'help'         => __('To manage connector line opacity.', 'bb-timeline')
+                        ),
+
+                        // Image/icon Border Radius
+                        'img_border_radius' => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Radius', 'bb-timeline'),
+                            'default'     => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => '%',
+                            'help'         => __('To manage Icon / Image border corners.', 'bb-timeline')
+                        ),
+                    ),
+                ),
+            )
+        ), 
+
+        //Timeline Style
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
             'sections'      => array(
@@ -750,7 +1128,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5'
-                        ),
+                        )
                     )
                 ),
 
