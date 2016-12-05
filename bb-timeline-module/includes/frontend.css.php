@@ -118,7 +118,7 @@
     box-shadow: none;
 }
 
-<?php $timeline_tmb_img_bg_color = ( !empty($item->timeline_tmb_img_bg_color) ) ? $item->timeline_tmb_img_bg_color : '' ; ?>
+<?php $timeline_tmb_img_bg_color = ( !empty($item->timeline_tmb_img_bg_color) ) ? $item->timeline_tmb_img_bg_color : 'ffffff' ; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 	background-color: #<?php echo $timeline_tmb_img_bg_color; ?>;
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($timeline_tmb_img_bg_color)) ?>, <?php echo ( $item->timeline_tmb_img_bg_color_opc != '' ) ? $item->timeline_tmb_img_bg_color_opc/100 : 100; ?>);
