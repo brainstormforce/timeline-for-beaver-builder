@@ -685,7 +685,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_date_color'    => array( 
                             'type'       => 'color',
                             'label'         => __('Text Color', 'bb-timeline'),
-                            'default'    => 'ffffff',
+                            'default'    => '5B9DD9',
                             'show_reset' => true,
                             'preview'       => array(
                                 'type' => 'css',
