@@ -469,7 +469,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'tmtitle_tag'           => array(
                             'type'          => 'select',
                             'label'         => __( 'HTML Tag', 'bb-timeline' ),
-                            'default'       => 'h2',
+                            'default'       => 'h3',
                             'options'       => array(
                                 'h1'            =>  'h1',
                                 'h2'            =>  'h2',
@@ -496,7 +496,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_title_custom_size' => array(
                             'type'              => 'text',
                             'label'             => __('Font Size', 'bb-timeline'),
-                            'default'           => '20',
+                            'default'           => '',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px'
@@ -505,7 +505,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_title_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -514,7 +514,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_title_color'    => array( 
                             'type'       => 'color',
                             'label'         => __('Text Color', 'bb-timeline'),
-                            'default'    => '',
+                            'default'    => 'ffffff',
                             'show_reset' => true,
                             'preview'       => array(
                                 'type' => 'css',
@@ -530,7 +530,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px',
-                            'default'    => '',
+                            'default'    => '0',
                             'preview'       => array(
                                 'type' => 'css',
                                 'property' => 'margin-top',
@@ -577,7 +577,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_dec_custom_size' => array(
                             'type'              => 'text',
                             'label'             => __('Font Size', 'bb-timeline'),
-                            'default'           => '18',
+                            'default'           => '',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px'
@@ -586,7 +586,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_dec_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -667,7 +667,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_date_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '36',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -685,7 +685,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_date_color'    => array( 
                             'type'       => 'color',
                             'label'         => __('Text Color', 'bb-timeline'),
-                            'default'    => 'bdd0db',
+                            'default'    => 'ffffff',
                             'show_reset' => true,
                             'preview'       => array(
                                 'type' => 'css',
