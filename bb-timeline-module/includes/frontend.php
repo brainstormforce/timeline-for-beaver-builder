@@ -13,12 +13,20 @@
 			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
+				<?php if( $timeline1->timeline_date_customcontent_type == 'rsdate' ){ ?>
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date($settings->date_format, strtotime($current_date)); ?>
-				</span> 
+				</span>
+
+				<?php } else if($timeline1->timeline_date_customcontent_type == 'customcontent'){ ?> 
+				<!--Timeline-customcontent-->
+					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
+				<!--/.Timeline-customcontent-->
+				<?php } ?>
 			</div>
 			<!--/.date-->
+
 			<?php } ?>
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
@@ -86,10 +94,17 @@
 			<?php if( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ){ ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
+				<?php if( $timeline1->timeline_date_customcontent_type == 'rsdate' ){ ?>
 				<?php $current_date = $timeline1->year .'-'. $timeline1->month .'-'. $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date($settings->date_format, strtotime($current_date)); ?>
-				</span> 
+				</span>
+
+				 <?php } else if($timeline1->timeline_date_customcontent_type == 'customcontent'){ ?> 
+				<!--Timeline-customcontent-->
+					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
+				<!--/.Timeline-customcontent-->
+				<?php } ?>
 			</div>
 			<!--/.date-->
 			<?php } ?>

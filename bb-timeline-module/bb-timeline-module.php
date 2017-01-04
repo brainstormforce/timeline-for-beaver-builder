@@ -182,7 +182,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Time Date Show / Hide
                 'date_show_hide_section'       => array( // Section
-                    'title'         => __('Date', 'bb-timeline'), // Section Title
+                    'title'         => __('Date Area', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'date_show_hide'         => array(
                             'type'          => 'select',
@@ -532,7 +532,7 @@ FLBuilder::register_module('BSFBBTimelines',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px',
-                            'default'    => '',
+                            'default'    => '0',
                             'preview'       => array(
                                 'type' => 'css',
                                 'property' => 'margin-top',
@@ -748,6 +748,31 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                     ),
                 ),
 
+                // Timeline Date / Content 
+                'timeline_date_area'       => array(
+                    'title'         => __( 'Date Area', 'bb-timeline' ),
+                    'fields'        => array(
+                        'timeline_date_customcontent_type'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Select Type', 'bb-timeline'),
+                            'default'       => 'rsdate',
+                            'options'       => array(
+                                // 'none'              => __( 'None', 'bb-timeline' ),
+                                'rsdate'            => __( 'Date', 'bb-timeline' ),
+                                'customcontent'     => __( 'Content', 'bb-timeline' ),
+                            ),
+                            'toggle'        => array(
+                                'rsdate'          => array(
+                                    'sections'   => array( 'date' ),
+                                ),
+                                'customcontent'         => array(
+                                    'sections'   => array( 'custom_content'),
+                                )
+                            ),
+                        ),
+                    ),
+                ),
+
                 //Set Date
                 'date'       => array(
                     'title'         => __( 'Date', 'bb-timeline' ),
@@ -775,6 +800,18 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'description'   => __('<br/><br/>Please fill all three fields to display date.', 'bb-timeline'),
                         ),
                     )
+                ),
+
+                //Custom-Content
+                'custom_content'       => array( // Section
+                    'title'         => __('Enter Your Content', 'bb-timeline'), // Section Title
+                    'fields'        => array( // Section Fields
+                        'timeline_custom_content_editor'          => array(
+                            'type'          => 'editor',
+                            'rows'          => 5,
+                            'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                        ),
+                    ),
                 ),
             )
         ),
