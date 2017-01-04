@@ -160,7 +160,23 @@
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
 	background-color: #<?php echo $sections_bg_color; ?>;
 	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($sections_bg_color)) ?>, <?php echo ( $item->sections_bg_color_opc != '' ) ? $item->sections_bg_color_opc/100 : 100; ?>);
+    border-radius: <?php echo $item->timeline_sections_border_radius; ?>px;
+    border-width: <?php echo $item->timeline_sections_border_width; ?>px;
+    border-style: <?php echo $item->timeline_section_border_style; ?>;
+    border-color: #<?php echo $item->timeline_sections_border_color; ?>;
 }
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after  {
+<?php $top_value = ( (int)$item->timeline_sections_border_radius <= 10 ) ? 10 : $item->timeline_sections_border_radius;?>
+    top: <?php echo $top_value; ?>px;
+    margin-left: <?php echo $item->timeline_sections_border_width; ?>px;
+}
+
+.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main{
+    padding-top: <?php echo $item->timeline_sections_padding_top; ?>px;
+    padding-bottom: <?php echo $item->timeline_sections_padding_bottom; ?>px;
+}
+
 .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
     border-right-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($sections_bg_color)) ?>, <?php echo ( $item->sections_bg_color_opc != '' ) ? $item->sections_bg_color_opc/100 : 100; ?>);
     border-left-color: transparent;
@@ -229,6 +245,12 @@
 	}
 	<?php endif; ?>	
 
+    <?php if($settings->connector_show_hide == 'cshow') : ?>
+    .fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
+        margin-left: 50px !important;
+    }
+    <?php endif; ?> 
+
 	/*common css*/
 	
     .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
@@ -245,7 +267,6 @@
 
     .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
         padding: 20px;
-        margin-left: 40px !important;
     }
 
     .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .bb-tmlabel .bb-timline-title {
@@ -290,15 +311,15 @@
     }
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmtime {
-		width: 100%;
+		width: auto;
 		position: relative;
         padding: 0 0 20px 0px;
-        margin-left: 65px;
+        margin-left: 60px;
         text-align: left;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmlabel {
-		margin: 0 0 40px 40px;
+		margin: 0 0 40px 50px;
 		padding: 20px;
 	}
 
@@ -344,7 +365,7 @@
 	    width: auto;
 	    position: relative;
 	    padding: 0 0 20px 0px;
-        margin-left: 65px;
+        margin-left: 60px;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
@@ -352,7 +373,7 @@
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
-	    margin: 0 0 40px 40px;
+	    margin: 0 0 40px 50px;
 	    padding: 20px;
 	}
 
@@ -384,7 +405,7 @@
 	    width: auto;
 	    position: relative;
 	    padding: 0 0 20px 0px;
-        margin-left: 65px;
+        margin-left: 50px;
         text-align: left;
 	}
 

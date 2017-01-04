@@ -84,8 +84,6 @@
 
             } else {
             	timeline_date_area.css('display', 'block');
-                date.css('display', 'block');
-                custom_content.css('display', 'block');
             }
         },
 	});

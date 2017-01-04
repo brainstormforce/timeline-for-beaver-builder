@@ -15,8 +15,15 @@
     display: inline-block;
 }
 /*main heading align /.*/
-
+#fl-builder-settings-section-timeline_date_area {
+    margin-bottom: 0 !important;
+}
 /*-----------------------------Common-CSS-Start---------------------------------------*/
+
+.bb-tmtimeline-container .bb-custom-content img{
+    margin: 0 !important;
+}
+
 .bb-tmtimeline-container .bb-tmtimeline {
     margin: 30px 0 0 0 !important;
     padding: 0;
@@ -83,7 +90,6 @@
     line-height: 1.4;
     position: relative;
     margin: 0 0 30px 25%;
-    border-radius: 5px;
     display: block;
 }
 
@@ -122,7 +128,7 @@
 	position: absolute;
 	pointer-events: none;
 	border-width: 10px;
-	top: 10px;
+	/*top: 10px;*/
 }
 
 /* The icons */
@@ -197,7 +203,6 @@
     line-height: 1.4;
     position: relative;
     margin: 0 25% 30px 0;
-    border-radius: 5px;
     display: block;
 }
 
@@ -256,7 +261,7 @@
     position: absolute;
     pointer-events: none;
     border-width: 10px;
-    top: 10px;
+    /*top: 10px;*/
 }
 /*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
 
@@ -327,7 +332,6 @@
     line-height: 1.4;
     position: relative;
     margin: 0 0 30px 55%;
-    border-radius: 5px;
     display: block;
 }
 
@@ -369,7 +373,7 @@
     position: absolute;
     pointer-events: none;
     border-width: 10px;
-    top: 10px;
+    /*top: 10px;*/
 }
 
 .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
