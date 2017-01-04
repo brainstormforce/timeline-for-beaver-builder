@@ -1169,7 +1169,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                         'timeline_section_border_style'         => array(
                             'type'          => 'select',
-                            'label'         => __('Style', 'bb-timeline'),
+                            'label'         => __('Border Style', 'bb-timeline'),
                             'default'       => 'none',
                             'options'       => array(
                                 'none'      =>  __('None', 'bb-timeline'),
