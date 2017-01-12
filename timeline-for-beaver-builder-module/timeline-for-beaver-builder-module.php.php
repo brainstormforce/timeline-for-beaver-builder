@@ -15,15 +15,15 @@ class BSFBBTimelines extends FLBuilderModule {
             'name'          => __('Timeline', 'bb-timeline'),
             'description'   => __('To create Bootstrap Card builder modules.', 'bb-timeline'),
             'category'		=> __('Advanced Modules', 'bb-timeline'),
-            'dir'           => BB_TIMELINE_DIR . 'bb-timeline-module/',
-            'url'           => BB_TIMELINE_URL . 'bb-timeline-module/',
+            'dir'           => TIMELINE_FOR_BEAVER_BUILDER_DIR . 'timeline-for-beaver-builder-module/',
+            'url'           => TIMELINE_FOR_BEAVER_BUILDER_URL  . 'timeline-for-beaver-builder-module/',
             'partial_refresh' => false // Defaults to false and can be omitted.
         )); 
 
         $this->add_js('jquery-waypoints');
 
         // Register and enqueue your own.
-        $this->add_css( 'animate', BB_TIMELINE_URL . 'assets/css/animate.css' );
+        $this->add_css( 'animate', TIMELINE_FOR_BEAVER_BUILDER_URL  . 'assets/css/animate.css' );
     }
 
     /**
