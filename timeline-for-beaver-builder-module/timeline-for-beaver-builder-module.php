@@ -182,7 +182,7 @@ FLBuilder::register_module('BSFBBTimelines',
 
                 //Time Date Show / Hide
                 'date_show_hide_section'       => array( // Section
-                    'title'         => __('Date Area', 'bb-timeline'), // Section Title
+                    'title'         => __('Date / Content Area', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'date_show_hide'         => array(
                             'type'          => 'select',
@@ -747,7 +747,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 // Timeline Date / Content 
                 'timeline_date_area'       => array(
-                    'title'         => __( 'Date Area', 'bb-timeline' ),
+                    'title'         => __( 'Date / Content Area', 'bb-timeline' ),
                     'fields'        => array(
                         'timeline_date_customcontent_type'    => array(
                             'type'          => 'select',
