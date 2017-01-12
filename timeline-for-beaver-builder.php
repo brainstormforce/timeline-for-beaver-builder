@@ -3,21 +3,14 @@
  * Plugin Name: Timeline For Beaver Builder 
  * Plugin URI: https://www.brainstormforce.com/
  * Description: Timeline for Beaver Builder is a custom modules for Beaver Builder to create the awesome responsive timeline with animation.
-<<<<<<< HEAD:timeline-for-beaver-builder.php
  * Version: 1.0.1
-=======
- * Version: 1.0.0
->>>>>>> 5961d1f5c0f4a47f4a319339a7cd99d28c15de9d:timeline-for-beaver-builder.php
  * Author: Brainstorm force, Bhushan Bobade
  * Author URI: https://www.brainstormforce.com/
  * Text Domain: bb-timeline
  */
 define( 'TIMELINE_FOR_BEAVER_BUILDER_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TIMELINE_FOR_BEAVER_BUILDER_URL', plugins_url( '/', __FILE__ ) );
-<<<<<<< HEAD:timeline-for-beaver-builder.php
-=======
 
->>>>>>> 5961d1f5c0f4a47f4a319339a7cd99d28c15de9d:timeline-for-beaver-builder.php
 /**
  * Custom modules
  */
@@ -35,10 +28,6 @@ if ( !class_exists( 'BSFBBTimeline' ) ) {
             if ( class_exists( 'FLBuilder' ) ) {
                 // If class exist it loads the module
                 require_once 'timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php';
-<<<<<<< HEAD:timeline-for-beaver-builder.php
-=======
-
->>>>>>> 5961d1f5c0f4a47f4a319339a7cd99d28c15de9d:timeline-for-beaver-builder.php
             }
             else {
                 // Display admin notice for activating beaver builder
