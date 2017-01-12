@@ -16,14 +16,22 @@ class BSFBBTimelines extends FLBuilderModule {
             'description'   => __('To create Bootstrap Card builder modules.', 'bb-timeline'),
             'category'		=> __('Advanced Modules', 'bb-timeline'),
             'dir'           => TIMELINE_FOR_BEAVER_BUILDER_DIR . 'timeline-for-beaver-builder-module/',
+<<<<<<< HEAD:timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php
             'url'           => TIMELINE_FOR_BEAVER_BUILDER_URL  . 'timeline-for-beaver-builder-module/',
+=======
+            'url'           => TIMELINE_FOR_BEAVER_BUILDER_URL . 'timeline-for-beaver-builder-module/',
+>>>>>>> 5961d1f5c0f4a47f4a319339a7cd99d28c15de9d:timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php
             'partial_refresh' => false // Defaults to false and can be omitted.
         )); 
 
         $this->add_js('jquery-waypoints');
 
         // Register and enqueue your own.
+<<<<<<< HEAD:timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php
         $this->add_css( 'animate', TIMELINE_FOR_BEAVER_BUILDER_URL  . 'assets/css/animate.css' );
+=======
+        $this->add_css( 'animate', TIMELINE_FOR_BEAVER_BUILDER_URL . 'assets/css/animate.css' );
+>>>>>>> 5961d1f5c0f4a47f4a319339a7cd99d28c15de9d:timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php
     }
 
     /**
@@ -113,7 +121,6 @@ FLBuilder::register_module('BSFBBTimelines',
                 'timeline_connector'     => array(
                     'title'         => __('Connector', 'bb-timeline'),
                     'fields'        => array(
-
                         'connector_border_style'         => array(
                             'type'          => 'select',
                             'label'         => __('Style', 'bb-timeline'),
@@ -463,7 +470,6 @@ FLBuilder::register_module('BSFBBTimelines',
         'timeline_typography'         => array(
             'title'         => __('Typography', 'bb-timeline'),
             'sections'      => array(
-
                 //Timeline Title
                 'timeline_title_typography'     => array(
                     'title'         => __('Title', 'bb-timeline'),
@@ -471,7 +477,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'tmtitle_tag'           => array(
                             'type'          => 'select',
                             'label'         => __( 'HTML Tag', 'bb-timeline' ),
-                            'default'       => 'h2',
+                            'default'       => 'h3',
                             'options'       => array(
                                 'h1'            =>  'h1',
                                 'h2'            =>  'h2',
@@ -498,7 +504,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_title_custom_size' => array(
                             'type'              => 'text',
                             'label'             => __('Font Size', 'bb-timeline'),
-                            'default'           => '20',
+                            'default'           => '',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px'
@@ -507,7 +513,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_title_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -563,7 +569,6 @@ FLBuilder::register_module('BSFBBTimelines',
                 'timeline_description_typography'     => array(
                     'title'         => __('Description', 'bb-timeline'),
                     'fields'        => array(
-
                         'timeline_dec_font'          => array(
                             'type'          => 'font',
                             'default'       => array(
@@ -580,7 +585,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_dec_custom_size' => array(
                             'type'              => 'text',
                             'label'             => __('Font Size', 'bb-timeline'),
-                            'default'           => '18',
+                            'default'           => '',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px'
@@ -589,7 +594,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_dec_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -645,7 +650,6 @@ FLBuilder::register_module('BSFBBTimelines',
                 'timeline_date_typography'     => array(
                     'title'         => __('Date / Content', 'bb-timeline'),
                     'fields'        => array(
-
                         'timeline_date_font'          => array(
                             'type'          => 'font',
                             'default'       => array(
@@ -671,7 +675,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_date_custom_line_height' => array(
                             'type'          => 'text',
                             'label'         => __('Line Height', 'bb-timeline'),
-                            'default'       => '30',
+                            'default'       => '36',
                             'maxlength'     => '4',
                             'size'          => '4',
                             'description'   => 'px'
@@ -689,7 +693,7 @@ FLBuilder::register_module('BSFBBTimelines',
                         'timeline_date_color'    => array( 
                             'type'       => 'color',
                             'label'         => __('Text Color', 'bb-timeline'),
-                            'default'    => 'bdd0db',
+                            'default'    => '5B9DD9',
                             'show_reset' => true,
                             'preview'       => array(
                                 'type' => 'css',
@@ -820,7 +824,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
         'timeline_img_icon'     => array(
             'title'         => __('Image / Icon', 'bb-timeline'),
             'sections'      => array(
-
                 // Timeline Icon / Image 
                 'timeline_img_icon'       => array(
                     'title'         => __( 'Image / Icon', 'bb-timeline' ),
@@ -869,13 +872,13 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             ),
                             'toggle' => array(
                                 'simple' => array(
+                                    'sections'   => array(''),
                                     'fields' => array('timeline_icon_colors', 'timeline_icon_hover_colors'),
                                 ),
 
                                 'custom' => array(
                                     'sections'   => array('icon_boder_settings'),
-                                    'fields' => array('timeline_icon_colors', 'timeline_icon_hover_colors'),
-                                    
+                                    'fields' => array('timeline_icon_colors', 'timeline_icon_hover_colors'),  
                                 )
                             )
                         ), 
@@ -902,7 +905,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                 'icon_boder_settings'       => array(
                     'title'         => '', // Section Title
                     'fields'        => array(
-
                         // Image/icon Background Color 
                         'timeline_tmb_icon_bg_color' => array( 
                             'type'       => 'color',
@@ -970,19 +972,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                         'icon_border_color' => array( 
                             'type'       => 'color',
                             'label'         => __('Border Color', 'bb-timeline'),
-                        ),
-
-                        // Select Image 
-                        'photo'         => array(
-                            'type'          => 'photo',
-                            'label'         => __('Image', 'bb-timeline'),
-                            'show_remove'   => true,
-                        ),
-
-                        // Image/icon Background Color 
-                        'timeline_icon_border_bg_color' => array( 
-                            'type'       => 'color',
-                            'label'         => __('Background Color', 'bb-timeline'),
                             'default'    => '',
                             'show_reset' => true
                         ),
@@ -1146,7 +1135,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
         'timeline_style'     => array(
             'title'         => __('Style', 'bb-timeline'),
             'sections'      => array(
-
                 //Timeline Section Styling
                 'timeline_bg_sections'     => array(
                     'title'         => __('Timeline Section', 'bb-timeline'),
@@ -1280,7 +1268,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                 'timeline_title_border'     => array(
                     'title'         => __('Separator', 'bb-timeline'),
                     'fields'        => array(
-
                         'timeline_title_border_style'         => array(
                             'type'          => 'select',
                             'label'         => __('Style', 'bb-timeline'),

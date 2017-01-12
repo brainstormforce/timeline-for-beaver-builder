@@ -2,7 +2,7 @@
 
 	var dateshowhide_var = '';
     
-    FLBuilder.registerModuleHelper('bb-timeline-module', {
+    FLBuilder.registerModuleHelper('timeline-for-beaver-builder-module', {
 
         init: function()
         {

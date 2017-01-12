@@ -15,10 +15,12 @@
     display: inline-block;
 }
 /*main heading align /.*/
+
+/*-----------------------------Common-CSS-Start---------------------------------------*/
+
 #fl-builder-settings-section-timeline_date_area {
     margin-bottom: 0 !important;
 }
-/*-----------------------------Common-CSS-Start---------------------------------------*/
 
 .bb-tmtimeline-container .bb-custom-content img{
     margin: 0 !important;
@@ -128,7 +130,6 @@
 	position: absolute;
 	pointer-events: none;
 	border-width: 10px;
-	/*top: 10px;*/
 }
 
 /* The icons */

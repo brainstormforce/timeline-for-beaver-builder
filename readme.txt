@@ -1,4 +1,4 @@
-=== BB Timeline ===
+=== Timeline for Beaver Builder ===
 Contributors: brainstormforce, bhushansbobade20
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
@@ -8,7 +8,7 @@ Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Timeline for Beaver Builder is a custom modules for Beaver Builder that create timeline.
+Timeline for Beaver Builder is custom modules for Beaver Builder that create the Awesome Responsive Timeline in a simple way.
 
 == Description ==
 
