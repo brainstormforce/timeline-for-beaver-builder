@@ -38,9 +38,11 @@ Timeline for Beaver Builder provides options for Title, Description, Customize D
 - Initial release
 
 = 1.0.1 =
-*  
+* We have added new option for Date / Content Area for more timeline design possibility.
+* Also have added new customization option for timeline section design.
 
 
 == Upgrade Notice ==
 
 = 1.0.1 =
+This version added new options. Upgrade immediately for more timeline design possibility.
