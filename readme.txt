@@ -10,8 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 URL : https://wordpress.org/plugins/timeline-for-beaver-builder
  
-Old: Timeline for Beaver Builder
-New: Timeline Module for Beaver Builder
+Timeline Module for Beaver Builder
  
 A quick and easy to use timeline plugin to build creative and responsive timelines for Beaver Builder.
  
