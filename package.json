@@ -1,8 +1,8 @@
 {
-  "name": "bb-header-footer",
+  "name": "timeline-for-beaver-builder",
   "version": "0.1.0",
   "main": "Gruntfile.js",
-  "author": "YOUR NAME HERE",
+  "author": "Brainstorm Force",
   "devDependencies": {
     "grunt": "~1.0.1",
     "grunt-wp-i18n": "~1.0.0",
