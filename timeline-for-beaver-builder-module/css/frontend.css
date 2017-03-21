@@ -19,23 +19,23 @@
 /*-----------------------------Common-CSS-Start---------------------------------------*/
 
 #fl-builder-settings-section-timeline_date_area {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 
 .bb-tmtimeline-container .bb-custom-content img{
-    margin: 0 !important;
+    margin: 0;
 }
 
 .bb-tmtimeline-container .bb-tmtimeline {
-    margin: 30px 0 0 0 !important;
+    margin: 30px 0 0 0;
     padding: 0;
-    list-style: none !important;
+    list-style: none;
     position: relative;
 } 
 
 .bb-tmtimeline-container .bb-tmtimeline > li {
 	position: relative;
-	margin: 0 !important;
+	margin: 0;
 }
 
 .bb-tmtimeline-container .bb-tmicon i {
@@ -61,7 +61,7 @@
 }
 
 .bb-tmtimeline-container .bb-tmtimeline > li:last-child .tm-conatiner-main:before {
-    height: 96% !important;
+    height: 96%;
 }
 
 .bb-tmtimeline-container .bb-tmtimeline > li .bb-tmtime.bb-tmtime-hide {
@@ -262,7 +262,6 @@
     position: absolute;
     pointer-events: none;
     border-width: 10px;
-    /*top: 10px;*/
 }
 /*-----------------------------Timeline-Layout-RIGHT-End----------------------------*/
 
@@ -374,7 +373,6 @@
     position: absolute;
     pointer-events: none;
     border-width: 10px;
-    /*top: 10px;*/
 }
 
 .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {

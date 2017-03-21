@@ -754,7 +754,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
                             'label'         => __('Select Type', 'bb-timeline'),
                             'default'       => 'rsdate',
                             'options'       => array(
-                                // 'none'              => __( 'None', 'bb-timeline' ),
                                 'rsdate'            => __( 'Date', 'bb-timeline' ),
                                 'customcontent'     => __( 'Content', 'bb-timeline' ),
                             ),
@@ -772,7 +771,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 //Set Date
                 'date'       => array(
-                    //'title'         => __( 'Date', 'bb-timeline' ),
                     'fields'        => array(
                         'day'          => array(
                             'type'          => 'text',
@@ -801,7 +799,6 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 
                 //Custom-Content
                 'custom_content'       => array( // Section
-                    //'title'         => __('Enter Your Content', 'bb-timeline'), // Section Title
                     'fields'        => array( // Section Fields
                         'timeline_custom_content_editor'          => array(
                             'type'          => 'editor',

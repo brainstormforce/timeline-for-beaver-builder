@@ -4,7 +4,7 @@ Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
 Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder
 Stable tag: 1.0.1
-Tested up to: 4.6
+Tested up to: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,15 +80,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Changelog ==
 
-= 1.0.0 =
-- Initial release
-
 = 1.0.1 =
 * We have added new option for Date / Content Area for more timeline design possibility.
 * Also have added new customization option for timeline section design.
 
-
-== Upgrade Notice ==
-
-= 1.0.1 =
-This version added new options. Upgrade immediately for more timeline design possibility.
+= 1.0.0 =
+- Initial release
