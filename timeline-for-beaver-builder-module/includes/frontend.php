@@ -60,11 +60,11 @@
 				<?php } ?>
 
 				<?php
-					 $hideClass = '';
+				$hide_class = '';
 				if ( 'no' != $settings->tm_animation ) {
-					$hideClass = 'bb-hide-it';
+					$hide_class = 'bb-hide-it';
 				} ?>
-				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
+				<div class="bb-tmlabel <?php echo $hide_class; ?>">	
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
@@ -137,11 +137,11 @@
 			<!--Timline-Content-->
 			<div class="tm-conatiner-main">
 				<?php
-					$hideClass = '';
+					$hide_class = '';
 				if ( 'no' != $settings->tm_animation ) {
-					$hideClass = 'bb-hide-it';
+					$hide_class = 'bb-hide-it';
 				} ?>
-				<div class="bb-tmlabel <?php echo $hideClass; ?>">
+				<div class="bb-tmlabel <?php echo $hide_class; ?>">
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
 						<?php echo $timeline1->timeline_title; ?>
