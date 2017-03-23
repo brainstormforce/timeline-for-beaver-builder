@@ -1,4 +1,13 @@
-<?php if ( $settings->timeline_layout != 'both' ) { ?> 
+<?php
+/**
+ * Timeline Module for Beaver Builder
+ *
+ * @package  bb-timeline
+ */
+
+?>
+
+<?php if ( 'both' != $settings->timeline_layout ) { ?> 
 <!-- If Left Or Right -->
 <div class="bb-tmtimeline-container bb-timeline-<?php echo $settings->timeline_layout; ?>">
 	<ul class="bb-tmtimeline">
@@ -10,16 +19,16 @@
 			$timeline1 = $settings->timeline1[ $i ];
 		?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
-			<?php if ( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ) { ?>
+			<?php if ( '' != $timeline1->day && '' != $timeline1->month && '' != $timeline1->year ) { ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
-				<?php if ( $timeline1->timeline_date_customcontent_type == 'rsdate' ) { ?>
+				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 				<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
 				</span>
 
-				<?php } elseif ( $timeline1->timeline_date_customcontent_type == 'customcontent' ) { ?> 
+				<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
 				<!--Timeline-customcontent-->
 					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
 				<!--/.Timeline-customcontent-->
@@ -32,17 +41,17 @@
 			<div class="tm-conatiner-main">
 
 				<!--icon-->
-				<?php if ( $timeline1->timeline_img_icon_type == 'icon' ) { ?>  
+				<?php if ( 'icon' == $timeline1->timeline_img_icon_type ) { ?>  
 				<div class="bb-tmicon">
 					<i class="<?php echo $timeline1->timeline_icon_style; ?>"></i>
 				</div>
 				<!--/.icon-->
 
-			    <?php } elseif ( $timeline1->timeline_img_icon_type == 'photo' ) { ?>
+			    <?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
 
 			    <!--image-->
 				<div class="bb-tm-image">
-				    <?php if ( $timeline1->photo != '' && isset( $timeline1->photo_src ) ) { ?> 
+				    <?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
 					   <img src="<?php echo $timeline1->photo_src; ?>"/>
 					<?php } ?>
 				</div>
@@ -51,8 +60,8 @@
 				<?php } ?>
 
 				<?php
-					$hideClass = '';
-				if ( $settings->tm_animation != 'no' ) {
+					 $hideClass = '';
+				if ( 'no' != $settings->tm_animation ) {
 					$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">	
@@ -91,16 +100,16 @@
 			$timeline1 = $settings->timeline1[ $i ];
 		?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
-			<?php if ( $timeline1->day != '' && $timeline1->month != '' && $timeline1->year != '' ) { ?>
+			<?php if ( '' != $timeline1->day && '' != $timeline1->month && '' != $timeline1->year ) { ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
-				<?php if ( $timeline1->timeline_date_customcontent_type == 'rsdate' ) { ?>
+				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 				<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
 				</span>
 
-					<?php } elseif ( $timeline1->timeline_date_customcontent_type == 'customcontent' ) { ?> 
+					<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
 				<!--Timeline-customcontent-->
 					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
 				<!--/.Timeline-customcontent-->
@@ -110,15 +119,15 @@
 			<?php } ?>
 
 			<!--icon-->
-			<?php if ( $timeline1->timeline_img_icon_type == 'icon' ) { ?>  
+			<?php if ( 'icon' == $timeline1->timeline_img_icon_type ) { ?>  
 			<div class="bb-tmicon">
 				<i class="<?php echo $timeline1->timeline_icon_style; ?>"></i>
 			</div>
 			<!--/.icon-->
-		    <?php } elseif ( $timeline1->timeline_img_icon_type == 'photo' ) { ?>
+		    <?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
 		    <!--image-->
 			<div class="bb-tm-image">
-			    <?php if ( $timeline1->photo != '' && isset( $timeline1->photo_src ) ) { ?> 
+			    <?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
 				   <img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>
 			</div>
@@ -129,7 +138,7 @@
 			<div class="tm-conatiner-main">
 				<?php
 					$hideClass = '';
-				if ( $settings->tm_animation != 'no' ) {
+				if ( 'no' != $settings->tm_animation ) {
 					$hideClass = 'bb-hide-it';
 				} ?>
 				<div class="bb-tmlabel <?php echo $hideClass; ?>">
