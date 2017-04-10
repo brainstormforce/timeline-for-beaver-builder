@@ -86,8 +86,8 @@ Visit our website to know more about the top WordPress products and services we 
 ## Changelog ##
 
 ### 1.0.1 ###
-* We have added new option for Date / Content Area for more timeline design possibility.
-* Also have added new customization option for timeline section design.
+* New option for Date / Content Area for more timeline design possibility.
+* New customization option for timeline section design.
 
 ### 1.0.0 ###
 - Initial release
