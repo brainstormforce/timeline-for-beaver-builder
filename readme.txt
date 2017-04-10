@@ -16,13 +16,13 @@ A quick and easy to use timeline plugin to build creative and responsive timelin
  
 Tags: timeline for beaver builder, beaver builder modules, timeline, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, widget, beaver builder timeline
  
-==Description==
+== Description ==
 
 Timelines have always played an important role on websites that want to show the history, a process or something that has a step wise procedure.
 
 The Timeline module for Beaver Builder lets you create beautiful timelines on your website. The timeline plugin adds another advanced module with the ones that are already available with Beaver Builder. This timeline module works quite similar to the other Beaver Builder modules; you just need to drag and drop and format it as per your requirements.
 
-=Features of the Timeline module for Beaver Builder=
+== Features of the Timeline module for Beaver Builder ==
 
 -        Beautiful timelines for WordPress and Beaver Builder.
 -        Responsive and mobile ready timelines for Beaver Builder.
@@ -34,7 +34,7 @@ The Timeline module for Beaver Builder lets you create beautiful timelines on yo
 
 Since this module is highly customizable and easy to use, you can use it for a number of applications on your website.
 
-=Applications of the Timeline module=
+== Applications of the Timeline module ==
 
 -        Display company history or progress
 -        List down your personal achievements
@@ -55,7 +55,7 @@ bbtimeline&utm_medium=description
 “>Brainstorm Force</a>! 
 
 
-=What’s More?=
+== What’s More? ==
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
 
@@ -86,8 +86,10 @@ Visit our website to know more about the top WordPress products and services we 
 == Changelog ==
 
 = 1.0.1 =
-* We have added new option for Date / Content Area for more timeline design possibility.
-* Also have added new customization option for timeline section design.
+* New option for Date / Content Area for more timeline design possibility.
+* New customization option for timeline section design.
 
 = 1.0.0 =
 - Initial release
+
+== Upgrade Notice ==
