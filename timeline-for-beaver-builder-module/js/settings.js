@@ -72,14 +72,18 @@
 		_toggleLayoutOptions: function() {
 
             var form = $('.fl-builder-settings'),
+            	timeline_date_area   = form.find('#fl-builder-settings-section-timeline_date_area'),
                 date   = form.find('#fl-builder-settings-section-date'),
+                custom_content   = form.find('#fl-builder-settings-section-custom_content'),
                	dateshowhide = dateshowhide_var.val();
             
             if( dateshowhide == 'hide' ) {
+            	timeline_date_area.css('display', 'none');
                 date.css('display', 'none');
+                custom_content.css('display', 'none');
 
             } else {
-                date.css('display', 'block');
+            	timeline_date_area.css('display', 'block');
             }
         },
 	});
