@@ -1,10 +1,10 @@
 # Timeline Module for Beaver Builder #
-**Contributors:** brainstormforce, bhushansbobade20  
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [bhushansbobade20](https://profiles.wordpress.org/bhushansbobade20)  
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder  
 **Stable tag:** 1.0.1  
-**Tested up to:** 4.6  
+**Tested up to:** 4.7  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -50,9 +50,10 @@ Since this module is highly customizable and easy to use, you can use it for a n
 -        Customize and use for various applications on your website
 -        Several animation effects make timelines look more attractive
 
-Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
+ Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
 bbtimeline&utm_medium=description
-“>Brainstorm Force</a>!
+“>Brainstorm Force</a>! 
+
 
 ###What’s More?###
 
@@ -84,15 +85,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 ## Changelog ##
 
-### 1.0.0 ###
-- Initial release
-
 ### 1.0.1 ###
 * We have added new option for Date / Content Area for more timeline design possibility.
 * Also have added new customization option for timeline section design.
 
-
-## Upgrade Notice ##
-
-### 1.0.1 ###
-This version added new options. Upgrade immediately for more timeline design possibility.
+### 1.0.0 ###
+- Initial release
