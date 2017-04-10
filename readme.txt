@@ -44,7 +44,7 @@ Since this module is highly customizable and easy to use, you can use it for a n
 -        Twitter Feed Timeline
 -        Order History/ tracking Timeline for ecommerce websites
 
-=Advantages of Timeline Module for Beaver Builder=
+== Advantages of Timeline Module for Beaver Builder ==
 
 -        Easy drag drop module like the other Beaver Builder modules
 -        Customize and use for various applications on your website
@@ -70,7 +70,7 @@ You can also consider checking out our other plugins:
  
 Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share”>Twitter</a>.
 
-==Installation==
+== Installation ==
 
 1.	Make sure you have Beaver Builder installed on your website.
 2.	Upload the plugin files to the /wp-content/plugins/bb-timeline directory, or install the plugin through the WordPress plugins screen directly.
