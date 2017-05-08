@@ -727,7 +727,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 							'type'          => 'text',
 							'label'         => __( 'Timeline Title', 'bb-timeline' ),
 							'default'       => 'Title of section',
-							'connections'   => array( 'string', 'html' )
+							'connections'   => array( 'string', 'html' ),
 						),
 						'timeline_title_align'     => array(
 							'type'          => 'select',
@@ -751,7 +751,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 							'type'          => 'editor',
 							'rows'          => 5,
 							'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.',
-							'connections'   => array( 'string', 'html' )
+							'connections'   => array( 'string', 'html' ),
 						),
 					),
 				),
@@ -815,7 +815,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 							'type'          => 'editor',
 							'rows'          => 5,
 							'default'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-							'connections'   => array( 'string', 'html' )
+							'connections'   => array( 'string', 'html' ),
 						),
 					),
 				),
@@ -1009,7 +1009,7 @@ FLBuilder::register_settings_form('bb_timeline_form', array(
 							'type'          => 'photo',
 							'label'         => __( 'Image', 'bb-timeline' ),
 							'show_remove'   => true,
-							'connections'   => array( 'photo' )
+							'connections'   => array( 'photo' ),
 						),
 
 						/* Icon Background Style */
