@@ -228,7 +228,7 @@ border-left-color: transparent;
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel,
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
-	    margin: 0 0 40px 0 !important;
+		margin: 0 0 40px 0 !important;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmtime,
@@ -246,12 +246,12 @@ border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmtime {
-	    margin-left: 0 !important;
+		margin-left: 0 !important;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel,
 	body .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
-	    margin-left: 0px !important;
+		margin-left: 0px !important;
 	}
 	<?php endif; ?>	
 
@@ -372,19 +372,19 @@ border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime {
-	    width: auto;
-	    position: relative;
-	    padding: 0 0 20px 0px;
+		width: auto;
+		position: relative;
+		padding: 0 0 20px 0px;
 		margin-left: 60px;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmtime span {
-	    text-align: left;
+		text-align: left;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
-	    margin: 0 0 40px 50px;
-	    padding: 20px;
+		margin: 0 0 40px 50px;
+		padding: 20px;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
@@ -412,33 +412,33 @@ border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime {
-	    width: auto;
-	    position: relative;
-	    padding: 0 0 20px 0px;
+		width: auto;
+		position: relative;
+		padding: 0 0 20px 0px;
 		margin-left: 50px;
 		text-align: left;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime span {
-	    text-align: left;
+		text-align: left;
 	}
 	
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
-	    margin: 1px 0 40px 0;
+		margin: 1px 0 40px 0;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
-	    border-left-color: transparent;
-	    right: auto;
-	    left: 20px;
-	    top: -20px;
+		border-left-color: transparent;
+		right: auto;
+		left: 20px;
+		top: -20px;
 	}
 	
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
 		right: auto;
-	    left: 20px;
-	    border-right-color: transparent;
-	    top: -20px;
+		left: 20px;
+		border-right-color: transparent;
+		top: -20px;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
@@ -459,25 +459,25 @@ border-left-color: transparent;
 
 	/* Connector */
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-	    border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
-	    border-left-color: transparent;
-	    border-right-color: transparent;
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-left-color: transparent;
+		border-right-color: transparent;
 	}
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-	    border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
-	    border-right-color: transparent;
-	    border-left-color: transparent;
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-right-color: transparent;
+		border-left-color: transparent;
 	}
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-	    border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
-	    border-right-color: transparent;
-	    border-left-color: transparent;
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-right-color: transparent;
+		border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?>:nth-child(even) .bb-tmlabel:after  {
-	    border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
-	    border-left-color: transparent;
-	    border-right-color: transparent;
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-left-color: transparent;
+		border-right-color: transparent;
 	}
 }
 

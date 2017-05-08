@@ -47,11 +47,11 @@
 				</div>
 				<!--/.icon-->
 
-			    <?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
+				<?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
 
-			    <!--image-->
+				<!--image-->
 				<div class="bb-tm-image">
-				    <?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
+					<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
 					   <img src="<?php echo $timeline1->photo_src; ?>"/>
 					<?php } ?>
 				</div>
@@ -124,10 +124,10 @@
 				<i class="<?php echo $timeline1->timeline_icon_style; ?>"></i>
 			</div>
 			<!--/.icon-->
-		    <?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
-		    <!--image-->
+			<?php } elseif ( 'photo' == $timeline1->timeline_img_icon_type ) { ?>
+			<!--image-->
 			<div class="bb-tm-image">
-			    <?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
+				<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
 				   <img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>
 			</div>
