@@ -20,7 +20,7 @@ Tags: timeline for beaver builder, beaver builder modules, timeline, beaver buil
 
 Timelines have always played an important role on websites that want to show the history, a process or something that has a step wise procedure.
 
-The Timeline module for Beaver Builder lets you create beautiful timelines on your website. The timeline plugin adds another advanced module with the ones that are already available with Beaver Builder. This timeline module works quite similar to the other Beaver Builder modules; you just need to drag and drop and format it as per your requirements.
+The Timeline module is a <a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=description">Beaver Builder addon</a> that lets you create beautiful timelines on your website. Known as the <a href=" https://www.ultimatebeaver.com/beaver-builder-free/bbtimeline?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=description ">Timeline Module for Beaver Builder</a>, this gets added as an advanced module with the ones that are already available with Beaver Builder. This timeline module works quite similar to the other Beaver Builder modules; you just need to drag and drop and format it as per your requirements.
 
 == Features of the Timeline module for Beaver Builder ==
 
@@ -50,9 +50,7 @@ Since this module is highly customizable and easy to use, you can use it for a n
 -        Customize and use for various applications on your website
 -        Several animation effects make timelines look more attractive
 
- Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
-bbtimeline&utm_medium=description
-“>Brainstorm Force</a>! 
+ Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=description">Brainstorm Force</a>! 
 
 
 == What’s More? ==
