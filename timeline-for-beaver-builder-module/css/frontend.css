@@ -198,7 +198,7 @@
 
 .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel {
     padding: 30px;
-    color: #fff;
+    /*color: #fff;*/
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.4;
@@ -326,7 +326,7 @@
 
 .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel {
     padding: 30px;
-    /*color: #fff;*/
+    color: #fff;
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.4;
