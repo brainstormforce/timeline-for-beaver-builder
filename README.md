@@ -1,6 +1,6 @@
 # Timeline Module for Beaver Builder #
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [bhushansbobade20](https://profiles.wordpress.org/bhushansbobade20)  
-**Donate link:** https://www.brainstormforce.com/payment/  
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)  
+**Donate link:** https://www.paypal.me/BrainstormForce 
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder  
 **Stable tag:** 1.1.0  
