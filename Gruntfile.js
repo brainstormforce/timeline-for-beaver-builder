@@ -40,7 +40,64 @@ module.exports = function( grunt ) {
 					updateTimestamp: true
 				}
 			}
-		}
+		},
+		 copy: {
+            main: {
+                options: {
+                    mode: true
+                },
+                src: [
+                    '**',
+                    '*.zip',
+                    '!node_modules/**',
+                    '!build/**',
+                    '!css/sourcemap/**',
+                    '!.git/**',
+                    '!bin/**',
+                    '!.gitlab-ci.yml',
+                    '!bin/**',
+                    '!tests/**',
+                    '!phpunit.xml.dist',
+                    '!*.sh',
+                    '!*.map',
+                    '!Gruntfile.js',
+                    '!package.json',
+                    '!.gitignore',
+                    '!phpunit.xml',
+                    '!README.md',
+                    '!sass/**',
+                    '!codesniffer.ruleset.xml',
+                    '!vendor/**',
+                    '!composer.json',
+                    '!composer.lock',
+                    '!package-lock.json',
+                    '!phpcs.ruleset.xml',
+                ],
+                dest: 'timeline-for-beaver-builder/'
+            }
+        },
+
+        compress: {
+            main: {
+                options: {
+                    archive: 'timeline-for-beaver-builder.zip',
+                    mode: 'zip'
+                },
+                files: [
+                    {
+                        src: [
+                            './timeline-for-beaver-builder/**'
+                        ]
+
+                    }
+                ]
+            }
+        },
+
+        clean: {
+            main: ["timeline-for-beaver-builder"],
+            zip: ["timeline-for-beaver-builder.zip"],
+        },
 
 	} );
 
@@ -49,6 +106,10 @@ module.exports = function( grunt ) {
 
     grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
     grunt.registerTask('readme', ['wp_readme_to_markdown']);
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.registerTask('release', ['clean:zip', 'copy', 'compress', 'clean:main']);
 
 	grunt.util.linefeed = '\n';
 
