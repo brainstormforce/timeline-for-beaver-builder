@@ -46,8 +46,12 @@ class BSFBBTimelines extends FLBuilderModule {
 		if ( ! isset( $settings->photo_src ) ) {
 			$settings->photo_src = '';
 		}
+		$photo_id = '';
+		if ( isset( $settings->photo ) ) {
+			$photo_id = $settings->photo;
+		}
 		// Cache the attachment data.
-		$data = FLBuilderPhoto::get_attachment_data( $settings->photo );
+		$data = FLBuilderPhoto::get_attachment_data( $photo_id );
 
 		if ( $data ) {
 			$settings->data = $data;
