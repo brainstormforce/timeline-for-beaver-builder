@@ -1,6 +1,6 @@
 # Timeline Module for Beaver Builder #
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)  
-**Donate link:** https://www.paypal.me/BrainstormForce 
+**Donate link:** https://www.paypal.me/BrainstormForce
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder  
 **Stable tag:** 1.1.1
@@ -104,3 +104,9 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 ## Upgrade Notice ##
+
+## Credits ##
+
+### Animate CSS ###
+Repo - https://github.com/animate-css/animate.css
+Licensed under MIT - https://github.com/animate-css/animate.css/blob/main/LICENSE
