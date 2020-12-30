@@ -1,10 +1,4 @@
-@charset "UTF-8";/*!
-* animate.css - https://animate.style/
-* 
-* Licensed under the MIT license
-*
-* Copyright (c) 2020 Animate.css
-*/
+@charset "UTF-8";
 
 .animated {
   -webkit-animation-duration: 1s;
