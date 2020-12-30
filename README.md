@@ -107,6 +107,4 @@ Visit our website to know more about the top WordPress products and services we 
 
 ## Credits ##
 
-### Animate CSS ###
-Repo - https://github.com/animate-css/animate.css
-Licensed under MIT - https://github.com/animate-css/animate.css/blob/main/LICENSE
+- [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
