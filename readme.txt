@@ -104,3 +104,7 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 == Upgrade Notice ==
+
+== Credits ==
+
+- [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
