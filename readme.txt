@@ -24,35 +24,35 @@ The Timeline module for Beaver Builder lets you create beautiful timelines on yo
 
 == Features of the Timeline module for Beaver Builder ==
 
--        Beautiful timelines for WordPress and Beaver Builder.
--        Responsive and mobile ready timelines for Beaver Builder.
--        Show and Hide options for Date
--        On or OFF options for Connectors
--        Customizable dates, selector and connector
--        Several typography options for title, description, date, etc.
--        Customize animation effects, duration, delay and more.
+<li>Beautiful timelines for WordPress and Beaver Builder.</li>
+<li>Responsive and mobile ready timelines for Beaver Builder.</li>
+<li>Show and Hide options for Date</li>
+<li>On or OFF options for Connectors</li>
+<li>Customizable dates, selector and connector</li>
+<li>Several typography options for title, description, date, etc.</li>
+<li>Customize animation effects, duration, delay and more.</li>
 
 Since this module is highly customizable and easy to use, you can use it for a number of applications on your website.
 
 == Applications of the Timeline module ==
 
--        Display company history or progress
--        List down your personal achievements
--        Roadmap or Release cycle for products
--        Display an event history or schedule
--        Timeline for Post/Page/Custom Post
--        Twitter Feed Timeline
--        Order History/ tracking Timeline for ecommerce websites
+<li>Display company history or progress</li>
+<li>List down your personal achievements</li>
+<li>Roadmap or Release cycle for products</li>
+<li>Display an event history or schedule</li>
+<li>Timeline for Post/Page/Custom Post</li>
+<li>Twitter Feed Timeline</li>
+<li>Order History/ tracking Timeline for ecommerce websites</li>
 
 == Advantages of Timeline Module for Beaver Builder ==
 
--        Easy drag drop module like the other Beaver Builder modules
--        Customize and use for various applications on your website
--        Several animation effects make timelines look more attractive
+<li>Easy drag drop module like the other Beaver Builder modules</li>
+<li>Customize and use for various applications on your website</li>
+<li>Several animation effects make timelines look more attractive</li>
 
- Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
+ Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
 bbtimeline&utm_medium=description
-“>Brainstorm Force</a>! 
+">Brainstorm Force</a>!
 
 
 == What’s More? ==
@@ -61,19 +61,19 @@ If you like this plugin, please leave us a good review and rating! Your feedback
 
 You can also consider checking out our other plugins:
 
-<a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
+<a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
+<a href="https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Beaver Builder Cards</a>: An advanced module to create attractive cards using Beaver Builder.
+<a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Beaver Builder Cards</a>: An advanced module to create attractive cards using Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
+<a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
+<a href="https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
  
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share”>Twitter</a>.
+Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href="https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share">Facebook</a> and <a href="https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share">Twitter</a>.
 
 == Installation ==
 
@@ -87,6 +87,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Screenshots ==
 
+== Credits ==
+
+- [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
 
 == Changelog ==
 
@@ -104,7 +107,3 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 == Upgrade Notice ==
-
-== Credits ==
-
-- [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
