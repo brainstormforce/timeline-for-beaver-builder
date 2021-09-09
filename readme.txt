@@ -50,6 +50,20 @@ Since this module is highly customizable and easy to use, you can use it for a n
 <li>Customize and use for various applications on your website</li>
 <li>Several animation effects make timelines look more attractive</li>
 
+== ADVANCED TIMELINE MODULE (PRO) ==
+Are you looking for more options? Check out the Advanced Timeline module which comes with Ultimate Addons for Beaver Builder together with a bunch of other premium modules.
+
+== Advanced Timeline Module Key Features: ==
+<li>Horizontal and vertical timeline layouts</li>
+<li>Timelines with custom content or with Posts, Pages, CPTs</li>
+<li>Powerful query filters to choose exact post</li>
+<li>Infinite load for posts</li>
+<li>Presets - pre-made timeline designs</li>
+<li>Ability to customize individual timeline item</li>
+<li>Custom text label or date for timeline items</li>
+<li>Advanced design and customization options</li>
+
+
  Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
 bbtimeline&utm_medium=description
 ">Brainstorm Force</a>!
