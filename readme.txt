@@ -63,7 +63,6 @@ Are you looking for more options? Check out the Advanced Timeline module which c
 <li>Custom text label or date for timeline items</li>
 <li>Advanced design and customization options</li>
 
-
  Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
 bbtimeline&utm_medium=description
 ">Brainstorm Force</a>!
