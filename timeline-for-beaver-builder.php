@@ -41,8 +41,8 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 				require_once 'timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php';
 			} else {
 				// Display admin notice for activating beaver builder.
-				add_action( 'admin_notices',array( $this, 'admin_notices_function' ) );
-				add_action( 'network_admin_notices',array( $this, 'admin_notices_function' ) );
+				add_action( 'admin_notices', array( $this, 'admin_notices_function' ) );
+				add_action( 'network_admin_notices', array( $this, 'admin_notices_function' ) );
 			}
 		}
 

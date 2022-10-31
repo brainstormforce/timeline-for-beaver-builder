@@ -17,13 +17,13 @@
 				continue;
 			}
 			$timeline1 = $settings->timeline1[ $i ];
-		?>
+			?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<?php if ( '' != $timeline1->day && '' != $timeline1->month && '' != $timeline1->year ) { ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
-				<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
+					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
 				</span>
@@ -63,7 +63,8 @@
 				$hide_class = '';
 				if ( 'no' != $settings->tm_animation ) {
 					$hide_class = 'bb-hide-it';
-				} ?>
+				}
+				?>
 				<div class="bb-tmlabel <?php echo $hide_class; ?>">	
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
@@ -98,13 +99,13 @@
 				continue;
 			}
 			$timeline1 = $settings->timeline1[ $i ];
-		?>
+			?>
 		<li class="tm-timeline-li-<?php echo $i; ?>">
 			<?php if ( '' != $timeline1->day && '' != $timeline1->month && '' != $timeline1->year ) { ?>
 			<!--date-->
 			<div class="bb-tmtime bb-tmtime-<?php echo $settings->date_show_hide; ?>">
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
-				<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
+					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
 					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
 				</span>
@@ -140,7 +141,8 @@
 					$hide_class = '';
 				if ( 'no' != $settings->tm_animation ) {
 					$hide_class = 'bb-hide-it';
-				} ?>
+				}
+				?>
 				<div class="bb-tmlabel <?php echo $hide_class; ?>">
 					<!--Timline-Title-->
 					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
@@ -162,4 +164,4 @@
 </div>
 
 <?php }// End if().
-	?>
+?>
