@@ -1,10 +1,10 @@
 === Timeline Module for Beaver Builder ===
-Contributors: brainstormforce
+Contributors: pratikchaskar
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder
-Stable tag: 1.1.1
-Tested up to: 6.0
+Stable tag: 1.1.2
+Tested up to: 6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,9 @@ Visit our website to know more about the top WordPress products and services we 
 - [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
 
 == Changelog ==
+
+= 1.1.2 =
+* Improvement: Added compatibility to WordPress 6.1
 
 = 1.1.1 =
 * Fix: Resolved JS error when Photo field is empty.

@@ -8,7 +8,8 @@
 ?>
 
 <?php
-if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeline_title_font['family'] ) : ?>
+if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeline_title_font['family'] ) :
+	?>
 .fl-node-<?php echo $id; ?> .bb-timline-title {
 	<?php FLBuilderFonts::font_css( $settings->timeline_title_font ); ?>
 }
@@ -57,19 +58,19 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 	letter-spacing: <?php echo $settings->timeline_date_custom_letter_spacing; ?>px;
 }
 
-<?php $connector_bg_color = ( ! empty( $settings->connector_bg_color ) ) ? $settings->connector_bg_color : '46a4da' ; ?>
+<?php $connector_bg_color = ( ! empty( $settings->connector_bg_color ) ) ? $settings->connector_bg_color : '46a4da'; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-conatiner-main:before {
 	width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 	border-left-width: <?php echo ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20'; ?>px;
 	border-left-style: <?php echo $settings->connector_border_style; ?>;
-	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ) ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
+	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
 }
 
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before {
 	width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-style: <?php echo $settings->connector_border_style; ?>;
-	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ) ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
+	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
 }
 
 /* Animation CSS */
@@ -81,33 +82,33 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 /* foreach child section*/
 <?php
 foreach ( $settings->timeline1 as $i => $item ) {
-?>
+	?>
 /* Timeline Title Align */
 .fl-node-<?php echo $id; ?> .tm-timeline-li-<?php echo $i; ?> .bb-timline-title {
 text-align: <?php echo $item->timeline_title_align; ?>;
 }
 
 /* Timeline Connector */
-<?php if ( 'icon' == $item->timeline_img_icon_type && 'custom' == $item->icon_bg_style ) : ?>
+	<?php if ( 'icon' == $item->timeline_img_icon_type && 'custom' == $item->icon_bg_style ) : ?>
 /* for icon setting */
-<?php $icon_border_color = ( ! empty( $item->icon_border_color ) ) ? $item->icon_border_color : '' ; ?>
+		<?php $icon_border_color = ( ! empty( $item->icon_border_color ) ) ? $item->icon_border_color : ''; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	border-width: <?php echo ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20'; ?>px;
 	border-style: <?php echo $item->icon_border_style; ?>;
 	border-color: #<?php echo $item->icon_border_color; ?>;
-	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $icon_border_color ) ) ?>, <?php echo ( '' != $item->icon_border_color_opc ) ? $item->icon_border_color_opc / 100 : 100; ?>);
+	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $icon_border_color ) ); ?>, <?php echo ( '' != $item->icon_border_color_opc ) ? $item->icon_border_color_opc / 100 : 100; ?>);
 	box-sizing: content-box;
 	box-shadow: none;
 }
 
-<?php $timeline_tmb_icon_bg_color = ( ! empty( $item->timeline_tmb_icon_bg_color ) ) ? $item->timeline_tmb_icon_bg_color : '6CBFEE' ; ?>
+		<?php $timeline_tmb_icon_bg_color = ( ! empty( $item->timeline_tmb_icon_bg_color ) ) ? $item->timeline_tmb_icon_bg_color : '6CBFEE'; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	background-color: #<?php echo $timeline_tmb_icon_bg_color; ?>;
-	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_icon_bg_color ) ) ?>, <?php echo ( '' != $item->timeline_tmb_bg_color_opc ) ? $item->timeline_tmb_bg_color_opc / 100 : 100; ?>);
+	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_icon_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_bg_color_opc ) ? $item->timeline_tmb_bg_color_opc / 100 : 100; ?>);
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
-	<?php if ( ! empty( $item->connector_border_radius ) ) : ?>	
+		<?php if ( ! empty( $item->connector_border_radius ) ) : ?>	
 	border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-webkit-border-radius: <?php echo $item->connector_border_radius; ?>%;
@@ -116,25 +117,25 @@ text-align: <?php echo $item->timeline_title_align; ?>;
 	<?php endif; ?>
 
 /* for image setting */
-<?php if ( 'photo' == $item->timeline_img_icon_type && 'imgcustom' == $item->img_bg_style ) : ?>
-<?php $img_border_color = ( ! empty( $item->img_border_color ) ) ? $item->img_border_color : '' ; ?>
+	<?php if ( 'photo' == $item->timeline_img_icon_type && 'imgcustom' == $item->img_bg_style ) : ?>
+		<?php $img_border_color = ( ! empty( $item->img_border_color ) ) ? $item->img_border_color : ''; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 	border-width: <?php echo ( $item->img_border_width < '20' ) ? $item->img_border_width : '20'; ?>px;
 	border-style: <?php echo $item->img_border_style; ?>;
 	border-color: #<?php echo $item->img_border_color; ?>;
-	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $img_border_color ) ) ?>, <?php echo ( '' != $item->img_border_color_opc ) ? $item->img_border_color_opc / 100 : 100; ?>);
+	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $img_border_color ) ); ?>, <?php echo ( '' != $item->img_border_color_opc ) ? $item->img_border_color_opc / 100 : 100; ?>);
 	box-sizing: content-box;
 	box-shadow: none;
 }
 
-<?php $timeline_tmb_img_bg_color = ( ! empty( $item->timeline_tmb_img_bg_color ) ) ? $item->timeline_tmb_img_bg_color : 'ffffff' ; ?>
+		<?php $timeline_tmb_img_bg_color = ( ! empty( $item->timeline_tmb_img_bg_color ) ) ? $item->timeline_tmb_img_bg_color : 'ffffff'; ?>
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 	background-color: #<?php echo $timeline_tmb_img_bg_color; ?>;
-	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_img_bg_color ) ) ?>, <?php echo ( '' != $item->timeline_tmb_img_bg_color_opc ) ? $item->timeline_tmb_img_bg_color_opc / 100 : 100; ?>);
+	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_img_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_img_bg_color_opc ) ? $item->timeline_tmb_img_bg_color_opc / 100 : 100; ?>);
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
-	<?php if ( ! empty( $item->img_border_radius ) ) : ?>	
+		<?php if ( ! empty( $item->img_border_radius ) ) : ?>	
 	border-radius: <?php echo $item->img_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->img_border_radius; ?>%;
 	-webkit-border-radius: <?php echo $item->img_border_radius; ?>%;
@@ -164,11 +165,11 @@ color: #<?php echo $item->timeline_icon_hover_colors; ?>;
 }
 
 /* Timeline Sections */
-<?php $sections_bg_color = ( ! empty( $item->sections_bg_color ) ) ? $item->sections_bg_color : '6cbfee' ; ?>
+	<?php $sections_bg_color = ( ! empty( $item->sections_bg_color ) ) ? $item->sections_bg_color : '6cbfee'; ?>
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
 background-color: #<?php echo $sections_bg_color; ?>;
-background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-radius: <?php echo $item->timeline_sections_border_radius; ?>px;
 border-width: <?php echo $item->timeline_sections_border_width; ?>px;
 border-style: <?php echo $item->timeline_section_border_style; ?>;
@@ -176,7 +177,7 @@ border-color: #<?php echo $item->timeline_sections_border_color; ?>;
 }
 
 .fl-node-<?php echo $id; ?> .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after  {
-<?php $top_value = ( (int) $item->timeline_sections_border_radius <= 10 ) ? 10 : $item->timeline_sections_border_radius;?>
+	<?php $top_value = ( (int) $item->timeline_sections_border_radius <= 10 ) ? 10 : $item->timeline_sections_border_radius; ?>
 top: <?php echo $top_value; ?>px;
 margin-left: <?php echo $item->timeline_sections_border_width; ?>px;
 }
@@ -187,29 +188,29 @@ padding-bottom: <?php echo $item->timeline_sections_padding_bottom; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-left-color: transparent;
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-right-color: transparent;
 }
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-right-color: transparent;
 }
 
 .fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?>:nth-child(even) .bb-tmlabel:after {
-border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-left-color: transparent;
 }
 
 
-<?php if ( $global_settings->responsive_enabled ) { // Global Setting If started. ?>
+	<?php if ( $global_settings->responsive_enabled ) { // Global Setting If started. ?>
 
 @media screen and (max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?>) {
 
-	<?php if ( 'chide' == $settings->connector_show_hide ) : ?>
+		<?php if ( 'chide' == $settings->connector_show_hide ) : ?>
 		
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
@@ -255,7 +256,7 @@ border-left-color: transparent;
 	}
 	<?php endif; ?>	
 
-	<?php if ( 'cshow' == $settings->connector_show_hide ) : ?>
+		<?php if ( 'cshow' == $settings->connector_show_hide ) : ?>
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
 		margin-left: 50px !important;
 	}
@@ -459,23 +460,23 @@ border-left-color: transparent;
 
 	/* Connector */
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 		border-left-color: transparent;
 		border-right-color: transparent;
 	}
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 		border-right-color: transparent;
 		border-left-color: transparent;
 	}
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 		border-right-color: transparent;
 		border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?>:nth-child(even) .bb-tmlabel:after  {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 		border-left-color: transparent;
 		border-right-color: transparent;
 	}
