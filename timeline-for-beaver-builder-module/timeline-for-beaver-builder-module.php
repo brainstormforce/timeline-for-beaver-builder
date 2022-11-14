@@ -221,6 +221,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'Date Format', 'bb-timeline' ),
 							'default' => 'M j, Y',
+							// phpcs:disable
 							'options' => array(
 								'M j, Y' => date( 'M j, Y' ),
 								'F j, Y' => date( 'F j, Y' ),
@@ -231,6 +232,7 @@ FLBuilder::register_module(
 								'Y-m-d'  => date( 'Y-m-d' ),
 								'Y/m/d'  => date( 'Y/m/d' ),
 							),
+							// phpcs:enable
 						),
 					),
 				),
@@ -795,21 +797,21 @@ FLBuilder::register_settings_form(
 							'day'   => array(
 								'type'      => 'text',
 								'label'     => __( 'Day', 'bb-timeline' ),
-								'default'   => date( 'd' ),
+								'default'   => date( 'd' ), // phpcs:ignore
 								'maxlength' => '2',
 								'size'      => '5',
 							),
 							'month' => array(
 								'type'      => 'text',
 								'label'     => __( 'Month', 'bb-timeline' ),
-								'default'   => date( 'm' ),
+								'default'   => date( 'm' ), // phpcs:ignore
 								'maxlength' => '2',
 								'size'      => '5',
 							),
 							'year'  => array(
 								'type'        => 'text',
 								'label'       => __( 'Year', 'bb-timeline' ),
-								'default'     => date( 'Y' ),
+								'default'     => date( 'Y' ),   // phpcs:ignore
 								'maxlength'   => '4',
 								'size'        => '5',
 								'description' => __( '<br/><br/>Please fill all three fields to display date.', 'bb-timeline' ),
