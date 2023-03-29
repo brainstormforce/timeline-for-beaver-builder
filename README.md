@@ -4,7 +4,7 @@
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder  
 **Stable tag:** 1.1.2  
-**Tested up to:** 6.1  
+**Tested up to:** 6.2  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
