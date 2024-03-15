@@ -217,6 +217,7 @@ FLBuilder::register_module(
 							),
 						),
 						// Date Format.
+						// @codingStandardsIgnoreStart
 						'date_format'    => array(
 							'type'    => 'select',
 							'label'   => __( 'Date Format', 'bb-timeline' ),
@@ -232,6 +233,7 @@ FLBuilder::register_module(
 								'Y/m/d'  => date( 'Y/m/d' ),
 							),
 						),
+						// @codingStandardsIgnoreEnd
 					),
 				),
 
@@ -795,21 +797,21 @@ FLBuilder::register_settings_form(
 							'day'   => array(
 								'type'      => 'text',
 								'label'     => __( 'Day', 'bb-timeline' ),
-								'default'   => date( 'd' ),
+								'default'   => date( 'd' ), // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 								'maxlength' => '2',
 								'size'      => '5',
 							),
 							'month' => array(
 								'type'      => 'text',
 								'label'     => __( 'Month', 'bb-timeline' ),
-								'default'   => date( 'm' ),
+								'default'   => date( 'm' ),  // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 								'maxlength' => '2',
 								'size'      => '5',
 							),
 							'year'  => array(
 								'type'        => 'text',
 								'label'       => __( 'Year', 'bb-timeline' ),
-								'default'     => date( 'Y' ),
+								'default'     => date( 'Y' ), // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 								'maxlength'   => '4',
 								'size'        => '5',
 								'description' => __( '<br/><br/>Please fill all three fields to display date.', 'bb-timeline' ),
