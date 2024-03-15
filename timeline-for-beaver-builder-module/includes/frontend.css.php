@@ -211,7 +211,7 @@ border-left-color: transparent;
 @media screen and (max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?>) {
 
 		<?php if ( 'chide' == $settings->connector_show_hide ) : ?>
-		
+
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon,
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 		display: none !important;
@@ -263,7 +263,7 @@ border-left-color: transparent;
 	<?php endif; ?> 
 
 	/*common css*/
-	
+
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmicon,
 	.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li .bb-tmicon,
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmicon {
@@ -391,7 +391,7 @@ border-left-color: transparent;
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel:after {
 		border-left-color: transparent;
 	}
-	
+
 	.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li .bb-tmlabel:after{
 		right: auto;
 		left: 20px;
@@ -423,7 +423,7 @@ border-left-color: transparent;
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmtime span {
 		text-align: left;
 	}
-	
+
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li:nth-child(odd) .bb-tmlabel {
 		margin: 1px 0 40px 0;
 	}
@@ -434,7 +434,7 @@ border-left-color: transparent;
 		left: 20px;
 		top: -20px;
 	}
-	
+
 	.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li .bb-tmlabel:after{
 		right: auto;
 		left: 20px;
@@ -482,6 +482,6 @@ border-left-color: transparent;
 	}
 }
 
-<?php }// End if().
-}// End foreach().
+<?php }
+}
 ?>

@@ -52,7 +52,7 @@
 				<!--image-->
 				<div class="bb-tm-image">
 					<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-					   <img src="<?php echo $timeline1->photo_src; ?>"/>
+						<img src="<?php echo $timeline1->photo_src; ?>"/>
 					<?php } ?>
 				</div>
 				<!--/.image-->
@@ -82,7 +82,7 @@
 				</div>
 
 			</div>
-			
+
 			<!--/.Timline-Content-->
 		</li>
 		<?php endfor; ?>
@@ -129,7 +129,7 @@
 			<!--image-->
 			<div class="bb-tm-image">
 				<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-				   <img src="<?php echo $timeline1->photo_src; ?>"/>
+					<img src="<?php echo $timeline1->photo_src; ?>"/>
 				<?php } ?>
 			</div>
 			<!--/.image-->
@@ -163,5 +163,5 @@
 	</ul>
 </div>
 
-<?php }// End if().
+<?php }
 ?>
