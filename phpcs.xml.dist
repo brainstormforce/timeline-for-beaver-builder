@@ -9,6 +9,7 @@
 	<config name="testVersion" value="5.3-"/>
 
 	<rule ref="WordPress-Core" >
+	    <exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 	</rule>
