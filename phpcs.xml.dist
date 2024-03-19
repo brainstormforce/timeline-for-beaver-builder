@@ -12,6 +12,7 @@
 	    <exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+		<exclude name="WordPress.PHP.DeprecatedFunctions.DeprecatedInPhp80.TrimParameterRemoved"/>
 	</rule>
 	<rule ref="WordPress-Docs" />
 	<rule ref="WordPress-Extra" />
