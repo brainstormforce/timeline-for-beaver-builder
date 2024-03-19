@@ -8,7 +8,9 @@
 	<rule ref="PHPCompatibility"/>
 	<config name="testVersion" value="5.3-"/>
 
-	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Core" >
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+	</rule>
 	<rule ref="WordPress-Docs" />
 	<rule ref="WordPress-Extra" />
 
