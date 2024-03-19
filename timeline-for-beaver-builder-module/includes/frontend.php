@@ -112,7 +112,7 @@
 
 					<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
 				<!--Timeline-customcontent-->
-					<div class="bb-custom-content"><?php echo esc_html( $timeline1->timeline_custom_content_editor ); ?></div>
+					<div class="bb-custom-content"><?php echo wp_kses_post( $timeline1->timeline_custom_content_editor ); ?></div>
 				<!--/.Timeline-customcontent-->
 				<?php } ?>
 			</div>

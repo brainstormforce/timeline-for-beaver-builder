@@ -63,14 +63,14 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 	width: <?php echo esc_attr( ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20' ); ?>px;
 	border-left-width: <?php echo esc_attr( ( $settings->connector_border_width < '20' ) ? $settings->connector_border_width : '20' ); ?>px;
 	border-left-style: <?php echo esc_attr( $settings->connector_border_style ); ?>;
-	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
+	border-left-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? esc_attr( $settings->connector_bg_color_opc / 100 ) : 100; ?>);
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline:before {
 	width: <?php echo esc_attr( $settings->connector_border_width ); ?>px;
 	border-left-width: <?php echo esc_attr( $settings->connector_border_width ); ?>px;
 	border-left-style: <?php echo esc_attr( $settings->connector_border_style ); ?>;
-	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
+	border-left-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? esc_attr( $settings->connector_bg_color_opc / 100 ) : 100; ?>);
 }
 
 /* Animation CSS */
@@ -96,7 +96,7 @@ text-align: <?php echo esc_attr( $item->timeline_title_align ); ?>;
 	border-width: <?php echo esc_attr( ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20' ); ?>px;
 	border-style: <?php echo esc_attr( $item->icon_border_style ); ?>;
 	border-color: #<?php echo esc_attr( $item->icon_border_color ); ?>;
-	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $icon_border_color ) ); ?>, <?php echo ( '' != $item->icon_border_color_opc ) ? $item->icon_border_color_opc / 100 : 100; ?>);
+	border-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $icon_border_color ) ) ); ?>, <?php echo ( '' != $item->icon_border_color_opc ) ? esc_attr( $item->icon_border_color_opc / 100 ) : 100; ?>);
 	box-sizing: content-box;
 	box-shadow: none;
 }
@@ -104,7 +104,7 @@ text-align: <?php echo esc_attr( $item->timeline_title_align ); ?>;
 		<?php $timeline_tmb_icon_bg_color = ( ! empty( $item->timeline_tmb_icon_bg_color ) ) ? $item->timeline_tmb_icon_bg_color : '6CBFEE'; ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmicon {
 	background-color: #<?php echo esc_attr( $timeline_tmb_icon_bg_color ); ?>;
-	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_icon_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_bg_color_opc ) ? $item->timeline_tmb_bg_color_opc / 100 : 100; ?>);
+	background: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_icon_bg_color ) ) ); ?>, <?php echo ( '' != $item->timeline_tmb_bg_color_opc ) ? esc_attr( $item->timeline_tmb_bg_color_opc / 100 ) : 100; ?>);
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmicon {
@@ -123,7 +123,7 @@ text-align: <?php echo esc_attr( $item->timeline_title_align ); ?>;
 	border-width: <?php echo esc_attr( ( $item->img_border_width < '20' ) ? $item->img_border_width : '20' ); ?>px;
 	border-style: <?php echo esc_attr( $item->img_border_style ); ?>;
 	border-color: #<?php echo esc_attr( $item->img_border_color ); ?>;
-	border-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $img_border_color ) ); ?>, <?php echo ( '' != $item->img_border_color_opc ) ? $item->img_border_color_opc / 100 : 100; ?>);
+	border-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $img_border_color ) ) ); ?>, <?php echo ( '' != $item->img_border_color_opc ) ? esc_attr( $item->img_border_color_opc / 100 ) : 100; ?>);
 	box-sizing: content-box;
 	box-shadow: none;
 }
@@ -131,7 +131,7 @@ text-align: <?php echo esc_attr( $item->timeline_title_align ); ?>;
 		<?php $timeline_tmb_img_bg_color = ( ! empty( $item->timeline_tmb_img_bg_color ) ) ? $item->timeline_tmb_img_bg_color : 'ffffff'; ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tm-image {
 	background-color: #<?php echo esc_attr( $timeline_tmb_img_bg_color ); ?>;
-	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_img_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_img_bg_color_opc ) ? $item->timeline_tmb_img_bg_color_opc / 100 : 100; ?>);
+	background: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_img_bg_color ) ) ); ?>, <?php echo ( '' != $item->timeline_tmb_img_bg_color_opc ) ? esc_attr( $item->timeline_tmb_img_bg_color_opc / 100 ) : 100; ?>);
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tm-image {
@@ -167,9 +167,9 @@ color: #<?php echo esc_attr( $item->timeline_icon_hover_colors ); ?>;
 /* Timeline Sections */
 	<?php $sections_bg_color = ( ! empty( $item->sections_bg_color ) ) ? $item->sections_bg_color : '6cbfee'; ?>
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel {
-background-color: #<?php echo $sections_bg_color; ?>;
-background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel {
+background-color: #<?php echo esc_attr( $sections_bg_color ); ?>;
+background: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 border-radius: <?php echo esc_attr( $item->timeline_sections_border_radius ); ?>px;
 border-width: <?php echo esc_attr( $item->timeline_sections_border_width ); ?>px;
 border-style: <?php echo esc_attr( $item->timeline_section_border_style ); ?>;
@@ -188,27 +188,27 @@ padding-bottom: <?php echo esc_attr( $item->timeline_sections_padding_bottom ); 
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-right-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 border-left-color: transparent;
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-left-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 border-right-color: transparent;
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-left-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 border-right-color: transparent;
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?>:nth-child(even) .bb-tmlabel:after {
-border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+border-right-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 border-left-color: transparent;
 }
 
 
 	<?php if ( $global_settings->responsive_enabled ) { // Global Setting If started. ?>
 
-@media screen and (max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?>) {
+@media screen and (max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint . 'px' ); ?>) {
 
 		<?php if ( 'chide' == $settings->connector_show_hide ) : ?>
 
@@ -460,23 +460,23 @@ border-left-color: transparent;
 
 	/* Connector */
 	.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 		border-left-color: transparent;
 		border-right-color: transparent;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 		border-right-color: transparent;
 		border-left-color: transparent;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?> .bb-tmlabel:after {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 		border-right-color: transparent;
 		border-left-color: transparent;
 	}
 
 	.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo esc_attr( $i ); ?>:nth-child(even) .bb-tmlabel:after  {
-		border-bottom-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
+		border-bottom-color: rgba(<?php echo esc_attr( implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? esc_attr( $item->sections_bg_color_opc / 100 ) : 100; ?>);
 		border-left-color: transparent;
 		border-right-color: transparent;
 	}
