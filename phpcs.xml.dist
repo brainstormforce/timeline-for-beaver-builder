@@ -10,6 +10,7 @@
 
 	<rule ref="WordPress-Core" >
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 	</rule>
 	<rule ref="WordPress-Docs" />
 	<rule ref="WordPress-Extra" />
