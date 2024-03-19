@@ -12,7 +12,8 @@
 <div class="bb-tmtimeline-container bb-timeline-<?php echo esc_attr( $settings->timeline_layout ); ?>">
 	<ul class="bb-tmtimeline">
 		<?php
-		for ( $i = 0; $i < count( $settings->timeline1 ); $i++ ) :
+		$timeline_count = count( $settings->timeline1 );
+		for ( $i = 0; $i < $timeline_count; $i++ ) :
 			if ( ! is_object( $settings->timeline1[ $i ] ) ) {
 				continue;
 			}
@@ -25,7 +26,7 @@
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo esc_html( date( $settings->date_format, strtotime( $current_date ) ) ); ?>
+					<?php echo esc_html( gmdate( $settings->date_format, strtotime( $current_date ) ) ); ?>
 				</span>
 
 				<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
@@ -94,7 +95,8 @@
 <div class="bb-tmtimeline-container bb-timeline-<?php echo esc_attr( $settings->timeline_layout ); ?>">
 	<ul class="bb-tmtimeline">
 		<?php
-		for ( $i = 0; $i < count( $settings->timeline1 ); $i++ ) :
+		$timeline_count = count( $settings->timeline1 );
+		for ( $i = 0; $i < $timeline_count; $i++ ) :
 			if ( ! is_object( $settings->timeline1[ $i ] ) ) {
 				continue;
 			}
@@ -107,7 +109,7 @@
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo esc_html( date( $settings->date_format, strtotime( $current_date ) ) ); ?>
+					<?php echo esc_html( gmdate( $settings->date_format, strtotime( $current_date ) ) ); ?>
 				</span>
 
 					<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
