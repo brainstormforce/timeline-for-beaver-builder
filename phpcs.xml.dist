@@ -4,6 +4,7 @@
 	<rule ref="PHPCompatibility">
 	 	<exclude name="WordPress.PHP.StrictComparisons.LooseComparison" />
 		<exclude name="WordPress.PHP.StrictInArray.MissingTrueStrict" />
+		<exclude name="WordPress.WP.I18n.MissingArgDomain" />
 	</rule>
 	<rule ref="PHPCompatibility"/>
 	<config name="testVersion" value="5.3-"/>
