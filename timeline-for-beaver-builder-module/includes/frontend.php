@@ -145,11 +145,7 @@
 				?>
 				<div class="bb-tmlabel <?php echo esc_attr( $hide_class ); ?>">
 					<!--Timline-Title-->
-<<<<<<< HEAD
-					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
-=======
 					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_attr( $timeline1->timeline_title_align ); ?>">
->>>>>>> dev
 						<?php echo esc_html( $timeline1->timeline_title ); ?>
 					</<?php echo esc_attr( $settings->tmtitle_tag ); ?>>
 					<!--/.Timline-Title-->
