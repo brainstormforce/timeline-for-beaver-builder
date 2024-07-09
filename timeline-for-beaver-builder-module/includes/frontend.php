@@ -67,9 +67,9 @@
 				?>
 				<div class="bb-tmlabel <?php echo $hide_class; ?>">	
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
-						<?php echo $timeline1->timeline_title; ?>
-					</<?php echo $settings->tmtitle_tag; ?>>
+					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_attr( $timeline1->timeline_title_align ); ?>">
+						<?php echo esc_html( $timeline1->timeline_title ); ?>
+					</<?php echo esc_attr( $settings->tmtitle_tag ); ?>>
 					<!--/.Timline-Title-->
 
 					<div class="tm-title-border-bottom">
@@ -145,9 +145,9 @@
 				?>
 				<div class="bb-tmlabel <?php echo $hide_class; ?>">
 					<!--Timline-Title-->
-					<<?php echo $settings->tmtitle_tag; ?> class="bb-timline-title bb-tm-title-<?php echo $timeline1->timeline_title_align; ?>">
-						<?php echo $timeline1->timeline_title; ?>
-					</<?php echo $settings->tmtitle_tag; ?>>
+					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_attr( $timeline1->timeline_title_align ); ?>">
+						<?php echo esc_html( $timeline1->timeline_title ); ?>
+					</<?php echo esc_attr( $settings->tmtitle_tag ); ?>>
 					<!--/.Timline-Title-->
 					<div class="tm-title-border-bottom">
 						<span class="bb-tmlabel-border-bottom"></span>
