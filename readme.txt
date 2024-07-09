@@ -108,6 +108,7 @@ Visit our website to know more about the top WordPress products and services we 
 
 = 1.1.3 =
 * This update addressed a security bug. Props to Patchstack for privately reporting it to our team. Please make sure you are using the latest version on your website.
+* Improvement: Improved codebase for improved security.
 
 = 1.1.2 =
 * Improvement: Added compatibility to WordPress 6.1

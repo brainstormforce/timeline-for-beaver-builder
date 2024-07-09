@@ -10,36 +10,36 @@
 <?php
 if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeline_title_font['family'] ) :
 	?>
-.fl-node-<?php echo $id; ?> .bb-timline-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-title {
 	<?php FLBuilderFonts::font_css( $settings->timeline_title_font ); ?>
 }
 <?php endif; ?>
 
-.fl-node-<?php echo $id; ?> .bb-timline-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-title {
 	font-size: <?php echo $settings->timeline_title_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_title_custom_line_height; ?>px;
 	color: #<?php echo $settings->timeline_title_color; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-timline-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-title {
 	margin-top: <?php echo $settings->timeline_title_margin_top; ?>px;
 	margin-bottom: <?php echo $settings->timeline_title_margin_bottom; ?>px;
 }
 
 /* Timeline Description Typography */
 <?php if ( ! empty( $settings->timeline_dec_font ) && 'Default' != $settings->timeline_dec_font['family'] ) : ?>
-.fl-node-<?php echo $id; ?> .bb-timline-dec {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-dec {
 	<?php FLBuilderFonts::font_css( $settings->timeline_dec_font ); ?>
 }
 <?php endif; ?>
 
-.fl-node-<?php echo $id; ?> .bb-timline-dec {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-dec {
 	color: #<?php echo $settings->timeline_dec_color; ?>;
 	font-size: <?php echo $settings->timeline_dec_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_dec_custom_line_height; ?>px;
 }
 
-.fl-node-<?php echo $id; ?> .bb-timline-dec {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timline-dec {
 	margin-top: <?php echo $settings->timeline_dec_margin_top; ?>px;
 	margin-bottom: <?php echo $settings->timeline_dec_margin_bottom; ?>px;
 }
@@ -51,7 +51,7 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 }
 <?php endif; ?>
 
-.fl-node-<?php echo $id; ?> .bb-tmtime {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtime {
 	color: #<?php echo $settings->timeline_date_color; ?>;
 	font-size: <?php echo $settings->timeline_date_custom_size; ?>px;
 	line-height: <?php echo $settings->timeline_date_custom_line_height; ?>px;
@@ -66,7 +66,7 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 	border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $connector_bg_color ) ); ?>, <?php echo ( '' != $settings->connector_bg_color_opc ) ? $settings->connector_bg_color_opc / 100 : 100; ?>);
 }
 
-.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline:before {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline:before {
 	width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-width: <?php echo $settings->connector_border_width; ?>px;
 	border-left-style: <?php echo $settings->connector_border_style; ?>;
@@ -74,7 +74,7 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 }
 
 /* Animation CSS */
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .animated {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .animated {
 	-webkit-animation-duration:  <?php echo $settings->tm_animation_duration; ?>s;
 	animation-duration: <?php echo $settings->tm_animation_duration; ?>s;
 }
@@ -84,7 +84,7 @@ if ( ! empty( $settings->timeline_title_font ) && 'Default' != $settings->timeli
 foreach ( $settings->timeline1 as $i => $item ) {
 	?>
 /* Timeline Title Align */
-.fl-node-<?php echo $id; ?> .tm-timeline-li-<?php echo $i; ?> .bb-timline-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .tm-timeline-li-<?php echo $i; ?> .bb-timline-title {
 text-align: <?php echo $item->timeline_title_align; ?>;
 }
 
@@ -92,7 +92,7 @@ text-align: <?php echo $item->timeline_title_align; ?>;
 	<?php if ( 'icon' == $item->timeline_img_icon_type && 'custom' == $item->icon_bg_style ) : ?>
 /* for icon setting */
 		<?php $icon_border_color = ( ! empty( $item->icon_border_color ) ) ? $item->icon_border_color : ''; ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	border-width: <?php echo ( $item->icon_border_width < '20' ) ? $item->icon_border_width : '20'; ?>px;
 	border-style: <?php echo $item->icon_border_style; ?>;
 	border-color: #<?php echo $item->icon_border_color; ?>;
@@ -102,12 +102,12 @@ text-align: <?php echo $item->timeline_title_align; ?>;
 }
 
 		<?php $timeline_tmb_icon_bg_color = ( ! empty( $item->timeline_tmb_icon_bg_color ) ) ? $item->timeline_tmb_icon_bg_color : '6CBFEE'; ?>
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 	background-color: #<?php echo $timeline_tmb_icon_bg_color; ?>;
 	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_icon_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_bg_color_opc ) ? $item->timeline_tmb_bg_color_opc / 100 : 100; ?>);
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon {
 		<?php if ( ! empty( $item->connector_border_radius ) ) : ?>	
 	border-radius: <?php echo $item->connector_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->connector_border_radius; ?>%;
@@ -134,7 +134,7 @@ text-align: <?php echo $item->timeline_title_align; ?>;
 	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $timeline_tmb_img_bg_color ) ); ?>, <?php echo ( '' != $item->timeline_tmb_img_bg_color_opc ) ? $item->timeline_tmb_img_bg_color_opc / 100 : 100; ?>);
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tm-image {
 		<?php if ( ! empty( $item->img_border_radius ) ) : ?>	
 	border-radius: <?php echo $item->img_border_radius; ?>%;
 	-moz-border-radius: <?php echo $item->img_border_radius; ?>%;
@@ -145,29 +145,29 @@ text-align: <?php echo $item->timeline_title_align; ?>;
 
 
 /* Timeline Title border */
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel-border-bottom {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel-border-bottom {
 border-bottom-width: <?php echo $item->timeline_title_border_width; ?>px;
 border-bottom-style: <?php echo $item->timeline_title_border_style; ?>;
 border-bottom-color: #<?php echo $item->timeline_title_border_color; ?>;
 width : <?php echo ( $item->timeline_title_seperator_width < '100' ) ? $item->timeline_title_seperator_width : '100'; ?>%;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-title-border-bottom {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-title-border-bottom {
 text-align: <?php echo $item->timeline_title_border_align; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon i {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmicon i {
 color: #<?php echo $item->timeline_icon_colors; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?>:hover .bb-tmicon i {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?>:hover .bb-tmicon i {
 color: #<?php echo $item->timeline_icon_hover_colors; ?>;
 }
 
 /* Timeline Sections */
 	<?php $sections_bg_color = ( ! empty( $item->sections_bg_color ) ) ? $item->sections_bg_color : '6cbfee'; ?>
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .bb-tmlabel {
 background-color: #<?php echo $sections_bg_color; ?>;
 background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-radius: <?php echo $item->timeline_sections_border_radius; ?>px;
@@ -176,31 +176,31 @@ border-style: <?php echo $item->timeline_section_border_style; ?>;
 border-color: #<?php echo $item->timeline_sections_border_color; ?>;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after  {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after  {
 	<?php $top_value = ( (int) $item->timeline_sections_border_radius <= 10 ) ? 10 : $item->timeline_sections_border_radius; ?>
 top: <?php echo $top_value; ?>px;
 margin-left: <?php echo $item->timeline_sections_border_width; ?>px;
 }
 
-.fl-node-<?php echo $id; ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main{
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-tmtimeline-container .tm-timeline-li-<?php echo $i; ?> .tm-conatiner-main{
 padding-top: <?php echo $item->timeline_sections_padding_top; ?>px;
 padding-bottom: <?php echo $item->timeline_sections_padding_bottom; ?>px;
 }
 
-.fl-node-<?php echo $id; ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-right .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
 border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-left-color: transparent;
 }
-.fl-node-<?php echo $id; ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-left .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
 border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-right-color: transparent;
 }
-.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?> .bb-tmlabel:after {
 border-left-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-right-color: transparent;
 }
 
-.fl-node-<?php echo $id; ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?>:nth-child(even) .bb-tmlabel:after {
+.fl-node-<?php echo esc_attr( $id ); ?> .bb-timeline-both .bb-tmtimeline > li.tm-timeline-li-<?php echo $i; ?>:nth-child(even) .bb-tmlabel:after {
 border-right-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $sections_bg_color ) ); ?>, <?php echo ( '' != $item->sections_bg_color_opc ) ? $item->sections_bg_color_opc / 100 : 100; ?>);
 border-left-color: transparent;
 }
