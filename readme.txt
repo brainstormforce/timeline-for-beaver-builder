@@ -3,8 +3,8 @@ Contributors: pratikchaskar
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder
-Stable tag: 1.1.2
-Tested up to: 6.4.1
+Stable tag: 1.1.3
+Tested up to: 6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,10 @@ Visit our website to know more about the top WordPress products and services we 
 - [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
 
 == Changelog ==
+
+= 1.1.3 =
+* This update addressed a security bug. Props to Patchstack for privately reporting it to our team. Please make sure you are using the latest version on your website.
+* Improvement: Improved codebase for improved security.
 
 = 1.1.2 =
 * Improvement: Added compatibility to WordPress 6.1

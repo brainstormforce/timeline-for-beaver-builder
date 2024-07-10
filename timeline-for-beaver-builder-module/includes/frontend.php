@@ -53,7 +53,7 @@
 				<!--image-->
 				<div class="bb-tm-image">
 					<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-						<img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
+					   <img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
 					<?php } ?>
 				</div>
 				<!--/.image-->
@@ -70,7 +70,7 @@
 					<!--Timline-Title-->
 					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_attr( $timeline1->timeline_title_align ); ?>">
 						<?php echo esc_html( $timeline1->timeline_title ); ?>
-					</<?php echo esc_html( $settings->tmtitle_tag ); ?>>
+					</<?php echo esc_attr( $settings->tmtitle_tag ); ?>>
 					<!--/.Timline-Title-->
 
 					<div class="tm-title-border-bottom">
@@ -147,9 +147,9 @@
 				?>
 				<div class="bb-tmlabel <?php echo esc_attr( $hide_class ); ?>">
 					<!--Timline-Title-->
-					<<?php echo esc_html( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_html( $timeline1->timeline_title_align ); ?>">
+					<<?php echo esc_attr( $settings->tmtitle_tag ); ?> class="bb-timline-title bb-tm-title-<?php echo esc_attr( $timeline1->timeline_title_align ); ?>">
 						<?php echo esc_html( $timeline1->timeline_title ); ?>
-					</<?php echo esc_html( $settings->tmtitle_tag ); ?>>
+					</<?php echo esc_attr( $settings->tmtitle_tag ); ?>>
 					<!--/.Timline-Title-->
 					<div class="tm-title-border-bottom">
 						<span class="bb-tmlabel-border-bottom"></span>
