@@ -12,7 +12,8 @@
 <div class="bb-tmtimeline-container bb-timeline-<?php echo esc_attr( $settings->timeline_layout ); ?>">
 	<ul class="bb-tmtimeline">
 		<?php
-		for ( $i = 0; $i < count( $settings->timeline1 ); $i++ ) :
+		$timeline_count = count( $settings->timeline1 );
+		for ( $i = 0; $i < $timeline_count; $i++ ) :
 			if ( ! is_object( $settings->timeline1[ $i ] ) ) {
 				continue;
 			}
@@ -25,12 +26,12 @@
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
+					<?php echo esc_html( gmdate( $settings->date_format, strtotime( $current_date ) ) ); ?>
 				</span>
 
 				<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
 				<!--Timeline-customcontent-->
-					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
+					<div class="bb-custom-content"><?php echo wp_kses_post( $timeline1->timeline_custom_content_editor ); ?></div>
 				<!--/.Timeline-customcontent-->
 				<?php } ?>
 			</div>
@@ -52,7 +53,7 @@
 				<!--image-->
 				<div class="bb-tm-image">
 					<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-					   <img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
+					<img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
 					<?php } ?>
 				</div>
 				<!--/.image-->
@@ -77,12 +78,12 @@
 					</div>
 
 					<!--Timline-description-->
-					<div class="bb-timline-dec"><?php echo $timeline1->timeline_editor; ?></div>
+					<div class="bb-timline-dec"><?php echo wp_kses_post( $timeline1->timeline_editor ); ?></div>
 					<!--/.Timline-description-->
 				</div>
 
 			</div>
-			
+
 			<!--/.Timline-Content-->
 		</li>
 		<?php endfor; ?>
@@ -94,7 +95,8 @@
 <div class="bb-tmtimeline-container bb-timeline-<?php echo esc_attr( $settings->timeline_layout ); ?>">
 	<ul class="bb-tmtimeline">
 		<?php
-		for ( $i = 0; $i < count( $settings->timeline1 ); $i++ ) :
+		$timeline_count = count( $settings->timeline1 );
+		for ( $i = 0; $i < $timeline_count; $i++ ) :
 			if ( ! is_object( $settings->timeline1[ $i ] ) ) {
 				continue;
 			}
@@ -107,12 +109,12 @@
 				<?php if ( 'rsdate' == $timeline1->timeline_date_customcontent_type ) { ?>
 					<?php $current_date = $timeline1->year . '-' . $timeline1->month . '-' . $timeline1->day; ?>
 				<span class="feed-date">
-					<?php echo date( $settings->date_format, strtotime( $current_date ) ); ?>
+					<?php echo esc_html( gmdate( $settings->date_format, strtotime( $current_date ) ) ); ?>
 				</span>
 
 					<?php } elseif ( 'customcontent' == $timeline1->timeline_date_customcontent_type ) { ?> 
 				<!--Timeline-customcontent-->
-					<div class="bb-custom-content"><?php echo $timeline1->timeline_custom_content_editor; ?></div>
+					<div class="bb-custom-content"><?php echo wp_kses_post( $timeline1->timeline_custom_content_editor ); ?></div>
 				<!--/.Timeline-customcontent-->
 				<?php } ?>
 			</div>
@@ -129,7 +131,7 @@
 			<!--image-->
 			<div class="bb-tm-image">
 				<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-				   <img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
+					<img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
 				<?php } ?>
 			</div>
 			<!--/.image-->
@@ -153,7 +155,7 @@
 						<span class="bb-tmlabel-border-bottom"></span>
 					</div>
 					<!--Timline-description-->
-					<div class="bb-timline-dec"><?php echo $timeline1->timeline_editor; ?></div>
+					<div class="bb-timline-dec"><?php echo wp_kses_post( $timeline1->timeline_editor ); ?></div>
 					<!--/.Timline-description-->
 				</div>
 			</div>
@@ -163,5 +165,5 @@
 	</ul>
 </div>
 
-<?php }// End if().
+<?php }
 ?>
