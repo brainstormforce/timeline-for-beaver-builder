@@ -74,7 +74,7 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 			echo '<div class="notice notice-error">';
 
 			/* Translators: Timeline Module For Beaver Builder */
-				echo '<p>' . esc_html( sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-timeline' ) . '</p>', esc_url( $url ) ) );
+				echo '<p>' . wp_kses_post( sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-timeline' ) . '</p>', esc_url( $url ) ) );
 
 			echo '</div>';
 		}
