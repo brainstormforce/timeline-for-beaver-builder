@@ -486,11 +486,11 @@ FLBuilder::register_module(
 					'title'  => __( 'Title', 'bb-timeline' ),
 					'fields' => array(
 						'tmtitle_tag'                  => array(
-							'type'    => 'select',
-							'label'   => __( 'HTML Tag', 'bb-timeline' ),
-							'default' => 'h3',
+							'type'     => 'select',
+							'label'    => __( 'HTML Tag', 'bb-timeline' ),
+							'default'  => 'h3',
 							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options' => array(
+							'options'  => array(
 								'h1' => 'h1',
 								'h2' => 'h2',
 								'h3' => 'h3',

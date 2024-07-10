@@ -53,7 +53,7 @@
 				<!--image-->
 				<div class="bb-tm-image">
 					<?php if ( '' != $timeline1->photo && isset( $timeline1->photo_src ) ) { ?> 
-					   <img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
+					<img src="<?php echo esc_url( $timeline1->photo_src ); ?>"/>
 					<?php } ?>
 				</div>
 				<!--/.image-->
