@@ -33,7 +33,6 @@ class BSFBBTimelines extends FLBuilderModule {
 
 		// Register and enqueue your own.
 		$this->add_css( 'animate', TIMELINE_FOR_BEAVER_BUILDER_URL . 'assets/css/animate.css' );
-
 	}
 
 	/**
