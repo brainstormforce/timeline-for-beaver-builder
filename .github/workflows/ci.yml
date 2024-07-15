@@ -31,7 +31,7 @@ jobs:
       run: composer config github-oauth.github.com ${{ secrets.PRIVATE_ACCESS_TOKEN }} 
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-suggest --no-progress
+      run: composer install --prefer-dist --no-suggest --no-progress --ignore-platform-reqs
 
     - name: PHPCS check
       if: always()
