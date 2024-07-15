@@ -3,7 +3,7 @@
  * Plugin Name: Timeline Module for Beaver Builder
  * Plugin URI: https://www.brainstormforce.com/
  * Description: Timeline for Beaver Builder is a custom modules for Beaver Builder to create the awesome responsive timeline with animation.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: Pratik Chaskar
  * Author URI: https://pratikchaskar.com/
  * Text Domain: bb-timeline
@@ -27,7 +27,7 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 		/**
 		 * To initializ new object
 		 */
-		function __construct() {
+		public function __construct() {
 			add_action( 'init', array( $this, 'load_timeline' ) );
 			add_action( 'init', array( $this, 'load_textdomain' ) );
 		}
@@ -35,7 +35,7 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 		/**
 		 * Function to load BB Timeline
 		 */
-		function load_timeline() {
+		public function load_timeline() {
 			if ( class_exists( 'FLBuilder' ) ) {
 				// If class exist it loads the module.
 				require_once 'timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php';
@@ -52,13 +52,12 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 		public function load_textdomain() {
 
 			load_plugin_textdomain( 'bb-timeline' );
-
 		}
 
 		/**
 		 * Function to display admin notice
 		 */
-		function admin_notices_function() {
+		public function admin_notices_function() {
 			// check for Beaver Builder Installed / Activated or not.
 			if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
 				|| file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) ) ) {
@@ -74,10 +73,10 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 			echo '<div class="notice notice-error">';
 
 			/* Translators: Timeline Module For Beaver Builder */
-				echo '<p>' . sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-timeline' ) . '</p>', $url );
+				echo '<p>' . wp_kses_post( sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-timeline' ) . '</p>', esc_url( $url ) ) );
 
 			echo '</div>';
 		}
 	}
 	new BSFBBTimeline();
-}// End if().
+}
