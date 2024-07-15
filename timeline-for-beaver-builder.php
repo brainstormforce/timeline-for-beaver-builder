@@ -52,7 +52,6 @@ if ( ! class_exists( 'BSFBBTimeline' ) ) {
 		public function load_textdomain() {
 
 			load_plugin_textdomain( 'bb-timeline' );
-
 		}
 
 		/**
