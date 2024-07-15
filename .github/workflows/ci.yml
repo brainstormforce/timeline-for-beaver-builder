@@ -20,18 +20,11 @@ jobs:
       with:
         token: ${{ secrets.PRIVATE_ACCESS_TOKEN }}
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
-        coverage: none
-        tools: composer
-
     - name: Set composer token
       run: composer config github-oauth.github.com ${{ secrets.PRIVATE_ACCESS_TOKEN }} 
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-suggest --no-progress --ignore-platform-reqs
+    - name: Composer Install
+      uses: ramsey/composer-install@v1
 
     - name: PHPCS check
       if: always()
