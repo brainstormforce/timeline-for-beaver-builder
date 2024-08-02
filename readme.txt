@@ -106,6 +106,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Changelog ==
 
+= 1.1.4 =
+* Improvement: Hardened the security of plugin.
+
 = 1.1.3 =
 * This update addressed a security bug. Props to Patchstack for privately reporting it to our team. Please make sure you are using the latest version on your website.
 * Improvement: Improved codebase for improved security.
