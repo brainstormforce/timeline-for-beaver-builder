@@ -2,7 +2,7 @@
 Contributors: pratikchaskar
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
-Tags: beaver builder, page builder timeline, bb timeline, timelines, drag and drop timeline, Timeline Module for Beaver Builder
+Tags: beaver builder, page builder timeline, bb timeline, drag and drop timeline, Timeline Module for Beaver Builder
 Stable tag: 1.1.4
 Tested up to: 6.6
 License: GPLv2 or later
