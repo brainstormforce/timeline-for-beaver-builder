@@ -28,7 +28,7 @@ jobs:
 
     - name: PHPCS check
       if: always()
-      run: composer lint
+      run: ./vendor/bin/phpcs --standard=phpcs.xml.dist --report-summary --report-source
 
     - name: PHP Syntax Errors
       if: always()
