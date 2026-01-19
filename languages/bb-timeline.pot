@@ -1,653 +1,654 @@
-# Copyright (C) 2017 Brainstorm force, Bhushan Bobade
+# Copyright (C) 2026 Pratik Chaskar
 # This file is distributed under the same license as the Timeline Module for Beaver Builder package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Timeline Module for Beaver Builder 1.0.1\n"
+"Project-Id-Version: Timeline Module for Beaver Builder 1.1.5\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/timeline-for-beaver-builder\n"
-"POT-Creation-Date: 2017-03-21 04:53:59+00:00\n"
+"POT-Creation-Date: 2026-01-19 09:43:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:15
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:60
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:67
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:23
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:75
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:82
 msgid "Timeline"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:16
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:24
 msgid "To create Bootstrap Card builder modules."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:17
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:25
 msgid "Advanced Modules"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:79
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:119
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:229
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1129
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1266
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:94
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:134
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:246
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1150
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1287
 msgid "Style"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:87
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:102
 msgid "Timeline Layout"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:90
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:727
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1341
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:105
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:748
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1362
 msgid "Left"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:91
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:729
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1343
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:106
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:750
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1364
 msgid "Right"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:92
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:107
 msgid "Both"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:94
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:109
 msgid "This is to set timeline layout."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:115
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:130
 msgid "Connector"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:122
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:829
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:927
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1057
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1156
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1269
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:137
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:849
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:947
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1078
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1177
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1290
 msgid "None"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:127
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:142
 msgid "To set Connector Line style."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:144
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1328
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:159
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1349
 msgid "Width"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:149
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:164
 msgid "To manage connector line width this width will also applied to icon border."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:155
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1299
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:170
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1320
 msgid "Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:162
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1144
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:177
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1165
 msgid "Opacity"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:167
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:979
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1109
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:182
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:999
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1130
 msgid "To manage connector line opacity."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:172
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:187
 msgid "Display On/ Off for Mobile"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:175
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:193
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:190
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:208
 msgid "Hide"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:176
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:192
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:191
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:207
 msgid "Show"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:178
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:193
 msgid " To Show or Hide connector on mobile."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:185
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:750
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:200
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:772
 msgid "Date / Content Area"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:189
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:204
 msgid "Display"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:195
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:210
 msgid " To Show or Hide Date on timeline. It works globally for timeline module"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:206
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:222
 msgid "Date Format"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:224
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:241
 msgid "Animation"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:231
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:248
 msgid "Choose one of the animation types for timeline."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:233
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:250
 msgid "No"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:234
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:251
 msgid "bounce"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:235
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:252
 msgid "flash"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:236
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:253
 msgid "pulse"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:237
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:254
 msgid "rubberBand"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:238
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:255
 msgid "shake"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:239
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:256
 msgid "headShake"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:240
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:257
 msgid "swing"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:241
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:258
 msgid "tada"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:242
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:259
 msgid "wobble"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:243
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:260
 msgid "jello"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:244
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:261
 msgid "bounceIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:245
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:262
 msgid "bounceInDown"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:246
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:263
 msgid "bounceInLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:247
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:264
 msgid "bounceInRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:248
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:265
 msgid "bounceInUp"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:249
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:266
 msgid "fadeIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:250
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:267
 msgid "fadeInDown"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:251
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:268
 msgid "fadeInDownBig"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:252
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:269
 msgid "fadeInLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:253
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:270
 msgid "fadeInLeftBig"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:254
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:271
 msgid "fadeInRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:255
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:272
 msgid "fadeInRightBig"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:256
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:273
 msgid "fadeInUp"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:257
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:274
 msgid "fadeInUpBig"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:258
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:275
 msgid "flipInX"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:259
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:276
 msgid "flipInY"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:260
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:277
 msgid "flipOutX"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:261
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:278
 msgid "flipOutY"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:262
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:279
 msgid "lightSpeedIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:263
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:280
 msgid "rotateIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:264
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:281
 msgid "rotateInDownLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:265
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:282
 msgid "rotateInDownRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:266
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:283
 msgid "rotateInUpLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:267
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:284
 msgid "rotateInUpRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:268
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:285
 msgid "rollIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:269
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:286
 msgid "zoomIn"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:270
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:287
 msgid "zoomInDown"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:271
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:288
 msgid "zoomInLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:272
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:289
 msgid "zoomInRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:273
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:290
 msgid "zoomInUp"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:274
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:291
 msgid "slideInDown"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:275
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:292
 msgid "slideInLeft"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:276
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:293
 msgid "slideInRight"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:277
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:294
 msgid "slideInUp"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:417
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:434
 msgid "Delay"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:427
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:444
 msgid "Duration"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:438
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:455
 msgid "Viewport Position"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:448
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:465
 msgid "Animation for Mobile"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:452
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:469
 msgid "Off"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:453
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:470
 msgid "On"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:455
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:472
 msgid " To set On or Off Animation on Mobile Timeline Animation."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:464
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:481
 msgid "Typography"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:468
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:715
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:485
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:735
 msgid "Title"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:472
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:489
 msgid "HTML Tag"
-msgstr ""
-
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:490
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:571
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:652
-msgid "Font Family"
-msgstr ""
-
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:499
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:580
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:661
-msgid "Font Size"
 msgstr ""
 
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:508
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:589
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:670
-msgid "Line Height"
+msgid "Font Family"
 msgstr ""
 
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:517
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:598
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:679
+msgid "Font Size"
+msgstr ""
+
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:526
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:607
 #: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:688
+msgid "Line Height"
+msgstr ""
+
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:535
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:616
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:706
 msgid "Text Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:529
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:610
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:547
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:628
 msgid "Margin Top"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:545
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:626
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:563
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:644
 msgid "Margin Bottom"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:563
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:738
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:581
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:759
 msgid "Description"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:644
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:662
 msgid "Date / Content"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:679
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:697
 msgid "Letter Spacing"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:708
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:728
 msgid "Add Timeline"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:711
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:731
 msgid "General"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:719
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:739
 msgid "Timeline Title"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:724
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:745
 msgid "Title Alignment"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:728
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1342
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:749
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1363
 msgid "Center"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:754
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:826
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:776
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:846
 msgid "Select Type"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:758
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:779
 msgid "Date"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:759
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:780
 msgid "Content"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:779
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:799
 msgid "Day"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:786
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:806
 msgid "Month"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:793
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:813
 msgid "Year"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:797
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:817
 msgid "<br/><br/>Please fill all three fields to display date."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:818
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:822
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:838
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:842
 msgid "Image / Icon"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:830
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:852
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:850
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:872
 msgid "Icon"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:831
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1001
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:851
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1021
 msgid "Image"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:860
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:880
 msgid "Icon Background Style"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:863
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1011
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:883
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1032
 msgid "Simple"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:864
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1012
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:884
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1033
 msgid "Customize"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:882
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:902
 msgid "Icon Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:890
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:910
 msgid "Icon Hover Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:904
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1034
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1137
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:924
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1055
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1158
 msgid "Background Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:907
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1037
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:927
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1058
 msgid "To manage background color."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:912
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1042
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:932
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1063
 msgid "Background Opacity"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:917
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1047
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:937
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1068
 msgid "To manage background opacity."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:923
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1053
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1153
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:943
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1074
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1174
 msgid "Border Style"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:925
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1055
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:945
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1076
 msgid ""
 "The type of border to use. Double borders must have a width of at least 3px "
 "to render properly."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:928
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1058
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:948
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1079
 msgid "Solid"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:929
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1059
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:949
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1080
 msgid "Dashed"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:930
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1060
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:950
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1081
 msgid "Dotted"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:931
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1061
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:951
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1082
 msgid "Double"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:951
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1081
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:971
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1102
 msgid "Border Width"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:967
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1097
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1186
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:987
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1118
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1207
 msgid "Border Color"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:974
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1104
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:994
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1125
 msgid "Border Color Opacity"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:984
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1115
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1004
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1136
 msgid "Border Radius"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:989
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1120
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1009
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1141
 msgid "To manage Icon / Image border corners."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1008
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1029
 msgid "Image Background Style"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1133
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1154
 msgid "Timeline Section"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1198
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1219
 msgid "Border Size"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1213
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1234
 msgid "Rounded Corners"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1228
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1249
 msgid "Top Spacing"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1244
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1265
 msgid "Bottom Spacing"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1262
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1283
 msgid "Separator"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1275
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1296
 msgid "For Double style effect Separator Height must be above 3px"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1302
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1323
 msgid "To set separator color."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1312
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1333
 msgid "Height"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1317
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1338
 msgid "To set separator height."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1333
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1354
 msgid "To set separator width."
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1338
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1359
 msgid "Alignment"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1345
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1366
 msgid "This is the alignment option for title border"
 msgstr ""
 
-#: timeline-for-beaver-builder.php:61
+#: timeline-for-beaver-builder.php:76
+#. Translators: Timeline Module For Beaver Builder
 msgid ""
 "The <strong>Timeline Module For Beaver Builder</strong> plugin requires "
 "<strong><a href=\"%s\">Beaver Builder</strong></a> plugin installed & "
@@ -659,7 +660,7 @@ msgid "Timeline Module for Beaver Builder"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.brainstormforce.com/"
+msgid "https://pratikchaskar.com/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -669,32 +670,32 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Brainstorm force, Bhushan Bobade"
+msgid "Pratik Chaskar"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:123
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1157
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1270
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:138
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1178
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1291
 msgctxt "Border type."
 msgid "Solid"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:124
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1158
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1271
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:139
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1179
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1292
 msgctxt "Border type."
 msgid "Dashed"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:125
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1159
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1272
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:140
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1180
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1293
 msgctxt "Border type."
 msgid "Dotted"
 msgstr ""
 
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1160
-#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1273
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1181
+#: timeline-for-beaver-builder-module/timeline-for-beaver-builder-module.php:1294
 msgctxt "Border type."
 msgid "Double"
 msgstr ""
