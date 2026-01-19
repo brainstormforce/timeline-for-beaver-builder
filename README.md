@@ -1,10 +1,9 @@
 # Timeline Module for Beaver Builder #
 **Contributors:** [pratikchaskar](https://profiles.wordpress.org/pratikchaskar)  
-**Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder timeline, bb timeline, drag and drop timeline, Timeline Module for Beaver Builder  
-**Stable tag:** 1.1.4  
-**Tested up to:** 6.9
+**Stable tag:** 1.1.5  
+**Tested up to:** 6.9  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -63,11 +62,6 @@ Are you looking for more options? Check out the Advanced Timeline module which c
 <li>Custom text label or date for timeline items</li>
 <li>Advanced design and customization options</li>
 
- Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
-bbtimeline&utm_medium=description
-">Brainstorm Force</a>!
-
-
 ## What’s More? ##
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
@@ -86,8 +80,6 @@ You can also consider checking out our other plugins:
 
 <li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=other-plugins">Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!</li>
  
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href="https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share">Facebook</a> and <a href="https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbtimeline&utm_medium=share">Twitter</a>.
-
 ## Installation ##
 
 1.	Make sure you have Beaver Builder installed on your website.
@@ -105,6 +97,9 @@ Visit our website to know more about the top WordPress products and services we 
 - [animate.css](https://github.com/animate-css/animate.css) is distributed under the terms of the MIT License.
 
 ## Changelog ##
+
+### 1.1.5 ###
+Updated Readme File.
 
 ### 1.1.4 ###
 * Improvement: Hardened the security of plugin.

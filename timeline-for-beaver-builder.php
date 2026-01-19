@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Timeline Module for Beaver Builder
- * Plugin URI: https://www.brainstormforce.com/
+ * Plugin URI: https://pratikchaskar.com/
  * Description: Timeline for Beaver Builder is a custom modules for Beaver Builder to create the awesome responsive timeline with animation.
- * Version: 1.1.4
+ * Version: 1.1.5
  * Author: Pratik Chaskar
  * Author URI: https://pratikchaskar.com/
  * Text Domain: bb-timeline
